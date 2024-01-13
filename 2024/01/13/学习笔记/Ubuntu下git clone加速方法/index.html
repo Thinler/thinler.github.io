@@ -16,23 +16,25 @@
   <meta name="author" content="Thinler">
   <meta name="keywords" content="">
   
-    <meta name="description" content="小毛米跳大圈代码如下： 123456789101112131415161718192021222324252627282930313233343536373839#include&lt;stdio.h&gt;int main()&#123;    long long n;    long long x0,y0,i,j,p,q,r,w;    scanf(&quot;%lld&quot;,&amp;">
+    <meta name="description" content="Ubuntu下git clone加速方法 环境 ：Ubuntu 20 in Vmare 问题：git clone复制github仓库时命令速度慢、无法访问 解决：修改host文件  Step1 获取github IP地址nslookup github.com github.com12345678910Server:         127.0.0.53Address:        127.0.0">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小猫跳圈">
-<meta property="og:url" content="http://example.com/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/index.html">
+<meta property="og:title" content="Ubuntu下git clone加速方法">
+<meta property="og:url" content="http://example.com/2024/01/13/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Ubuntu%E4%B8%8Bgit%20clone%E5%8A%A0%E9%80%9F%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Thinler&#39;s Hexo Blog">
-<meta property="og:description" content="小毛米跳大圈代码如下： 123456789101112131415161718192021222324252627282930313233343536373839#include&lt;stdio.h&gt;int main()&#123;    long long n;    long long x0,y0,i,j,p,q,r,w;    scanf(&quot;%lld&quot;,&amp;">
+<meta property="og:description" content="Ubuntu下git clone加速方法 环境 ：Ubuntu 20 in Vmare 问题：git clone复制github仓库时命令速度慢、无法访问 解决：修改host文件  Step1 获取github IP地址nslookup github.com github.com12345678910Server:         127.0.0.53Address:        127.0.0">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-12-02T04:11:15.893Z">
+<meta property="article:published_time" content="2024-01-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-01-13T13:05:58.694Z">
 <meta property="article:author" content="Thinler">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="C语言">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="技术向">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="加速">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>小猫跳圈 - Thinler&#39;s Hexo Blog</title>
+  <title>Ubuntu下git clone加速方法 - Thinler&#39;s Hexo Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +204,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="小猫跳圈"></span>
+            <span id="subtitle" data-typed-text="Ubuntu下git clone加速方法"></span>
           
         </div>
 
@@ -213,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-01 00:00" pubdate>
-          2023年12月1日 凌晨
+        <time datetime="2024-01-13 00:00" pubdate>
+          2024年1月13日 凌晨
         </time>
       </span>
     
@@ -225,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          865 字
+          874 字
         
       </span>
     
@@ -273,13 +275,30 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">小猫跳圈</h1>
+            <h1 id="seo-header">Ubuntu下git clone加速方法</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="小毛米跳大圈"><a href="#小毛米跳大圈" class="headerlink" title="小毛米跳大圈"></a>小毛米跳大圈</h1><p>代码如下：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">long</span> <span class="hljs-type">long</span> n;<br>    <span class="hljs-type">long</span> <span class="hljs-type">long</span> x0,y0,i,j,p,q,r,w;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;n);<br>    getchar();**<span class="hljs-comment">//one more getchar() here to remove Enter**</span><br>    getchar();<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;x0);<br>    getchar();<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;y0);<br>    getchar();<br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    scanf(&quot;%lld&quot;,&amp;p);</span><br><span class="hljs-comment">	  getchar();</span><br><span class="hljs-comment">	  scanf(&quot;%lld&quot;,&amp;q);</span><br><span class="hljs-comment">	  getchar();</span><br><span class="hljs-comment">	  scanf(&quot;%lld&quot;,&amp;r);</span><br><span class="hljs-comment">    */</span><br>		**<span class="hljs-comment">//读取p q r的时候一个scanf就好，上述五行可以整合成下面一行↓**</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld %lld %lld&quot;</span>,&amp;p,&amp;q,&amp;r);<br>    w=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(w=<span class="hljs-number">0</span>;w&lt;n;w++)&#123;    <span class="hljs-comment">//here change to w&lt;n</span><br>        getchar(); **<span class="hljs-comment">//把回车读掉**</span><br>        getchar();<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;i);<br>        getchar();<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;j);<br>        getchar();<br>        x0=x0+i;<br>        y0=y0+j;<br>    &#125;<br>    <span class="hljs-keyword">if</span>((x0-p)*(x0-p)+(y0-q)*(y0-q)&gt;r*r)&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;(%lld,%lld)&quot;</span>,x0,y0);<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;N0 WAY!&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h1 id="Ubuntu下git-clone加速方法"><a href="#Ubuntu下git-clone加速方法" class="headerlink" title="Ubuntu下git clone加速方法"></a>Ubuntu下git clone加速方法</h1><ul>
+<li>环境 ：Ubuntu 20 in Vmare</li>
+<li>问题：git clone复制github仓库时命令速度慢、无法访问</li>
+<li>解决：修改host文件</li>
+</ul>
+<h2 id="Step1-获取github-IP地址"><a href="#Step1-获取github-IP地址" class="headerlink" title="Step1 获取github IP地址"></a>Step1 获取github IP地址</h2><p><code>nslookup github.com</code></p>
+<figure class="highlight plaintext"><figcaption><span>github.com</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs nslookup">Server:         127.0.0.53<br>Address:        127.0.0.53#53<br><br>Non-authoritative answer:<br>Name:   github.com<br>Address: 20.205.243.166<br>Name:   github.com<br>Address: 2404:6800:4000::c01e:ff70<br>Name:   github.com<br>Address: 2404:6800:4000::c01e:ff71```<br></code></pre></td></tr></table></figure>
+
+<h2 id="Step2-获取github-global-ssl-fastly-net的IP地址"><a href="#Step2-获取github-global-ssl-fastly-net的IP地址" class="headerlink" title="Step2 获取github.global.ssl.fastly.net的IP地址"></a>Step2 获取github.<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=global&spm=1001.2101.3001.7020">global</a>.ssl.fastly.net的IP地址</h2><p><code>nslookup github.global.ssl.fastly.net</code></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">Server:</span>         <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.53</span><br><span class="hljs-attr">Address:</span>        <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.53</span><span class="hljs-comment">#53</span><br><br><span class="hljs-attr">Non-authoritative answer:</span><br><span class="hljs-attr">Name:</span>   <span class="hljs-string">github.global.ssl.fastly.net</span><br><span class="hljs-attr">Address:</span> <span class="hljs-number">104.244</span><span class="hljs-number">.46</span><span class="hljs-number">.21</span><br><span class="hljs-attr">Name:</span>   <span class="hljs-string">github.global.ssl.fastly.net</span><br><span class="hljs-attr">Address:</span> <span class="hljs-number">2001</span><span class="hljs-string">::68f4:2e3f</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="Step3-访问host文件并修改"><a href="#Step3-访问host文件并修改" class="headerlink" title="Step3 访问host文件并修改"></a>Step3 访问host文件并修改</h2><p><code>sudo vim /etc/hosts</code></p>
+<p>在文件最后一行加上</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">#github<br><span class="hljs-number">104.244.46.21</span> http://github.global.ssl.fastly.net<br><span class="hljs-number">104.244.46.21</span> https://github.global.ssl.fastly.net<br><br><span class="hljs-number">20.205.243.166</span> http://github.com<br><span class="hljs-number">20.205.243.166</span> https://github.com<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="Step4-刷新缓存"><a href="#Step4-刷新缓存" class="headerlink" title="Step4 刷新缓存"></a>Step4 刷新缓存</h2><p><code>sudo /etc/init.d/network-manager restart</code></p>
+<hr>
+<p>即可解决github clone速度慢的问题</p>
+
                 
               </div>
             
@@ -297,7 +316,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%88%86%E4%BA%AB/" class="category-chain-item">分享</a>
+  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
   
   
 
@@ -312,9 +331,13 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%BC%96%E7%A8%8B/" class="print-no-link">#编程</a>
+        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
       
-        <a href="/tags/C%E8%AF%AD%E8%A8%80/" class="print-no-link">#C语言</a>
+        <a href="/tags/%E6%8A%80%E6%9C%AF%E5%90%91/" class="print-no-link">#技术向</a>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0/" class="print-no-link">#笔记</a>
+      
+        <a href="/tags/%E5%8A%A0%E9%80%9F/" class="print-no-link">#加速</a>
       
     </div>
   
@@ -326,8 +349,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>小猫跳圈</div>
-      <div>http://example.com/2023/12/01/学习笔记/小猫跳圈/</div>
+      <div>Ubuntu下git clone加速方法</div>
+      <div>http://example.com/2024/01/13/学习笔记/Ubuntu下git clone加速方法/</div>
     </div>
     <div class="license-meta">
       
@@ -339,7 +362,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月1日</div>
+          <div>2024年1月13日</div>
         </div>
       
       
@@ -371,18 +394,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%91%BD%E4%BB%A4/" title="Linux命令">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Linux命令</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%BA%9B%E7%BC%96%E7%A8%8B%E5%88%9D%E5%AD%A6%E5%B0%8F%E6%8A%80%E5%B7%A7/" title="一些编程初学小技巧">
-                        <span class="hidden-mobile">一些编程初学小技巧</span>
+                      <a href="/2023/12/14/%E6%97%A5%E8%AE%B0%E9%9A%8F%E6%83%B3/2023-12-11/" title="随想-2023-12-11">
+                        <span class="hidden-mobile">随想-2023-12-11</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -402,8 +419,8 @@
     
       <script type="text/javascript">
         var disqus_config = function() {
-          this.page.url = 'http://example.com/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/';
-          this.page.identifier = '/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/';
+          this.page.url = 'http://example.com/2024/01/13/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Ubuntu%E4%B8%8Bgit%20clone%E5%8A%A0%E9%80%9F%E6%96%B9%E6%B3%95/';
+          this.page.identifier = '/2024/01/13/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Ubuntu%E4%B8%8Bgit%20clone%E5%8A%A0%E9%80%9F%E6%96%B9%E6%B3%95/';
         };
         Fluid.utils.loadComments('#disqus_thread', function() {
           var d = document, s = d.createElement('script');
