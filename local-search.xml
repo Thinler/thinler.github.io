@@ -8,7 +8,7 @@
     <link href="/2024/01/22/%E6%97%A5%E8%AE%B0%E9%9A%8F%E6%83%B3/2024-1-22/"/>
     <url>/2024/01/22/%E6%97%A5%E8%AE%B0%E9%9A%8F%E6%83%B3/2024-1-22/</url>
     
-    <content type="html"><![CDATA[<h1 id="线上聊天中关于消息回复的对白思考"><a href="#线上聊天中关于消息回复的对白思考" class="headerlink" title="线上聊天中关于消息回复的对白思考"></a>线上聊天中关于消息回复的对白思考</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="线上聊天中关于消息回复的对白思考"><a href="#线上聊天中关于消息回复的对白思考" class="headerlink" title="线上聊天中关于消息回复的对白思考"></a>线上聊天中关于消息回复的对白思考</h1><p>和一位朋友聊到线上聊天的消息回复问题</p>]]></content>
     
     
     <categories>
@@ -91,6 +91,31 @@
   
   
   <entry>
+    <title>Travel Plan——Version 1.0</title>
+    <link href="/2023/12/01/others/Travel%20Plan/"/>
+    <url>/2023/12/01/others/Travel%20Plan/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Travel-Plan——Version-1-0"><a href="#Travel-Plan——Version-1-0" class="headerlink" title="Travel Plan——Version 1.0"></a>Travel Plan——Version 1.0</h1><p>前情提要—————————————&gt;&gt;&gt;：</p><p><a href="https://www.notion.so/2db718954e674870be254551bac1eed7?pvs=21">苟怀四方志，所在可游盘</a></p><h2 id="8-12"><a href="#8-12" class="headerlink" title="8.12"></a>8.12</h2><p>By Train    怀仁站—&gt;宁武站(K7807 Recommended)</p><p><img src="/img/photo_in_blogs/travel_plan/Untitled.png" alt="Untitled"></p><p>稍作整顿，享用早餐</p><p>约九点半出发，芦芽山北线景点</p><p>学生半价（so 要带<strong>学生证</strong>） </p><p>万年冰洞内部会冷，建议带个外套</p><p><img src="/img/photo_in_blogs/travel_plan/Untitled%201.png" alt="Untitled 1"></p><p>大概18：00结束第一天的游览，一小时车程—&gt;县城</p><p>晚餐  简单的娱乐活动 </p><p>休息</p><hr><h2 id="8-13"><a href="#8-13" class="headerlink" title="8.13"></a>8.13</h2><p>八点左右出发，西线景点</p><pre class="mermaid">graph TD      id1(情人谷)    id2(芦芽山)    id3(马仑草原)    id1-->id3    id3-->id2</pre><p><img src="/img/photo_in_blogs/travel_plan/Untitled2.png" alt="Untitled2"></p><p>精力允许 可以再去<em>汾河源头</em></p><p>then 返程</p><hr><h2 id="8-14"><a href="#8-14" class="headerlink" title="8.14"></a>8.14</h2><p>By Train  宁武站—&gt;忻州站    (此行程可安排在8.13下午，乘坐<em>4601</em>次列车，但当天下午的行程需简单压缩，以下仍按照8.14启程计划)</p><p><img src="/img/photo_in_blogs/travel_plan/Untitled3.png" alt="Untitled3"></p><p>忻州古城一日游</p><p>Then 返程</p><p><img src="/img/photo_in_blogs/travel_plan/Untitled4.png" alt="Untitled4"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>旅行计划</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>旅行</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Linux命令</title>
     <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%91%BD%E4%BB%A4/"/>
     <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%91%BD%E4%BB%A4/</url>
@@ -110,31 +135,6 @@
       <tag>Linux</tag>
       
       <tag>技术向</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Travel Plan——Version 1.0</title>
-    <link href="/2023/12/01/others/Travel%20Plan/"/>
-    <url>/2023/12/01/others/Travel%20Plan/</url>
-    
-    <content type="html"><![CDATA[<h1 id="Travel-Plan——Version-1-0"><a href="#Travel-Plan——Version-1-0" class="headerlink" title="Travel Plan——Version 1.0"></a>Travel Plan——Version 1.0</h1><p>前情提要—————————————&gt;&gt;&gt;：</p><p><a href="https://www.notion.so/2db718954e674870be254551bac1eed7?pvs=21">苟怀四方志，所在可游盘</a></p><h2 id="8-12"><a href="#8-12" class="headerlink" title="8.12"></a>8.12</h2><p>By Train    怀仁站—&gt;宁武站(K7807 Recommended)</p><p><img src="/img/photo_in_blogs/travel_plan/Untitled.png" alt="Untitled"></p><p>稍作整顿，享用早餐</p><p>约九点半出发，芦芽山北线景点</p><p>学生半价（so 要带<strong>学生证</strong>） </p><p>万年冰洞内部会冷，建议带个外套</p><p><img src="/img/photo_in_blogs/travel_plan/Untitled%201.png" alt="Untitled 1"></p><p>大概18：00结束第一天的游览，一小时车程—&gt;县城</p><p>晚餐  简单的娱乐活动 </p><p>休息</p><hr><h2 id="8-13"><a href="#8-13" class="headerlink" title="8.13"></a>8.13</h2><p>八点左右出发，西线景点</p><pre class="mermaid">graph TD      id1(情人谷)    id2(芦芽山)    id3(马仑草原)    id1-->id3    id3-->id2</pre><p><img src="/img/photo_in_blogs/travel_plan/Untitled2.png" alt="Untitled2"></p><p>精力允许 可以再去<em>汾河源头</em></p><p>then 返程</p><hr><h2 id="8-14"><a href="#8-14" class="headerlink" title="8.14"></a>8.14</h2><p>By Train  宁武站—&gt;忻州站    (此行程可安排在8.13下午，乘坐<em>4601</em>次列车，但当天下午的行程需简单压缩，以下仍按照8.14启程计划)</p><p><img src="/img/photo_in_blogs/travel_plan/Untitled3.png" alt="Untitled3"></p><p>忻州古城一日游</p><p>Then 返程</p><p><img src="/img/photo_in_blogs/travel_plan/Untitled4.png" alt="Untitled4"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>旅行计划</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>旅行</tag>
       
     </tags>
     
@@ -282,33 +282,6 @@
   
   
   <entry>
-    <title>在细雨中呼喊</title>
-    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9C%A8%E7%BB%86%E9%9B%A8%E4%B8%AD%E5%91%BC%E5%94%A4/"/>
-    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9C%A8%E7%BB%86%E9%9B%A8%E4%B8%AD%E5%91%BC%E5%94%A4/</url>
-    
-    <content type="html"><![CDATA[<h1 id="在细雨中呼喊"><a href="#在细雨中呼喊" class="headerlink" title="在细雨中呼喊"></a>在细雨中呼喊</h1><blockquote><p>因为当人们无法选择自己的未来时，就会珍惜自己选择过去的权利。回忆的动人之处就在于可以重新选择，可以将那些毫无关联的往事重新组合起来，从而获得了全新的过去，而且还可以不断地更换自己的组合，以求获得不一样的经历。</p></blockquote><blockquote><p>于是我找到了生与死之间的不同，活着的人是无法看清太阳的，只有临死之人的眼睛才能穿越光芒看清太阳。</p></blockquote><blockquote><p>“音乐是从语言消失的地方开始的。”</p></blockquote><blockquote><p>我不再装模作样地拥有很多朋友，而是回到了孤单之中，以真正的我开始了独自的生活。有时我也会因为寂寞而难以忍受空虚的折磨，但我宁愿以这样的方式来维护自己的自尊，也不愿以耻辱为代价去换取那种表面的朋友。</p></blockquote><blockquote><p>总之当我们凶狠地对待这个世界时，这个世界突然变得温文尔雅了。</p></blockquote><blockquote><p>生命在面对消亡时，展现了对往昔的无限依恋。</p></blockquote><blockquote><p>她只是沉浸在我当时年龄还无法理解的自我与孤独之中，她站在生与死的界线上，同时被两者抛弃。</p></blockquote><blockquote><p>任何孩子都不会把自己的以后想得糟糕起来，现实还没有这么训练他们。</p></blockquote><blockquote><p>“你快去让他闭嘴。”<br>我怎么能让一个遭受不幸的人闭上嘴巴呢？</p></blockquote><blockquote><p>他开始想象他的母亲，在无依无靠的时候，这个只有九岁的孩子，想象没有面对未来，而是过早地通往了过去。</p></blockquote><blockquote><p>事实上我过去和现在，都不是那种愿为信念去死的人，我是那样崇拜生命在我体内流淌的声音。除了生命本身，我再也找不出活下去的另外理由了。</p></blockquote>]]></content>
-    
-    
-    <categories>
-      
-      <category>读书笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>小说</tag>
-      
-      <tag>余华</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>悉达多</title>
     <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%82%89%E8%BE%BE%E5%A4%9A/"/>
     <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%82%89%E8%BE%BE%E5%A4%9A/</url>
@@ -338,11 +311,11 @@
   
   
   <entry>
-    <title>我与地坛</title>
-    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%88%91%E4%B8%8E%E5%9C%B0%E5%9D%9B/"/>
-    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%88%91%E4%B8%8E%E5%9C%B0%E5%9D%9B/</url>
+    <title>在细雨中呼喊</title>
+    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9C%A8%E7%BB%86%E9%9B%A8%E4%B8%AD%E5%91%BC%E5%94%A4/"/>
+    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9C%A8%E7%BB%86%E9%9B%A8%E4%B8%AD%E5%91%BC%E5%94%A4/</url>
     
-    <content type="html"><![CDATA[<h1 id="我与地坛"><a href="#我与地坛" class="headerlink" title="我与地坛"></a>我与地坛</h1><blockquote><p>一个人，出生了，这就不再是一个可以辩论的问题，而只是上帝交给他的一个事实；上帝在交给我们这件事实的时候，已经顺便保证了它的结果，所以死是一件不必急于求成的事，死是一个必然会降临的节日。</p></blockquote><blockquote><p>但是太阳，它每时每刻都是夕阳也都是旭日。当它熄灭着走下山去收尽苍凉残照之际，正是它在另一面燃烧着爬上山巅布散烈烈朝辉之时。那一天，我也将沉静着走下山去，扶着我的拐杖。有一天，在某一处山洼里，势必会跑上来一个欢蹦的孩子，抱着他的玩具。<br>当然，那不是我。<br>但是，那不是我吗？</p></blockquote><blockquote><p>在科学的迷茫之处，在命运的混沌之点，人惟有乞灵于自己的精神。不管我们信仰什么，都是我们自己的精神的描述和引导。</p></blockquote><blockquote><p>又是秋天，妹妹推我去北海看了菊花。黄色的花淡雅，白色的花高洁，紫红色的花热烈而深沉，泼泼洒洒，秋风中正开得烂漫。我懂得母亲没有说完的话。妹妹也懂。我俩在一块儿，要好好儿活……</p></blockquote><blockquote><p>一些当时看去不太要紧的事却能长久扎根在记忆里。它们一向都在那儿安睡，偶尔醒一下，睁眼看看，见你忙着（升迁或者遁世）就又睡去，很多年里它们轻得仿佛不在。千百次机缘错过，终于一天又看见它们，看见时光把很多所谓人生大事消磨殆尽，而它们坚定不移固守在那儿，沉沉地有了无比的重量。比如一张旧日的照片，拍时并不经意，随手放在哪儿，多年中甚至不记得有它，可忽然一天整理旧物时碰见了它，拂去尘埃，竟会感到那是你的由来也是你的投奔；而很多郑重其事的留影，却已忘记是在哪儿和为了什么。</p></blockquote><blockquote><p>山和水都是墙，天和地都是墙，时间和空间都是墙，命运是无穷的限制，上帝的秘密是不尽的墙。</p></blockquote><blockquote><p>探秘的欲望终于要探到意义的墙下。</p></blockquote><blockquote><p>民歌以真诚和素朴为美。真诚而素朴的忧愁，真诚而素朴的爱恋，真诚而素朴的希冀与憧憬，变成曲调，贴着山走，沿着水流，顺着天游信着天游；变成唱词，贴着心走沿着心流顺着心游信着心游。</p></blockquote><blockquote><p>一代人与一代人的历史是不同的，这是代沟的永恒保障。沟不是坏东西，有山有水就有沟，地球上如果都是那么平展展的，虽然希望那都是良田但事实那很可能全是沙漠。</p></blockquote><blockquote><p>任何以自己的观念干涉别人爱情的行为，都只是一股逆流。</p></blockquote><blockquote><p>也千万别把人和意义分割开来理解。不是人有欲望，而是人即欲望。这欲望就是能量，是能量就是运动，是运动就走去前面或者未来。</p></blockquote><blockquote><p>既然是梦想不妨就让它完美些罢。何必连梦想也那么拘谨那么谦虚呢？我便如醉如痴并且极端自私自利地梦想下去。</p></blockquote><blockquote><p>幸福感不是能一次给够的，一次幸福感能维持多久这不好计算，但日子肯定比它长，比它长的日子却永远要依靠着它。</p></blockquote><blockquote><p>大劫大难之后人不该失去锐气，不该失去热度，你镇定了但仍在燃烧，你平稳了却更加浩荡。</p></blockquote><blockquote><p>过程！对，生命的意义就在于你能创造这过程的美好与精彩，生命的价值就在于你能够镇静而又激动地欣赏这过程的美丽与悲壮。</p></blockquote><blockquote><p>人是一点一点死去的，先是这儿，再是那儿，一步一步终于完成。</p></blockquote><blockquote><p>钟声沉稳、悠扬、飘飘荡荡，连接起晚霞与初月，扩展到天的深处，或地的尽头……</p></blockquote><blockquote><p>人的故乡，并不止于一块特定的土地，而是一种辽阔无比的心情，不受空间和时间的限制；这心情一经唤起，就是你已经回到了故乡。</p></blockquote><blockquote><p>描摹实际并不是写作的根本期冀。</p></blockquote><blockquote><p>而老家在我的印象里一向虚虚幻幻，更多的是一种情绪，一种声音，甚或一种光线一种气息，与一个实际的地点相距太远。</p></blockquote><blockquote><p>眺望越是美好，越是看见自己的丑弱；越是无边，越看到限制。</p></blockquote><blockquote><p>丑弱的人和圆满的神之间，是信者永远的路。这样，我听见，那犹豫的音乐是提醒着一件事：此岸永远是残缺的，否则彼岸就要坍塌。这大约就是佛之慈悲的那一个“悲”字吧。慈呢，便是在这一条无尽无休的路上行走，所要有的持念。</p></blockquote><blockquote><p>记忆，所以是一个牢笼。印象是牢笼以外的天空。</p></blockquote><blockquote><p>眺望就是回想。重病之时整天是梦。梦见熟悉的人、熟悉的往事，也梦见陌生的人和完全陌生的景物。偶尔醒来，窗外是无边的暗夜，是恍惚的晴空，是心里的怀疑：<br>谁说我没有死过？<br>出生以前，太阳<br>已无数次起落<br>悠久的时光被悠久的虚无吞并<br>又以我生日的名义<br>卷土重来。</p></blockquote><blockquote><p>午后，如果阳光静寂<br>你是否能听出<br>往日已归去哪里？<br>在光的前端，或思之极处<br>在时间被忽略的存在之中<br>生死同一。</p></blockquote><blockquote><p>有为，与爱情，原是风马牛不相及的两个领域。但暂时，亦可在心中长久，而写作，却永远地不能与爱情无关。</p></blockquote><blockquote><p>这一段童年似乎永远都不会长大，因为不管何年何月，这世上总是有着无处可去的童年。</p></blockquote><blockquote><p>良心，其实什么都明白。不过，明白，未必就能阻止人性的罪恶。多年来，我一直躲避着那罪恶的一刻。但其实，那是永远都躲避不开的。</p></blockquote><blockquote><p>历史常就是这样被割断着、湮灭着。梅娘好像从不存在。一个人，生命中最美丽的时光竟似消散得无影无踪。一个人丰饶的心魂，竟可以沉默到无声无息。</p></blockquote><blockquote><p>他们又不懂了，春天要的就是这个，要的就是张扬。<br>大人们其实忘了，春天莫不如此，各位年轻时也是一样。</p></blockquote><blockquote><p>料必母亲是懂得，世上有一种东西，其价值远远超过它的价格。这儿的价值，并不止于“物化劳动”，还物化着春天整整一个季节的能量。</p></blockquote><blockquote><p>因而想想吧，灵魂一到人间便被囚入有限的躯体，那灵魂原本就是多少梦想的埋藏，那躯体原本就是多少欲望的储备！</p></blockquote><blockquote><p>设若枝桠折断，春天惟努力生长。设若花朵凋残，春天惟含苞再放。设若暴雪狂风，但只要春天来了，天地间总会飘荡起焦渴的呼喊。</p></blockquote><blockquote><p>那个伤残的春天，一个伤残的青年终于看见了伤残。<br>看见了伤残，却摆脱不了春天。春风强劲也是一座牢笼，一副枷锁，一处炼狱，一条命定的路途。</p></blockquote><blockquote><p>对爱者而言，爱情怎么会是悲剧？对春天而言，秋天是它的悲剧吗？</p></blockquote><blockquote><p>秋风，绝非肃杀之气，那是一群成长着的魂灵，成长着，由远而近一路壮大。</p></blockquote><blockquote><p>现在我看虚空中也有一条界线，靠想念去迈过它，只要一迈过它便有清纯之气扑面而来。我已不在地坛，地坛在我。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="在细雨中呼喊"><a href="#在细雨中呼喊" class="headerlink" title="在细雨中呼喊"></a>在细雨中呼喊</h1><blockquote><p>因为当人们无法选择自己的未来时，就会珍惜自己选择过去的权利。回忆的动人之处就在于可以重新选择，可以将那些毫无关联的往事重新组合起来，从而获得了全新的过去，而且还可以不断地更换自己的组合，以求获得不一样的经历。</p></blockquote><blockquote><p>于是我找到了生与死之间的不同，活着的人是无法看清太阳的，只有临死之人的眼睛才能穿越光芒看清太阳。</p></blockquote><blockquote><p>“音乐是从语言消失的地方开始的。”</p></blockquote><blockquote><p>我不再装模作样地拥有很多朋友，而是回到了孤单之中，以真正的我开始了独自的生活。有时我也会因为寂寞而难以忍受空虚的折磨，但我宁愿以这样的方式来维护自己的自尊，也不愿以耻辱为代价去换取那种表面的朋友。</p></blockquote><blockquote><p>总之当我们凶狠地对待这个世界时，这个世界突然变得温文尔雅了。</p></blockquote><blockquote><p>生命在面对消亡时，展现了对往昔的无限依恋。</p></blockquote><blockquote><p>她只是沉浸在我当时年龄还无法理解的自我与孤独之中，她站在生与死的界线上，同时被两者抛弃。</p></blockquote><blockquote><p>任何孩子都不会把自己的以后想得糟糕起来，现实还没有这么训练他们。</p></blockquote><blockquote><p>“你快去让他闭嘴。”<br>我怎么能让一个遭受不幸的人闭上嘴巴呢？</p></blockquote><blockquote><p>他开始想象他的母亲，在无依无靠的时候，这个只有九岁的孩子，想象没有面对未来，而是过早地通往了过去。</p></blockquote><blockquote><p>事实上我过去和现在，都不是那种愿为信念去死的人，我是那样崇拜生命在我体内流淌的声音。除了生命本身，我再也找不出活下去的另外理由了。</p></blockquote>]]></content>
     
     
     <categories>
@@ -354,11 +327,9 @@
     
     <tags>
       
-      <tag>哲思</tag>
+      <tag>小说</tag>
       
-      <tag>文学</tag>
-      
-      <tag>史铁生</tag>
+      <tag>余华</tag>
       
     </tags>
     
@@ -386,6 +357,35 @@
       <tag>文学</tag>
       
       <tag>风土人情</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>我与地坛</title>
+    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%88%91%E4%B8%8E%E5%9C%B0%E5%9D%9B/"/>
+    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%88%91%E4%B8%8E%E5%9C%B0%E5%9D%9B/</url>
+    
+    <content type="html"><![CDATA[<h1 id="我与地坛"><a href="#我与地坛" class="headerlink" title="我与地坛"></a>我与地坛</h1><blockquote><p>一个人，出生了，这就不再是一个可以辩论的问题，而只是上帝交给他的一个事实；上帝在交给我们这件事实的时候，已经顺便保证了它的结果，所以死是一件不必急于求成的事，死是一个必然会降临的节日。</p></blockquote><blockquote><p>但是太阳，它每时每刻都是夕阳也都是旭日。当它熄灭着走下山去收尽苍凉残照之际，正是它在另一面燃烧着爬上山巅布散烈烈朝辉之时。那一天，我也将沉静着走下山去，扶着我的拐杖。有一天，在某一处山洼里，势必会跑上来一个欢蹦的孩子，抱着他的玩具。<br>当然，那不是我。<br>但是，那不是我吗？</p></blockquote><blockquote><p>在科学的迷茫之处，在命运的混沌之点，人惟有乞灵于自己的精神。不管我们信仰什么，都是我们自己的精神的描述和引导。</p></blockquote><blockquote><p>又是秋天，妹妹推我去北海看了菊花。黄色的花淡雅，白色的花高洁，紫红色的花热烈而深沉，泼泼洒洒，秋风中正开得烂漫。我懂得母亲没有说完的话。妹妹也懂。我俩在一块儿，要好好儿活……</p></blockquote><blockquote><p>一些当时看去不太要紧的事却能长久扎根在记忆里。它们一向都在那儿安睡，偶尔醒一下，睁眼看看，见你忙着（升迁或者遁世）就又睡去，很多年里它们轻得仿佛不在。千百次机缘错过，终于一天又看见它们，看见时光把很多所谓人生大事消磨殆尽，而它们坚定不移固守在那儿，沉沉地有了无比的重量。比如一张旧日的照片，拍时并不经意，随手放在哪儿，多年中甚至不记得有它，可忽然一天整理旧物时碰见了它，拂去尘埃，竟会感到那是你的由来也是你的投奔；而很多郑重其事的留影，却已忘记是在哪儿和为了什么。</p></blockquote><blockquote><p>山和水都是墙，天和地都是墙，时间和空间都是墙，命运是无穷的限制，上帝的秘密是不尽的墙。</p></blockquote><blockquote><p>探秘的欲望终于要探到意义的墙下。</p></blockquote><blockquote><p>民歌以真诚和素朴为美。真诚而素朴的忧愁，真诚而素朴的爱恋，真诚而素朴的希冀与憧憬，变成曲调，贴着山走，沿着水流，顺着天游信着天游；变成唱词，贴着心走沿着心流顺着心游信着心游。</p></blockquote><blockquote><p>一代人与一代人的历史是不同的，这是代沟的永恒保障。沟不是坏东西，有山有水就有沟，地球上如果都是那么平展展的，虽然希望那都是良田但事实那很可能全是沙漠。</p></blockquote><blockquote><p>任何以自己的观念干涉别人爱情的行为，都只是一股逆流。</p></blockquote><blockquote><p>也千万别把人和意义分割开来理解。不是人有欲望，而是人即欲望。这欲望就是能量，是能量就是运动，是运动就走去前面或者未来。</p></blockquote><blockquote><p>既然是梦想不妨就让它完美些罢。何必连梦想也那么拘谨那么谦虚呢？我便如醉如痴并且极端自私自利地梦想下去。</p></blockquote><blockquote><p>幸福感不是能一次给够的，一次幸福感能维持多久这不好计算，但日子肯定比它长，比它长的日子却永远要依靠着它。</p></blockquote><blockquote><p>大劫大难之后人不该失去锐气，不该失去热度，你镇定了但仍在燃烧，你平稳了却更加浩荡。</p></blockquote><blockquote><p>过程！对，生命的意义就在于你能创造这过程的美好与精彩，生命的价值就在于你能够镇静而又激动地欣赏这过程的美丽与悲壮。</p></blockquote><blockquote><p>人是一点一点死去的，先是这儿，再是那儿，一步一步终于完成。</p></blockquote><blockquote><p>钟声沉稳、悠扬、飘飘荡荡，连接起晚霞与初月，扩展到天的深处，或地的尽头……</p></blockquote><blockquote><p>人的故乡，并不止于一块特定的土地，而是一种辽阔无比的心情，不受空间和时间的限制；这心情一经唤起，就是你已经回到了故乡。</p></blockquote><blockquote><p>描摹实际并不是写作的根本期冀。</p></blockquote><blockquote><p>而老家在我的印象里一向虚虚幻幻，更多的是一种情绪，一种声音，甚或一种光线一种气息，与一个实际的地点相距太远。</p></blockquote><blockquote><p>眺望越是美好，越是看见自己的丑弱；越是无边，越看到限制。</p></blockquote><blockquote><p>丑弱的人和圆满的神之间，是信者永远的路。这样，我听见，那犹豫的音乐是提醒着一件事：此岸永远是残缺的，否则彼岸就要坍塌。这大约就是佛之慈悲的那一个“悲”字吧。慈呢，便是在这一条无尽无休的路上行走，所要有的持念。</p></blockquote><blockquote><p>记忆，所以是一个牢笼。印象是牢笼以外的天空。</p></blockquote><blockquote><p>眺望就是回想。重病之时整天是梦。梦见熟悉的人、熟悉的往事，也梦见陌生的人和完全陌生的景物。偶尔醒来，窗外是无边的暗夜，是恍惚的晴空，是心里的怀疑：<br>谁说我没有死过？<br>出生以前，太阳<br>已无数次起落<br>悠久的时光被悠久的虚无吞并<br>又以我生日的名义<br>卷土重来。</p></blockquote><blockquote><p>午后，如果阳光静寂<br>你是否能听出<br>往日已归去哪里？<br>在光的前端，或思之极处<br>在时间被忽略的存在之中<br>生死同一。</p></blockquote><blockquote><p>有为，与爱情，原是风马牛不相及的两个领域。但暂时，亦可在心中长久，而写作，却永远地不能与爱情无关。</p></blockquote><blockquote><p>这一段童年似乎永远都不会长大，因为不管何年何月，这世上总是有着无处可去的童年。</p></blockquote><blockquote><p>良心，其实什么都明白。不过，明白，未必就能阻止人性的罪恶。多年来，我一直躲避着那罪恶的一刻。但其实，那是永远都躲避不开的。</p></blockquote><blockquote><p>历史常就是这样被割断着、湮灭着。梅娘好像从不存在。一个人，生命中最美丽的时光竟似消散得无影无踪。一个人丰饶的心魂，竟可以沉默到无声无息。</p></blockquote><blockquote><p>他们又不懂了，春天要的就是这个，要的就是张扬。<br>大人们其实忘了，春天莫不如此，各位年轻时也是一样。</p></blockquote><blockquote><p>料必母亲是懂得，世上有一种东西，其价值远远超过它的价格。这儿的价值，并不止于“物化劳动”，还物化着春天整整一个季节的能量。</p></blockquote><blockquote><p>因而想想吧，灵魂一到人间便被囚入有限的躯体，那灵魂原本就是多少梦想的埋藏，那躯体原本就是多少欲望的储备！</p></blockquote><blockquote><p>设若枝桠折断，春天惟努力生长。设若花朵凋残，春天惟含苞再放。设若暴雪狂风，但只要春天来了，天地间总会飘荡起焦渴的呼喊。</p></blockquote><blockquote><p>那个伤残的春天，一个伤残的青年终于看见了伤残。<br>看见了伤残，却摆脱不了春天。春风强劲也是一座牢笼，一副枷锁，一处炼狱，一条命定的路途。</p></blockquote><blockquote><p>对爱者而言，爱情怎么会是悲剧？对春天而言，秋天是它的悲剧吗？</p></blockquote><blockquote><p>秋风，绝非肃杀之气，那是一群成长着的魂灵，成长着，由远而近一路壮大。</p></blockquote><blockquote><p>现在我看虚空中也有一条界线，靠想念去迈过它，只要一迈过它便有清纯之气扑面而来。我已不在地坛，地坛在我。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>哲思</tag>
+      
+      <tag>文学</tag>
+      
+      <tag>史铁生</tag>
       
     </tags>
     
@@ -450,6 +450,35 @@
   
   
   <entry>
+    <title>飞鸟集</title>
+    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%A3%9E%E9%B8%9F%E9%9B%86/"/>
+    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%A3%9E%E9%B8%9F%E9%9B%86/</url>
+    
+    <content type="html"><![CDATA[<h1 id="飞鸟集"><a href="#飞鸟集" class="headerlink" title="飞鸟集"></a>飞鸟集</h1><blockquote><p>If you shed tears when you miss the sun, you also miss the stars.<br> <br>如果错过了太阳时你流了泪，那么你也要错过群星了。</p></blockquote><blockquote><p>The echo mocks her origin to prove she is the original.<br> <br>回声嘲笑着她的原声，以证明她是原声。</p></blockquote><blockquote><p>Dream is a wife who must talk. Sleep is a husband who silently suffers.<br> <br>梦是一个一定要谈话的妻子。<br>睡眠是一个默默地忍受的丈夫。</p></blockquote><blockquote><p>“In the moon thou sendest thy love letters to me,” said the night to the sun.<br>“I leave my answers in tears upon the grass.”<br> <br>夜对太阳说道：“在月亮中，你送了你的情书给我。”<br>“我已在绿草上留下我的流着泪点的回答了。”</p></blockquote><blockquote><p>Not hammer-strokes, but dance of the water sings the pebbles into perfection.<br> <br>不是槌的打击，乃是水的载歌载舞，使鹅卵石臻于完美。</p></blockquote><blockquote><p>If you shut your door to all errors truth will be shut out.<br> <br>如果你把所有的错误都关在门外时，真理也要被关在外面了。</p></blockquote><blockquote><p>The leaf becomes flower when it loves. The flower becomes fruit when it worships.<br> <br>绿叶恋爱时便成了花。<br>花崇拜时便成了果实。</p></blockquote><blockquote><p>Let me think that there is one among those stars that guides my life through the dark unknown.<br> <br>让我设想，在群星之中，有一粒星是指导着我的生命通过不可知的黑暗的。</p></blockquote><blockquote><p>I have my stars in the sky, but oh for my little lamp unlit in my house.<br> <br>我有群星在天上，<br>但是，唉，我屋里的小灯却没有点亮。</p></blockquote><blockquote><p>By plucking her petals you do not gather the beauty of the flower.<br> <br>采着花瓣时，得不到花的美丽。</p></blockquote><blockquote><p>The world has kissed my soul with its pain, asking for its return in songs.<br> <br>世界以它的痛苦同我接吻，而要求歌声做报酬。</p></blockquote><blockquote><p>A mind all logic is like a knife all blade. It makes the hand bleed that uses it.<br> <br>全是理智的心，恰如一柄全是锋刃的刀。<br>叫使用它的人手上流血。</p></blockquote><blockquote><p>Let my doing nothing when I have nothing to do become untroubled in its depth of peace like the evening in the seashore when the water is silent.<br> <br>当我没有什么事做时，便让我不做什么事，不受骚扰地沉入安静深处吧，一如那海水沉默时海边的暮色。</p></blockquote><blockquote><p>Night’s darkness is a bag that bursts with the gold of the dawn.<br> <br>夜之黑暗是一只口袋，盛满了发出黎明的金光的口袋。</p></blockquote><blockquote><p>The service of the fruit is precious, the service of the flower is sweet, but let my service be the service of the leaves in its shade of humble devotion.<br> <br>果实的事业是尊贵的，花的事业是甜美的，但是让我做叶的事业罢，叶是谦逊地专心地垂着绿荫[1]的。</p></blockquote><blockquote><p>In heart’s perspective the distance looms large.<br> <br>在心的远景里，那相隔的距离显得更广阔了。</p></blockquote><blockquote><p>The moon has her light all over the sky, her dark spots to herself.<br> <br>月儿把她的光明遍照在天上，却留着她的黑斑给她自己。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>哲思</tag>
+      
+      <tag>诗</tag>
+      
+      <tag>泰戈尔</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>荒原狼</title>
     <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8D%92%E5%8E%9F%E7%8B%BC/"/>
     <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8D%92%E5%8E%9F%E7%8B%BC/</url>
@@ -498,35 +527,6 @@
       <tag>历史</tag>
       
       <tag>马伯庸</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>飞鸟集</title>
-    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%A3%9E%E9%B8%9F%E9%9B%86/"/>
-    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%A3%9E%E9%B8%9F%E9%9B%86/</url>
-    
-    <content type="html"><![CDATA[<h1 id="飞鸟集"><a href="#飞鸟集" class="headerlink" title="飞鸟集"></a>飞鸟集</h1><blockquote><p>If you shed tears when you miss the sun, you also miss the stars.<br> <br>如果错过了太阳时你流了泪，那么你也要错过群星了。</p></blockquote><blockquote><p>The echo mocks her origin to prove she is the original.<br> <br>回声嘲笑着她的原声，以证明她是原声。</p></blockquote><blockquote><p>Dream is a wife who must talk. Sleep is a husband who silently suffers.<br> <br>梦是一个一定要谈话的妻子。<br>睡眠是一个默默地忍受的丈夫。</p></blockquote><blockquote><p>“In the moon thou sendest thy love letters to me,” said the night to the sun.<br>“I leave my answers in tears upon the grass.”<br> <br>夜对太阳说道：“在月亮中，你送了你的情书给我。”<br>“我已在绿草上留下我的流着泪点的回答了。”</p></blockquote><blockquote><p>Not hammer-strokes, but dance of the water sings the pebbles into perfection.<br> <br>不是槌的打击，乃是水的载歌载舞，使鹅卵石臻于完美。</p></blockquote><blockquote><p>If you shut your door to all errors truth will be shut out.<br> <br>如果你把所有的错误都关在门外时，真理也要被关在外面了。</p></blockquote><blockquote><p>The leaf becomes flower when it loves. The flower becomes fruit when it worships.<br> <br>绿叶恋爱时便成了花。<br>花崇拜时便成了果实。</p></blockquote><blockquote><p>Let me think that there is one among those stars that guides my life through the dark unknown.<br> <br>让我设想，在群星之中，有一粒星是指导着我的生命通过不可知的黑暗的。</p></blockquote><blockquote><p>I have my stars in the sky, but oh for my little lamp unlit in my house.<br> <br>我有群星在天上，<br>但是，唉，我屋里的小灯却没有点亮。</p></blockquote><blockquote><p>By plucking her petals you do not gather the beauty of the flower.<br> <br>采着花瓣时，得不到花的美丽。</p></blockquote><blockquote><p>The world has kissed my soul with its pain, asking for its return in songs.<br> <br>世界以它的痛苦同我接吻，而要求歌声做报酬。</p></blockquote><blockquote><p>A mind all logic is like a knife all blade. It makes the hand bleed that uses it.<br> <br>全是理智的心，恰如一柄全是锋刃的刀。<br>叫使用它的人手上流血。</p></blockquote><blockquote><p>Let my doing nothing when I have nothing to do become untroubled in its depth of peace like the evening in the seashore when the water is silent.<br> <br>当我没有什么事做时，便让我不做什么事，不受骚扰地沉入安静深处吧，一如那海水沉默时海边的暮色。</p></blockquote><blockquote><p>Night’s darkness is a bag that bursts with the gold of the dawn.<br> <br>夜之黑暗是一只口袋，盛满了发出黎明的金光的口袋。</p></blockquote><blockquote><p>The service of the fruit is precious, the service of the flower is sweet, but let my service be the service of the leaves in its shade of humble devotion.<br> <br>果实的事业是尊贵的，花的事业是甜美的，但是让我做叶的事业罢，叶是谦逊地专心地垂着绿荫[1]的。</p></blockquote><blockquote><p>In heart’s perspective the distance looms large.<br> <br>在心的远景里，那相隔的距离显得更广阔了。</p></blockquote><blockquote><p>The moon has her light all over the sky, her dark spots to herself.<br> <br>月儿把她的光明遍照在天上，却留着她的黑斑给她自己。</p></blockquote>]]></content>
-    
-    
-    <categories>
-      
-      <category>读书笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>哲思</tag>
-      
-      <tag>诗</tag>
-      
-      <tag>泰戈尔</tag>
       
     </tags>
     
