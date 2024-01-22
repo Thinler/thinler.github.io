@@ -4,11 +4,38 @@
   
   
   <entry>
+    <title>线上聊天中关于消息回复的对白思考</title>
+    <link href="/2024/01/22/%E6%97%A5%E8%AE%B0%E9%9A%8F%E6%83%B3/2024-1-22/"/>
+    <url>/2024/01/22/%E6%97%A5%E8%AE%B0%E9%9A%8F%E6%83%B3/2024-1-22/</url>
+    
+    <content type="html"><![CDATA[<h1 id="线上聊天中关于消息回复的对白思考"><a href="#线上聊天中关于消息回复的对白思考" class="headerlink" title="线上聊天中关于消息回复的对白思考"></a>线上聊天中关于消息回复的对白思考</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>日记随想</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>哲思</tag>
+      
+      <tag>随想</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Ubuntu下git clone加速方法</title>
     <link href="/2024/01/13/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Ubuntu%E4%B8%8Bgit%20clone%E5%8A%A0%E9%80%9F%E6%96%B9%E6%B3%95/"/>
     <url>/2024/01/13/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Ubuntu%E4%B8%8Bgit%20clone%E5%8A%A0%E9%80%9F%E6%96%B9%E6%B3%95/</url>
     
-    <content type="html"><![CDATA[<h1 id="Ubuntu下git-clone加速方法"><a href="#Ubuntu下git-clone加速方法" class="headerlink" title="Ubuntu下git clone加速方法"></a>Ubuntu下git clone加速方法</h1><ul><li>环境 ：Ubuntu 20 in Vmare</li><li>问题：git clone复制github仓库时命令速度慢、无法访问</li><li>解决：修改host文件</li></ul><h2 id="Step1-获取github-IP地址"><a href="#Step1-获取github-IP地址" class="headerlink" title="Step1 获取github IP地址"></a>Step1 获取github IP地址</h2><p><code>nslookup github.com</code></p><figure class="highlight plaintext"><figcaption><span>github.com</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs nslookup">Server:         127.0.0.53<br>Address:        127.0.0.53#53<br><br>Non-authoritative answer:<br>Name:   github.com<br>Address: 20.205.243.166<br>Name:   github.com<br>Address: 2404:6800:4000::c01e:ff70<br>Name:   github.com<br>Address: 2404:6800:4000::c01e:ff71```<br></code></pre></td></tr></table></figure><h2 id="Step2-获取github-global-ssl-fastly-net的IP地址"><a href="#Step2-获取github-global-ssl-fastly-net的IP地址" class="headerlink" title="Step2 获取github.global.ssl.fastly.net的IP地址"></a>Step2 获取github.<a href="https://so.csdn.net/so/search?q=global&spm=1001.2101.3001.7020">global</a>.ssl.fastly.net的IP地址</h2><p><code>nslookup github.global.ssl.fastly.net</code></p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">Server:</span>         <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.53</span><br><span class="hljs-attr">Address:</span>        <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.53</span><span class="hljs-comment">#53</span><br><br><span class="hljs-attr">Non-authoritative answer:</span><br><span class="hljs-attr">Name:</span>   <span class="hljs-string">github.global.ssl.fastly.net</span><br><span class="hljs-attr">Address:</span> <span class="hljs-number">104.244</span><span class="hljs-number">.46</span><span class="hljs-number">.21</span><br><span class="hljs-attr">Name:</span>   <span class="hljs-string">github.global.ssl.fastly.net</span><br><span class="hljs-attr">Address:</span> <span class="hljs-number">2001</span><span class="hljs-string">::68f4:2e3f</span><br></code></pre></td></tr></table></figure><h2 id="Step3-访问host文件并修改"><a href="#Step3-访问host文件并修改" class="headerlink" title="Step3 访问host文件并修改"></a>Step3 访问host文件并修改</h2><p><code>sudo vim /etc/hosts</code></p><p>在文件最后一行加上</p><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">#github<br><span class="hljs-number">104.244.46.21</span> http://github.global.ssl.fastly.net<br><span class="hljs-number">104.244.46.21</span> https://github.global.ssl.fastly.net<br><br><span class="hljs-number">20.205.243.166</span> http://github.com<br><span class="hljs-number">20.205.243.166</span> https://github.com<br><br></code></pre></td></tr></table></figure><h2 id="Step4-刷新缓存"><a href="#Step4-刷新缓存" class="headerlink" title="Step4 刷新缓存"></a>Step4 刷新缓存</h2><p><code>sudo /etc/init.d/network-manager restart</code></p><hr><p>即可解决github clone速度慢的问题</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Ubuntu下git-clone加速方法"><a href="#Ubuntu下git-clone加速方法" class="headerlink" title="Ubuntu下git clone加速方法"></a>Ubuntu下git clone加速方法</h1><ul><li>环境 ：Ubuntu 20 in Vmare</li><li>问题：git clone复制github仓库时命令速度慢、无法访问</li><li>解决：修改host文件</li></ul><h2 id="Step1-获取github-IP地址"><a href="#Step1-获取github-IP地址" class="headerlink" title="Step1 获取github IP地址"></a>Step1 获取github IP地址</h2><p><code>nslookup github.com</code></p><figure class="highlight plaintext"><figcaption><span>github.com</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs nslookup">Server:         127.0.0.53<br>Address:        127.0.0.53#53<br><br>Non-authoritative answer:<br>Name:   github.com<br>Address: 20.205.243.166<br>Name:   github.com<br>Address: 2404:6800:4000::c01e:ff70<br>Name:   github.com<br>Address: 2404:6800:4000::c01e:ff71```<br></code></pre></td></tr></table></figure><h2 id="Step2-获取github-global-ssl-fastly-net的IP地址"><a href="#Step2-获取github-global-ssl-fastly-net的IP地址" class="headerlink" title="Step2 获取github.global.ssl.fastly.net的IP地址"></a>Step2 获取github.<a href="https://so.csdn.net/so/search?q=global&spm=1001.2101.3001.7020">global</a>.ssl.fastly.net的IP地址</h2><p><code>nslookup github.global.ssl.fastly.net</code></p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">Server:</span>         <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.53</span><br><span class="hljs-attr">Address:</span>        <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.53</span><span class="hljs-comment">#53</span><br><br><span class="hljs-attr">Non-authoritative answer:</span><br><span class="hljs-attr">Name:</span>   <span class="hljs-string">github.global.ssl.fastly.net</span><br><span class="hljs-attr">Address:</span> <span class="hljs-number">104.244</span><span class="hljs-number">.46</span><span class="hljs-number">.21</span><br><span class="hljs-attr">Name:</span>   <span class="hljs-string">github.global.ssl.fastly.net</span><br><span class="hljs-attr">Address:</span> <span class="hljs-number">2001</span><span class="hljs-string">::68f4:2e3f</span><br></code></pre></td></tr></table></figure><h2 id="Step3-访问host文件并修改"><a href="#Step3-访问host文件并修改" class="headerlink" title="Step3 访问host文件并修改"></a>Step3 访问host文件并修改</h2><p><code>sudo vim /etc/hosts</code></p><p>在文件最后一行加上</p><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">#github<br><span class="hljs-number">104.244.46.21</span> http://github.global.ssl.fastly.net<br><span class="hljs-number">104.244.46.21</span> https://github.global.ssl.fastly.net<br><br><span class="hljs-number">20.205.243.166</span> http://github.com<br><span class="hljs-number">20.205.243.166</span> https://github.com<br><br></code></pre></td></tr></table></figure><h2 id="Step4-刷新缓存"><a href="#Step4-刷新缓存" class="headerlink" title="Step4 刷新缓存"></a>Step4 刷新缓存</h2><p><code>sudo /etc/init.d/network-manager restart</code></p><hr><p>即可解决github clone速度慢的问题</p><h1 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h1><h2 id="1-使用cgit工具"><a href="#1-使用cgit工具" class="headerlink" title="1. 使用cgit工具"></a>1. 使用cgit工具</h2><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">sudo apt-get install cgit<br>cgit <span class="hljs-keyword">clone</span> <span class="hljs-title">...... </span><br></code></pre></td></tr></table></figure><h2 id="2-添加gitclone-com前缀"><a href="#2-添加gitclone-com前缀" class="headerlink" title="2. 添加gitclone.com前缀"></a>2. 添加gitclone.com前缀</h2><h3 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h3><p>git clone https:&#x2F;&#x2F;<em><strong>gitclone.com</strong></em>&#x2F;github.com&#x2F;tendermint&#x2F;tendermint.git</p><p>可以设置git参数 实现自动替换</p><p><code>git config --global url.&quot;https://gitclone.com/&quot;.insteadOf https:</code></p>]]></content>
     
     
     <categories>
@@ -55,6 +82,8 @@
       
       <tag>加缪</tag>
       
+      <tag>随想</tag>
+      
     </tags>
     
   </entry>
@@ -89,64 +118,6 @@
   
   
   <entry>
-    <title>小猫跳圈</title>
-    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/"/>
-    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/</url>
-    
-    <content type="html"><![CDATA[<h1 id="小毛米跳大圈"><a href="#小毛米跳大圈" class="headerlink" title="小毛米跳大圈"></a>小毛米跳大圈</h1><p>代码如下：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">long</span> <span class="hljs-type">long</span> n;<br>    <span class="hljs-type">long</span> <span class="hljs-type">long</span> x0,y0,i,j,p,q,r,w;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;n);<br>    getchar();**<span class="hljs-comment">//one more getchar() here to remove Enter**</span><br>    getchar();<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;x0);<br>    getchar();<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;y0);<br>    getchar();<br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    scanf(&quot;%lld&quot;,&amp;p);</span><br><span class="hljs-comment">  getchar();</span><br><span class="hljs-comment">  scanf(&quot;%lld&quot;,&amp;q);</span><br><span class="hljs-comment">  getchar();</span><br><span class="hljs-comment">  scanf(&quot;%lld&quot;,&amp;r);</span><br><span class="hljs-comment">    */</span><br>**<span class="hljs-comment">//读取p q r的时候一个scanf就好，上述五行可以整合成下面一行↓**</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld %lld %lld&quot;</span>,&amp;p,&amp;q,&amp;r);<br>    w=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(w=<span class="hljs-number">0</span>;w&lt;n;w++)&#123;    <span class="hljs-comment">//here change to w&lt;n</span><br>        getchar(); **<span class="hljs-comment">//把回车读掉**</span><br>        getchar();<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;i);<br>        getchar();<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;j);<br>        getchar();<br>        x0=x0+i;<br>        y0=y0+j;<br>    &#125;<br>    <span class="hljs-keyword">if</span>((x0-p)*(x0-p)+(y0-q)*(y0-q)&gt;r*r)&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;(%lld,%lld)&quot;</span>,x0,y0);<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;N0 WAY!&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>分享</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>编程</tag>
-      
-      <tag>C语言</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>一些编程初学小技巧</title>
-    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%BA%9B%E7%BC%96%E7%A8%8B%E5%88%9D%E5%AD%A6%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%BA%9B%E7%BC%96%E7%A8%8B%E5%88%9D%E5%AD%A6%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
-    
-    <content type="html"><![CDATA[<h1 id="Some-insights"><a href="#Some-insights" class="headerlink" title="Some insights"></a>Some insights</h1><h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>关于编程，以后难免会遇到很多问题，这要求我们善用搜索引擎，在bing、Google等平台上搜索（尤其比较深入的问题，国内网站查不到的话，优先谷歌，用英文检索）。</p><p>后期运行相对大点的程序也会出现报错的情况，许多报错代码都可以直接看懂，比如</p><p>哪个地方没加分号，编译器就会提示      <em>expected 分号 before 什么什么</em> </p><p><img src="/./Untitled.png" alt="对应的就是printf()后没加分号的情况"></p><p>对应的就是printf()后没加分号的情况</p><hr><p>当然更多情况往往是我们看不太懂报错信息，最直接了当的方法就是ctrl+c然后把报错信息丢进搜索引擎，多数情况下都能找到相应解答。</p><p>对于初学者来说，dev-c++、codeblocks等普通IDE即可满足需求，这些IDE免费且为不少教材所接受，但从实际使用的角度讲，这些IDE毫无疑问是有点简陋在里面的，这边推荐几款<em><strong>好用的IDE</strong></em>：➡➡➡➡➡➡➡</p><p><a href="https://www.notion.so/Visual-Studio-Code-594827391c53488a98aa13caafdcf142?pvs=21">Visual Studio Code</a></p><p><a href="https://www.notion.so/CLion-d4ab46a2c0ad44e8a90f17a7ee48e7fd?pvs=21">CLion</a></p><hr><h2 id="书籍分享"><a href="#书籍分享" class="headerlink" title="书籍分享"></a>书籍分享</h2><p>这是一本内容丰富，广泛全面的C语言教程，可作为自学参考书籍或课本之外的拓展。</p><p><a href="./C_Primer_Plus.pdf">C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达.pdf 【右键Download即可下载】</a></p><hr><h2 id="网站分享"><a href="#网站分享" class="headerlink" title="网站分享"></a>网站分享</h2><h3 id="问答类"><a href="#问答类" class="headerlink" title="问答类"></a>问答类</h3><p><a href="https://github.com/">github.com</a> 全球最大的代码托管平台（可能需要特定的网络环境）</p><p><a href="https://stackoverflow.com/">Stack Overflow - Where Developers Learn, Share, &amp; Build Careers</a> 知名IT问答平台</p><p> <a href="https://www.csdn.net/">CSDN - 专业开发者社区</a> 国内最大的程序员交流平台，良莠不齐，查找问题时似乎还是直接搜索引擎比较好。</p><p><a href="https://www.zhihu.com/question/20824615">（这个问题有点意思的说）如何优雅地使用 Stack Overflow？</a> </p><h3 id="刷题类"><a href="#刷题类" class="headerlink" title="刷题类"></a>刷题类</h3><p><a href="https://leetcode.cn/">力扣（LeetCode）官网</a> 可以刷刷这上面的每日一题，对于平时的上机作业以及期末程序设计题有所帮助。</p><h3 id="分享代码"><a href="#分享代码" class="headerlink" title="分享代码"></a>分享代码</h3><p><a href="https://pastebin.mozilla.org/">Mozilla Community Pastebin</a> 分享代码的一个网站，可以把自己的代码贴在上面，把生成的链接发给要分享的人（相比微信直接粘贴和拍照片在格式上美观的多）缺点是中文分享后显示为乱码。</p><p><a href="https://carbon.now.sh/?bg=rgba(171,+184,+195,+1)&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false">Carbon | Create and share beautiful images of your source code</a> 可以把代码分享成美观的图片，比如杨某元旦整的某活（</p><p>以及现在我正在使用的Notion，作为一款功能强大，可分享的笔记软件，分享代码自然不在话下。上学期我不时会用它给同学分享代码，效果不错。凭教育邮箱可申请升级版账号，网页端&amp;&amp;PC端&amp;&amp;手机端&amp;&amp;ipad端实时云同步，美哉美哉。</p><p><a href="https://www.notion.so/14-56978b8cf9ac45c4a2027ae6aa153b1a?pvs=21">第14次上机</a></p><p>一个分享代码的例子⬆️⬆️⬆️⬆️⬆️⬆️</p><hr><h3 id="进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）"><a href="#进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）" class="headerlink" title="进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）"></a>进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）</h3><ul><li>GIt</li></ul><p><a href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a> 文件分布管理系统，学习成本蛮高，在没有开发较大程序的使用需求时似乎也没必要学🤔。</p><p><a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a> 一个直观的，帮助git学习理解的网站。</p><p><a href="./progit.pdf">git官方学习文档</a></p><p>git官方学习文档</p><ul><li>入坑计算机专业自学指南</li></ul><p><a href="https://csdiy.wiki/">CS自学指南 (csdiy.wiki)</a></p><p><a href="https://cs61a.org/">https://cs61a.org/</a></p><hr><h3 id="辅助"><a href="#辅助" class="headerlink" title="辅助"></a>辅助</h3><p><a href="https://microsoftedge.microsoft.com/addons/detail/%E6%B2%99%E6%8B%89%E6%9F%A5%E8%AF%8D%E8%81%9A%E5%90%88%E8%AF%8D%E5%85%B8%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/idghocbbahafpfhjnfhpbfbmpegphmmp">Microsoft Edge Addons</a></p><p>浏览器内划词翻译插件，查询英文文献时maybe helpful.</p><p><a href="https://www.runoob.com/">菜鸟教程 - 学的不仅是技术，更是梦想！</a></p><p>讲的比较浅，忘了某个语法的时候可以快速参考一下。</p><p><a href="https://wormhole.app/">Wormhole - Simple, private file sharing</a></p><p>临时分享一些稍大的文件，不过有个人隐私、或者机密性的文件还是谨慎啦。</p><p><a href="https://c.runoob.com/compile/11/">C 在线工具 | 菜鸟工具</a></p><p>C语言在线编译，外出没带电脑但临时有使用需求时可以一用。</p><p><del><a href="https://weixin.qq.com/">https://weixin.qq.com</a> 欢迎找小杨交流233333</del>🤪</p><h2 id="Hope-it-helpful！"><a href="#Hope-it-helpful！" class="headerlink" title="Hope it helpful！"></a>Hope it helpful！</h2>]]></content>
-    
-    
-    <categories>
-      
-      <category>学习笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>编程</tag>
-      
-      <tag>C语言</tag>
-      
-      <tag>笔记</tag>
-      
-      <tag>学习</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Travel Plan——Version 1.0</title>
     <link href="/2023/12/01/others/Travel%20Plan/"/>
     <url>/2023/12/01/others/Travel%20Plan/</url>
@@ -172,6 +143,64 @@
   
   
   <entry>
+    <title>一些编程初学小技巧</title>
+    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%BA%9B%E7%BC%96%E7%A8%8B%E5%88%9D%E5%AD%A6%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%BA%9B%E7%BC%96%E7%A8%8B%E5%88%9D%E5%AD%A6%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Some-insights"><a href="#Some-insights" class="headerlink" title="Some insights"></a>Some insights</h1><h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>关于编程，以后难免会遇到很多问题，这要求我们善用搜索引擎，在bing、Google等平台上搜索（尤其比较深入的问题，国内网站查不到的话，优先谷歌，用英文检索）。</p><p>后期运行相对大点的程序也会出现报错的情况，许多报错代码都可以直接看懂，比如</p><p>哪个地方没加分号，编译器就会提示      <em>expected 分号 before 什么什么</em> </p><p><img src="/./Untitled.png" alt="对应的就是printf()后没加分号的情况"></p><p>对应的就是printf()后没加分号的情况</p><hr><p>当然更多情况往往是我们看不太懂报错信息，最直接了当的方法就是ctrl+c然后把报错信息丢进搜索引擎，多数情况下都能找到相应解答。</p><p>对于初学者来说，dev-c++、codeblocks等普通IDE即可满足需求，这些IDE免费且为不少教材所接受，但从实际使用的角度讲，这些IDE毫无疑问是有点简陋在里面的，这边推荐几款<em><strong>好用的IDE</strong></em>：➡➡➡➡➡➡➡</p><p><a href="https://www.notion.so/Visual-Studio-Code-594827391c53488a98aa13caafdcf142?pvs=21">Visual Studio Code</a></p><p><a href="https://www.notion.so/CLion-d4ab46a2c0ad44e8a90f17a7ee48e7fd?pvs=21">CLion</a></p><hr><h2 id="书籍分享"><a href="#书籍分享" class="headerlink" title="书籍分享"></a>书籍分享</h2><p>这是一本内容丰富，广泛全面的C语言教程，可作为自学参考书籍或课本之外的拓展。</p><p><a href="./C_Primer_Plus.pdf">C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达.pdf 【右键Download即可下载】</a></p><hr><h2 id="网站分享"><a href="#网站分享" class="headerlink" title="网站分享"></a>网站分享</h2><h3 id="问答类"><a href="#问答类" class="headerlink" title="问答类"></a>问答类</h3><p><a href="https://github.com/">github.com</a> 全球最大的代码托管平台（可能需要特定的网络环境）</p><p><a href="https://stackoverflow.com/">Stack Overflow - Where Developers Learn, Share, &amp; Build Careers</a> 知名IT问答平台</p><p> <a href="https://www.csdn.net/">CSDN - 专业开发者社区</a> 国内最大的程序员交流平台，良莠不齐，查找问题时似乎还是直接搜索引擎比较好。</p><p><a href="https://www.zhihu.com/question/20824615">（这个问题有点意思的说）如何优雅地使用 Stack Overflow？</a> </p><h3 id="刷题类"><a href="#刷题类" class="headerlink" title="刷题类"></a>刷题类</h3><p><a href="https://leetcode.cn/">力扣（LeetCode）官网</a> 可以刷刷这上面的每日一题，对于平时的上机作业以及期末程序设计题有所帮助。</p><h3 id="分享代码"><a href="#分享代码" class="headerlink" title="分享代码"></a>分享代码</h3><p><a href="https://pastebin.mozilla.org/">Mozilla Community Pastebin</a> 分享代码的一个网站，可以把自己的代码贴在上面，把生成的链接发给要分享的人（相比微信直接粘贴和拍照片在格式上美观的多）缺点是中文分享后显示为乱码。</p><p><a href="https://carbon.now.sh/?bg=rgba(171,+184,+195,+1)&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false">Carbon | Create and share beautiful images of your source code</a> 可以把代码分享成美观的图片，比如杨某元旦整的某活（</p><p>以及现在我正在使用的Notion，作为一款功能强大，可分享的笔记软件，分享代码自然不在话下。上学期我不时会用它给同学分享代码，效果不错。凭教育邮箱可申请升级版账号，网页端&amp;&amp;PC端&amp;&amp;手机端&amp;&amp;ipad端实时云同步，美哉美哉。</p><p><a href="https://www.notion.so/14-56978b8cf9ac45c4a2027ae6aa153b1a?pvs=21">第14次上机</a></p><p>一个分享代码的例子⬆️⬆️⬆️⬆️⬆️⬆️</p><hr><h3 id="进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）"><a href="#进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）" class="headerlink" title="进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）"></a>进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）</h3><ul><li>GIt</li></ul><p><a href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a> 文件分布管理系统，学习成本蛮高，在没有开发较大程序的使用需求时似乎也没必要学🤔。</p><p><a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a> 一个直观的，帮助git学习理解的网站。</p><p><a href="./progit.pdf">git官方学习文档</a></p><p>git官方学习文档</p><ul><li>入坑计算机专业自学指南</li></ul><p><a href="https://csdiy.wiki/">CS自学指南 (csdiy.wiki)</a></p><p><a href="https://cs61a.org/">https://cs61a.org/</a></p><hr><h3 id="辅助"><a href="#辅助" class="headerlink" title="辅助"></a>辅助</h3><p><a href="https://microsoftedge.microsoft.com/addons/detail/%E6%B2%99%E6%8B%89%E6%9F%A5%E8%AF%8D%E8%81%9A%E5%90%88%E8%AF%8D%E5%85%B8%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/idghocbbahafpfhjnfhpbfbmpegphmmp">Microsoft Edge Addons</a></p><p>浏览器内划词翻译插件，查询英文文献时maybe helpful.</p><p><a href="https://www.runoob.com/">菜鸟教程 - 学的不仅是技术，更是梦想！</a></p><p>讲的比较浅，忘了某个语法的时候可以快速参考一下。</p><p><a href="https://wormhole.app/">Wormhole - Simple, private file sharing</a></p><p>临时分享一些稍大的文件，不过有个人隐私、或者机密性的文件还是谨慎啦。</p><p><a href="https://c.runoob.com/compile/11/">C 在线工具 | 菜鸟工具</a></p><p>C语言在线编译，外出没带电脑但临时有使用需求时可以一用。</p><p><del><a href="https://weixin.qq.com/">https://weixin.qq.com</a> 欢迎找小杨交流233333</del>🤪</p><h2 id="Hope-it-helpful！"><a href="#Hope-it-helpful！" class="headerlink" title="Hope it helpful！"></a>Hope it helpful！</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>笔记</tag>
+      
+      <tag>C语言</tag>
+      
+      <tag>编程</tag>
+      
+      <tag>学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>小猫跳圈</title>
+    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/"/>
+    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/</url>
+    
+    <content type="html"><![CDATA[<h1 id="小毛米跳大圈"><a href="#小毛米跳大圈" class="headerlink" title="小毛米跳大圈"></a>小毛米跳大圈</h1><p>代码如下：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">long</span> <span class="hljs-type">long</span> n;<br>    <span class="hljs-type">long</span> <span class="hljs-type">long</span> x0,y0,i,j,p,q,r,w;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;n);<br>    getchar();**<span class="hljs-comment">//one more getchar() here to remove Enter**</span><br>    getchar();<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;x0);<br>    getchar();<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;y0);<br>    getchar();<br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    scanf(&quot;%lld&quot;,&amp;p);</span><br><span class="hljs-comment">  getchar();</span><br><span class="hljs-comment">  scanf(&quot;%lld&quot;,&amp;q);</span><br><span class="hljs-comment">  getchar();</span><br><span class="hljs-comment">  scanf(&quot;%lld&quot;,&amp;r);</span><br><span class="hljs-comment">    */</span><br>**<span class="hljs-comment">//读取p q r的时候一个scanf就好，上述五行可以整合成下面一行↓**</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld %lld %lld&quot;</span>,&amp;p,&amp;q,&amp;r);<br>    w=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(w=<span class="hljs-number">0</span>;w&lt;n;w++)&#123;    <span class="hljs-comment">//here change to w&lt;n</span><br>        getchar(); **<span class="hljs-comment">//把回车读掉**</span><br>        getchar();<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;i);<br>        getchar();<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;j);<br>        getchar();<br>        x0=x0+i;<br>        y0=y0+j;<br>    &#125;<br>    <span class="hljs-keyword">if</span>((x0-p)*(x0-p)+(y0-q)*(y0-q)&gt;r*r)&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;(%lld,%lld)&quot;</span>,x0,y0);<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;N0 WAY!&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+      <tag>编程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>白黑球</title>
     <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%99%BD%E9%BB%91%E7%90%83/"/>
     <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%99%BD%E9%BB%91%E7%90%83/</url>
@@ -188,9 +217,9 @@
     
     <tags>
       
-      <tag>编程</tag>
-      
       <tag>C语言</tag>
+      
+      <tag>编程</tag>
       
       <tag>算法</tag>
       
@@ -253,35 +282,6 @@
   
   
   <entry>
-    <title>悉达多</title>
-    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%82%89%E8%BE%BE%E5%A4%9A/"/>
-    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%82%89%E8%BE%BE%E5%A4%9A/</url>
-    
-    <content type="html"><![CDATA[<h1 id="悉达多"><a href="#悉达多" class="headerlink" title="悉达多"></a>悉达多</h1><blockquote><p>内在“我”之源泉，必须拥有自己的阿特曼！其他一切都只是寻觅、走弯路和误入歧途。</p></blockquote><blockquote><p>意义和本质绝非隐藏在事物背后，它们就在事物当中，在一切事物当中。</p></blockquote><blockquote><p>“书写虽好，思考更佳；聪敏虽好，忍耐更佳。”</p></blockquote><blockquote><p>他永不停歇地向河水求教，首要的是学会抛弃激情和期盼，不论断、无成见地以寂静的心、侍奉和敞开的灵去倾听。</p></blockquote><blockquote><p>没有过去，没有未来，一切都是本质和当下。</p></blockquote><blockquote><p>生命不灭，刹那即永恒。</p></blockquote><blockquote><p>爱并非毫无价值。它源自天性，是一种必需。爱的欲望该得到哺育，痛苦该去品尝，蠢行该去实践。</p></blockquote><blockquote><p>他的爱像一道伤口。他感到伤口的存在不该只为在心中溃烂，它应该风化、发光。</p></blockquote><blockquote><p>世界并非不圆满。世界并非徐缓地行进在通向圆满之路：不，世间的每一瞬间皆为圆满。一切罪孽都承载宽赦，所有孩童身上都栖息老人，所有新生儿身上都栖息亡者，所有将死之人都孕育永恒的生命。没人能看清他者的道路。强盗和赌徒的路或许通向佛陀，婆罗门的路或许通往强盗。在最深的禅定中存在这种可能：时间被终结，人视过往、当下和未来的生活为同时。这时，一切皆为善、圆满和梵天。因此在我看来，世间存在的一切皆好。在我看来，死如同生，罪孽犹如神圣，聪明等同愚蠢。一切皆有定数，一切只需我的赞赏、顺从和爱的默许。这样于我有益，只会促进我，从不伤害我。我听便灵魂与肉体的安排，去经历罪孽，追逐肉欲和财富，去贪慕虚荣，以陷入最羞耻的绝望，以学会放弃挣扎，学会热爱世界。我不再将这个世界与我所期待的，塑造的圆满世界比照，而是接受这个世界，爱它，属于它。——哦，乔文达，这就是我的一些思考和感悟。”</p></blockquote><blockquote><p>这就是我的认知：智慧无法言传。智者试图传授智慧，总像痴人说梦。”</p></blockquote><blockquote><p>真的反面同样真实！也就是说，只有片面的真才得以以言辞彰显。可以思想和言说的一切都是片面的，是局部，都缺乏整体、完满、统一。</p></blockquote>]]></content>
-    
-    
-    <categories>
-      
-      <category>读书笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>文学</tag>
-      
-      <tag>哲思</tag>
-      
-      <tag>黑塞</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>在细雨中呼喊</title>
     <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9C%A8%E7%BB%86%E9%9B%A8%E4%B8%AD%E5%91%BC%E5%94%A4/"/>
     <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%9C%A8%E7%BB%86%E9%9B%A8%E4%B8%AD%E5%91%BC%E5%94%A4/</url>
@@ -309,6 +309,35 @@
   
   
   <entry>
+    <title>悉达多</title>
+    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%82%89%E8%BE%BE%E5%A4%9A/"/>
+    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%82%89%E8%BE%BE%E5%A4%9A/</url>
+    
+    <content type="html"><![CDATA[<h1 id="悉达多"><a href="#悉达多" class="headerlink" title="悉达多"></a>悉达多</h1><blockquote><p>内在“我”之源泉，必须拥有自己的阿特曼！其他一切都只是寻觅、走弯路和误入歧途。</p></blockquote><blockquote><p>意义和本质绝非隐藏在事物背后，它们就在事物当中，在一切事物当中。</p></blockquote><blockquote><p>“书写虽好，思考更佳；聪敏虽好，忍耐更佳。”</p></blockquote><blockquote><p>他永不停歇地向河水求教，首要的是学会抛弃激情和期盼，不论断、无成见地以寂静的心、侍奉和敞开的灵去倾听。</p></blockquote><blockquote><p>没有过去，没有未来，一切都是本质和当下。</p></blockquote><blockquote><p>生命不灭，刹那即永恒。</p></blockquote><blockquote><p>爱并非毫无价值。它源自天性，是一种必需。爱的欲望该得到哺育，痛苦该去品尝，蠢行该去实践。</p></blockquote><blockquote><p>他的爱像一道伤口。他感到伤口的存在不该只为在心中溃烂，它应该风化、发光。</p></blockquote><blockquote><p>世界并非不圆满。世界并非徐缓地行进在通向圆满之路：不，世间的每一瞬间皆为圆满。一切罪孽都承载宽赦，所有孩童身上都栖息老人，所有新生儿身上都栖息亡者，所有将死之人都孕育永恒的生命。没人能看清他者的道路。强盗和赌徒的路或许通向佛陀，婆罗门的路或许通往强盗。在最深的禅定中存在这种可能：时间被终结，人视过往、当下和未来的生活为同时。这时，一切皆为善、圆满和梵天。因此在我看来，世间存在的一切皆好。在我看来，死如同生，罪孽犹如神圣，聪明等同愚蠢。一切皆有定数，一切只需我的赞赏、顺从和爱的默许。这样于我有益，只会促进我，从不伤害我。我听便灵魂与肉体的安排，去经历罪孽，追逐肉欲和财富，去贪慕虚荣，以陷入最羞耻的绝望，以学会放弃挣扎，学会热爱世界。我不再将这个世界与我所期待的，塑造的圆满世界比照，而是接受这个世界，爱它，属于它。——哦，乔文达，这就是我的一些思考和感悟。”</p></blockquote><blockquote><p>这就是我的认知：智慧无法言传。智者试图传授智慧，总像痴人说梦。”</p></blockquote><blockquote><p>真的反面同样真实！也就是说，只有片面的真才得以以言辞彰显。可以思想和言说的一切都是片面的，是局部，都缺乏整体、完满、统一。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>哲思</tag>
+      
+      <tag>文学</tag>
+      
+      <tag>黑塞</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>我与地坛</title>
     <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%88%91%E4%B8%8E%E5%9C%B0%E5%9D%9B/"/>
     <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%88%91%E4%B8%8E%E5%9C%B0%E5%9D%9B/</url>
@@ -325,9 +354,9 @@
     
     <tags>
       
-      <tag>文学</tag>
-      
       <tag>哲思</tag>
+      
+      <tag>文学</tag>
       
       <tag>史铁生</tag>
       
@@ -408,9 +437,9 @@
     
     <tags>
       
-      <tag>文学</tag>
-      
       <tag>哲思</tag>
+      
+      <tag>文学</tag>
       
       <tag>史铁生</tag>
       
@@ -448,35 +477,6 @@
   
   
   <entry>
-    <title>飞鸟集</title>
-    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%A3%9E%E9%B8%9F%E9%9B%86/"/>
-    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%A3%9E%E9%B8%9F%E9%9B%86/</url>
-    
-    <content type="html"><![CDATA[<h1 id="飞鸟集"><a href="#飞鸟集" class="headerlink" title="飞鸟集"></a>飞鸟集</h1><blockquote><p>If you shed tears when you miss the sun, you also miss the stars.<br> <br>如果错过了太阳时你流了泪，那么你也要错过群星了。</p></blockquote><blockquote><p>The echo mocks her origin to prove she is the original.<br> <br>回声嘲笑着她的原声，以证明她是原声。</p></blockquote><blockquote><p>Dream is a wife who must talk. Sleep is a husband who silently suffers.<br> <br>梦是一个一定要谈话的妻子。<br>睡眠是一个默默地忍受的丈夫。</p></blockquote><blockquote><p>“In the moon thou sendest thy love letters to me,” said the night to the sun.<br>“I leave my answers in tears upon the grass.”<br> <br>夜对太阳说道：“在月亮中，你送了你的情书给我。”<br>“我已在绿草上留下我的流着泪点的回答了。”</p></blockquote><blockquote><p>Not hammer-strokes, but dance of the water sings the pebbles into perfection.<br> <br>不是槌的打击，乃是水的载歌载舞，使鹅卵石臻于完美。</p></blockquote><blockquote><p>If you shut your door to all errors truth will be shut out.<br> <br>如果你把所有的错误都关在门外时，真理也要被关在外面了。</p></blockquote><blockquote><p>The leaf becomes flower when it loves. The flower becomes fruit when it worships.<br> <br>绿叶恋爱时便成了花。<br>花崇拜时便成了果实。</p></blockquote><blockquote><p>Let me think that there is one among those stars that guides my life through the dark unknown.<br> <br>让我设想，在群星之中，有一粒星是指导着我的生命通过不可知的黑暗的。</p></blockquote><blockquote><p>I have my stars in the sky, but oh for my little lamp unlit in my house.<br> <br>我有群星在天上，<br>但是，唉，我屋里的小灯却没有点亮。</p></blockquote><blockquote><p>By plucking her petals you do not gather the beauty of the flower.<br> <br>采着花瓣时，得不到花的美丽。</p></blockquote><blockquote><p>The world has kissed my soul with its pain, asking for its return in songs.<br> <br>世界以它的痛苦同我接吻，而要求歌声做报酬。</p></blockquote><blockquote><p>A mind all logic is like a knife all blade. It makes the hand bleed that uses it.<br> <br>全是理智的心，恰如一柄全是锋刃的刀。<br>叫使用它的人手上流血。</p></blockquote><blockquote><p>Let my doing nothing when I have nothing to do become untroubled in its depth of peace like the evening in the seashore when the water is silent.<br> <br>当我没有什么事做时，便让我不做什么事，不受骚扰地沉入安静深处吧，一如那海水沉默时海边的暮色。</p></blockquote><blockquote><p>Night’s darkness is a bag that bursts with the gold of the dawn.<br> <br>夜之黑暗是一只口袋，盛满了发出黎明的金光的口袋。</p></blockquote><blockquote><p>The service of the fruit is precious, the service of the flower is sweet, but let my service be the service of the leaves in its shade of humble devotion.<br> <br>果实的事业是尊贵的，花的事业是甜美的，但是让我做叶的事业罢，叶是谦逊地专心地垂着绿荫[1]的。</p></blockquote><blockquote><p>In heart’s perspective the distance looms large.<br> <br>在心的远景里，那相隔的距离显得更广阔了。</p></blockquote><blockquote><p>The moon has her light all over the sky, her dark spots to herself.<br> <br>月儿把她的光明遍照在天上，却留着她的黑斑给她自己。</p></blockquote>]]></content>
-    
-    
-    <categories>
-      
-      <category>读书笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>哲思</tag>
-      
-      <tag>诗</tag>
-      
-      <tag>泰戈尔</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>长安的荔枝</title>
     <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D/"/>
     <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%95%BF%E5%AE%89%E7%9A%84%E8%8D%94%E6%9E%9D/</url>
@@ -498,6 +498,35 @@
       <tag>历史</tag>
       
       <tag>马伯庸</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>飞鸟集</title>
+    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%A3%9E%E9%B8%9F%E9%9B%86/"/>
+    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%A3%9E%E9%B8%9F%E9%9B%86/</url>
+    
+    <content type="html"><![CDATA[<h1 id="飞鸟集"><a href="#飞鸟集" class="headerlink" title="飞鸟集"></a>飞鸟集</h1><blockquote><p>If you shed tears when you miss the sun, you also miss the stars.<br> <br>如果错过了太阳时你流了泪，那么你也要错过群星了。</p></blockquote><blockquote><p>The echo mocks her origin to prove she is the original.<br> <br>回声嘲笑着她的原声，以证明她是原声。</p></blockquote><blockquote><p>Dream is a wife who must talk. Sleep is a husband who silently suffers.<br> <br>梦是一个一定要谈话的妻子。<br>睡眠是一个默默地忍受的丈夫。</p></blockquote><blockquote><p>“In the moon thou sendest thy love letters to me,” said the night to the sun.<br>“I leave my answers in tears upon the grass.”<br> <br>夜对太阳说道：“在月亮中，你送了你的情书给我。”<br>“我已在绿草上留下我的流着泪点的回答了。”</p></blockquote><blockquote><p>Not hammer-strokes, but dance of the water sings the pebbles into perfection.<br> <br>不是槌的打击，乃是水的载歌载舞，使鹅卵石臻于完美。</p></blockquote><blockquote><p>If you shut your door to all errors truth will be shut out.<br> <br>如果你把所有的错误都关在门外时，真理也要被关在外面了。</p></blockquote><blockquote><p>The leaf becomes flower when it loves. The flower becomes fruit when it worships.<br> <br>绿叶恋爱时便成了花。<br>花崇拜时便成了果实。</p></blockquote><blockquote><p>Let me think that there is one among those stars that guides my life through the dark unknown.<br> <br>让我设想，在群星之中，有一粒星是指导着我的生命通过不可知的黑暗的。</p></blockquote><blockquote><p>I have my stars in the sky, but oh for my little lamp unlit in my house.<br> <br>我有群星在天上，<br>但是，唉，我屋里的小灯却没有点亮。</p></blockquote><blockquote><p>By plucking her petals you do not gather the beauty of the flower.<br> <br>采着花瓣时，得不到花的美丽。</p></blockquote><blockquote><p>The world has kissed my soul with its pain, asking for its return in songs.<br> <br>世界以它的痛苦同我接吻，而要求歌声做报酬。</p></blockquote><blockquote><p>A mind all logic is like a knife all blade. It makes the hand bleed that uses it.<br> <br>全是理智的心，恰如一柄全是锋刃的刀。<br>叫使用它的人手上流血。</p></blockquote><blockquote><p>Let my doing nothing when I have nothing to do become untroubled in its depth of peace like the evening in the seashore when the water is silent.<br> <br>当我没有什么事做时，便让我不做什么事，不受骚扰地沉入安静深处吧，一如那海水沉默时海边的暮色。</p></blockquote><blockquote><p>Night’s darkness is a bag that bursts with the gold of the dawn.<br> <br>夜之黑暗是一只口袋，盛满了发出黎明的金光的口袋。</p></blockquote><blockquote><p>The service of the fruit is precious, the service of the flower is sweet, but let my service be the service of the leaves in its shade of humble devotion.<br> <br>果实的事业是尊贵的，花的事业是甜美的，但是让我做叶的事业罢，叶是谦逊地专心地垂着绿荫[1]的。</p></blockquote><blockquote><p>In heart’s perspective the distance looms large.<br> <br>在心的远景里，那相隔的距离显得更广阔了。</p></blockquote><blockquote><p>The moon has her light all over the sky, her dark spots to herself.<br> <br>月儿把她的光明遍照在天上，却留着她的黑斑给她自己。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>哲思</tag>
+      
+      <tag>诗</tag>
+      
+      <tag>泰戈尔</tag>
       
     </tags>
     
