@@ -116,145 +116,6 @@
   
   
   <entry>
-    <title>Linux命令</title>
-    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%91%BD%E4%BB%A4/"/>
-    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%91%BD%E4%BB%A4/</url>
-    
-    <content type="html"><![CDATA[<h1 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h1><h2 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h2><p>echo 显示变量<br>date “+%j” 今年过去了多少天</p><p>ntpdate <a href="http://time.nist.gov/">time.nist.gov</a> 用ntpdate从服务器更新时间</p><p>wget -P 下载到指定目录<br>ps 查看系统进程<br>top 显示负载信息<br>pidof 查看PID值<br>kill 删除进程<br>killall<br>uname -s系统名称<br>-n主机名称 -i硬件架构<br>uptime系统负载信息<br>free 内存使用量信息<br>who 用户<br>last 最近登录信息<br>history 历史命令</p><hr><h2 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h2><p>df 磁盘空间利用情况<br>-h 以合适的单位返回各个文件系统容量<br>-T 文件系统类型<br>du 查看文件和目录磁盘的使用空间<br>fdisk 磁盘分区</p><hr><h2 id="文本编辑工具Vim"><a href="#文本编辑工具Vim" class="headerlink" title="文本编辑工具Vim"></a>文本编辑工具Vim</h2><h3 id="vim的三种操作模式"><a href="#vim的三种操作模式" class="headerlink" title="vim的三种操作模式"></a>vim的三种操作模式</h3><p>vim有三种操作模式，分别是命令模式（Command mode）、输入模式（Insert mode）和底线命令模式（Last line mode）。</p><p>三种模式切换快捷键：</p><table><thead><tr><th>模式</th><th>快捷键</th></tr></thead><tbody><tr><td>命令模式</td><td>ESC</td></tr><tr><td>输入模式</td><td>i或a</td></tr><tr><td>底线命令模式</td><td>:</td></tr></tbody></table><ul><li>命令模式</li></ul><p>在命令模式中控制光标移动和输入命令，可对文本进行复制、粘贴、删除和查找等工作。</p><p>使用命令vim filename后进入编辑器视图后，默认模式就是命令模式，此时敲击键盘字母会被识别为一个命令，例如在键盘上连续敲击两次d，就会删除光标所在行。</p><p>以下是在命令模式中常用的快捷操作：</p><table><thead><tr><th>操作</th><th>快捷键</th></tr></thead><tbody><tr><td>光标左移</td><td>h</td></tr><tr><td>光标右移</td><td>l（小写L）</td></tr><tr><td>光标上移</td><td>k</td></tr><tr><td>光标下移</td><td>j</td></tr><tr><td>光标移动到下一个单词</td><td>w</td></tr><tr><td>光标移动到上一个单词</td><td>b</td></tr><tr><td>移动游标到第n行</td><td>nG</td></tr><tr><td>移动游标到第一行</td><td>gg</td></tr><tr><td>移动游标到最后一行</td><td>G</td></tr><tr><td>快速回到上一次光标所在位置</td><td>Ctrl+o</td></tr><tr><td>删除当前字符</td><td>x</td></tr><tr><td>删除前一个字符</td><td>X</td></tr><tr><td>删除整行</td><td>dd</td></tr><tr><td>删除一个单词</td><td>dw或daw</td></tr><tr><td>删除至行尾</td><td>d$或D</td></tr><tr><td>删除至行首</td><td>d^</td></tr><tr><td>删除到文档末尾</td><td>dG</td></tr><tr><td>删除至文档首部</td><td>d1G</td></tr><tr><td>删除n行</td><td>ndd</td></tr><tr><td>删除n个连续字符</td><td>nx</td></tr><tr><td>将光标所在位置字母变成大写或小写</td><td>~</td></tr><tr><td>复制游标所在的整行</td><td>yy（3yy表示复制3行）</td></tr><tr><td>粘贴至光标后（下）</td><td>p</td></tr><tr><td>粘贴至光标前（上）</td><td>P</td></tr><tr><td>剪切</td><td>dd</td></tr><tr><td>交换上下行</td><td>ddp</td></tr><tr><td>替换整行，即删除游标所在行并进入插入模式</td><td>cc</td></tr><tr><td>撤销一次或n次操作</td><td>u{n}</td></tr><tr><td>撤销当前行的所有修改</td><td>U</td></tr><tr><td>恢复撤销操作</td><td>Ctrl+r</td></tr><tr><td>整行将向右缩进</td><td>&gt;&gt;</td></tr><tr><td>整行将向左退回</td><td>&lt;&lt;</td></tr><tr><td>若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开</td><td>ZZ</td></tr></tbody></table><ul><li>输入模式</li></ul><p>在命令模式下按i或a键就进入了输入模式，在输入模式下，您可以正常的使用键盘按键对文本进行插入和删除等操作。</p><ul><li>底线命令模式</li></ul><p>在命令模式下按:键就进入了底线命令模式，在底线命令模式中可以输入单个或多个字符的命令。</p><table><thead><tr><th>操作</th><th>命令</th></tr></thead><tbody><tr><td>保存</td><td>:w</td></tr><tr><td>退出</td><td>:q</td></tr><tr><td>保存并退出</td><td>:wq（:wq!表示强制保存退出）</td></tr><tr><td>将文件另存为其他文件名</td><td>:w new_filename</td></tr><tr><td>显示行号</td><td>:set nu</td></tr><tr><td>取消行号</td><td>:set nonu</td></tr><tr><td>使本行内容居中</td><td>:ce</td></tr><tr><td>使本行文本靠右</td><td>:ri</td></tr><tr><td>使本行内容靠左</td><td>:le</td></tr><tr><td>向光标之下寻找一个名称为word的字符串</td><td>:&#x2F;word</td></tr><tr><td>向光标之上寻找一个字符串名称为word的字符串</td><td>:?word</td></tr><tr><td>重复前一个搜寻的动作</td><td>:n</td></tr><tr><td>从第一行到最后一行寻找word1字符串，并将该字符串取代为word2</td><td></td></tr></tbody></table><h2 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h2><p>命令描述：cat命令用于查看内容较少的纯文本文件。</p><p>命令格式：cat [选项] [文件]。</p><p>命令参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-n或–number</td><td>显示行号</td></tr><tr><td>-b或–number-nonblank</td><td>显示行号，但是不对空白行进行编号</td></tr><tr><td>-s或–squeeze-blank</td><td>当遇到有连续两行以上的空白行，只显示一行的空白行</td></tr></tbody></table><h2 id="文本编辑工具Vim-1"><a href="#文本编辑工具Vim-1" class="headerlink" title="文本编辑工具Vim"></a>文本编辑工具Vim</h2><h3 id="vim的三种操作模式-1"><a href="#vim的三种操作模式-1" class="headerlink" title="vim的三种操作模式"></a>vim的三种操作模式</h3><p>vim有三种操作模式，分别是命令模式（Command mode）、输入模式（Insert mode）和底线命令模式（Last line mode）。</p><p>三种模式切换快捷键：</p><table><thead><tr><th>模式</th><th>快捷键</th></tr></thead><tbody><tr><td>命令模式</td><td>ESC</td></tr><tr><td>输入模式</td><td>i或a</td></tr><tr><td>底线命令模式</td><td>:</td></tr></tbody></table><ul><li>命令模式</li></ul><p>在命令模式中控制光标移动和输入命令，可对文本进行复制、粘贴、删除和查找等工作。</p><p>使用命令vim filename后进入编辑器视图后，默认模式就是命令模式，此时敲击键盘字母会被识别为一个命令，例如在键盘上连续敲击两次d，就会删除光标所在行。</p><p>以下是在命令模式中常用的快捷操作：</p><table><thead><tr><th>操作</th><th>快捷键</th></tr></thead><tbody><tr><td>光标左移</td><td>h</td></tr><tr><td>光标右移</td><td>l（小写L）</td></tr><tr><td>光标上移</td><td>k</td></tr><tr><td>光标下移</td><td>j</td></tr><tr><td>光标移动到下一个单词</td><td>w</td></tr><tr><td>光标移动到上一个单词</td><td>b</td></tr><tr><td>移动游标到第n行</td><td>nG</td></tr><tr><td>移动游标到第一行</td><td>gg</td></tr><tr><td>移动游标到最后一行</td><td>G</td></tr><tr><td>快速回到上一次光标所在位置</td><td>Ctrl+o</td></tr><tr><td>删除当前字符</td><td>x</td></tr><tr><td>删除前一个字符</td><td>X</td></tr><tr><td>删除整行</td><td>dd</td></tr><tr><td>删除一个单词</td><td>dw或daw</td></tr><tr><td>删除至行尾</td><td>d$或D</td></tr><tr><td>删除至行首</td><td>d^</td></tr><tr><td>删除到文档末尾</td><td>dG</td></tr><tr><td>删除至文档首部</td><td>d1G</td></tr><tr><td>删除n行</td><td>ndd</td></tr><tr><td>删除n个连续字符</td><td>nx</td></tr><tr><td>将光标所在位置字母变成大写或小写</td><td>~</td></tr><tr><td>复制游标所在的整行</td><td>yy（3yy表示复制3行）</td></tr><tr><td>粘贴至光标后（下）</td><td>p</td></tr><tr><td>粘贴至光标前（上）</td><td>P</td></tr><tr><td>剪切</td><td>dd</td></tr><tr><td>交换上下行</td><td>ddp</td></tr><tr><td>替换整行，即删除游标所在行并进入插入模式</td><td>cc</td></tr><tr><td>撤销一次或n次操作</td><td>u{n}</td></tr><tr><td>撤销当前行的所有修改</td><td>U</td></tr><tr><td>恢复撤销操作</td><td>Ctrl+r</td></tr><tr><td>整行将向右缩进</td><td>&gt;&gt;</td></tr><tr><td>整行将向左退回</td><td>&lt;&lt;</td></tr><tr><td>若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开</td><td>ZZ</td></tr></tbody></table><ul><li>输入模式</li></ul><p>在命令模式下按i或a键就进入了输入模式，在输入模式下，您可以正常的使用键盘按键对文本进行插入和删除等操作。</p><ul><li>底线命令模式</li></ul><p>在命令模式下按:键就进入了底线命令模式，在底线命令模式中可以输入单个或多个字符的命令。</p><table><thead><tr><th>操作</th><th>命令</th></tr></thead><tbody><tr><td>保存</td><td>:w</td></tr><tr><td>退出</td><td>:q</td></tr><tr><td>保存并退出</td><td>:wq（:wq!表示强制保存退出）</td></tr><tr><td>将文件另存为其他文件名</td><td>:w new_filename</td></tr><tr><td>显示行号</td><td>:set nu</td></tr><tr><td>取消行号</td><td>:set nonu</td></tr><tr><td>使本行内容居中</td><td>:ce</td></tr><tr><td>使本行文本靠右</td><td>:ri</td></tr><tr><td>使本行内容靠左</td><td>:le</td></tr><tr><td>向光标之下寻找一个名称为word的字符串</td><td>:&#x2F;word</td></tr><tr><td>向光标之上寻找一个字符串名称为word的字符串</td><td>:?word</td></tr><tr><td>重复前一个搜寻的动作</td><td>:n</td></tr><tr><td>从第一行到最后一行寻找word1字符串，并将该字符串取代为word2</td><td></td></tr></tbody></table><h2 id="cat-1"><a href="#cat-1" class="headerlink" title="cat"></a>cat</h2><p>命令描述：cat命令用于查看内容较少的纯文本文件。</p><p>命令格式：cat [选项] [文件]。</p><p>命令参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-n或–number</td><td>显示行号</td></tr><tr><td>-b或–number-nonblank</td><td>显示行号，但是不对空白行进行编号</td></tr><tr><td>-s或–squeeze-blank</td><td>当遇到有连续两行以上的空白行，只显示一行的空白行</td></tr></tbody></table><p>more</p><p>less 显示文件</p><p>head 显示文件开头指定行数（-n）指定字符数（-c）</p><p>tail 显示文件末尾多少行 -f显示文件最新追加的内容</p><p>stat 显示文件详细信息</p><p>wc 统计指定文本的行数-l 、单词数-w、字节数-c</p><p>file 辨识文件类型</p><p>diff 查看两个文件的差异</p><p>grep 查找文件里符合条件的字符串</p><h2 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h2><p>命令描述：sed是一种流编辑器，它是文本处理中非常中的工具，能够完美的配合正则表达式使用。</p><p>1. 处理时，把当前处理的行存储在临时缓冲区中，称为模式空间（pattern space）。<br>2. 接着用sed命令处理缓冲区中的内容，处理完成后，把缓冲区的内容送往屏幕。<br>3. 接着处理下一行，这样不断重复，直到文件末尾。</p><p>注意：</p><ul><li>sed命令不会修改原文件，例如删除命令只表示某些行不打印输出，而不是从原文件中删去。</li><li>如果要改变源文件，需要使用-i选项。</li></ul><p>命令格式：sed [参数] [动作] [文件]。</p><p>参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-e [script]</td><td>执行多个script</td></tr><tr><td>-f [script文件]</td><td>执行指定script文件</td></tr><tr><td>-n</td><td>仅显示script处理后的结果</td></tr><tr><td>-i</td><td>输出到原文件，静默执行（修改原文件）</td></tr></tbody></table><p>动作说明：</p><table><thead><tr><th>动作</th><th>说明</th></tr></thead><tbody><tr><td>a</td><td>在行后面增加内容</td></tr><tr><td>c</td><td>替换行</td></tr><tr><td>d</td><td>删除行</td></tr><tr><td>i</td><td>在行前面插入</td></tr><tr><td>p</td><td>打印相关的行</td></tr><tr><td>s</td><td>替换内容</td></tr></tbody></table><p>命令使用示例：</p><ul><li>删除第3行到最后一行内容。</li></ul><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">sed</span> <span class="hljs-string">&#x27;3,<span class="hljs-variable">$d</span>&#x27;</span> /etc/passwd<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1VGVHHQL0gK0jSZFAXXcA9pXa-633-570.png" alt="https://img.alicdn.com/tfs/TB1VGVHHQL0gK0jSZFAXXcA9pXa-633-570.png"></p><ul><li>在最后一行新增行。</li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift">sed &#x27;<span class="hljs-variable">$a</span> admin:x:<span class="hljs-number">1000</span>:<span class="hljs-number">1000</span>:admin:<span class="hljs-regexp">/home/</span>admin:<span class="hljs-regexp">/bin/</span>bash&#x27; <span class="hljs-regexp">/etc/</span>passwd<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1wjVJHHH1gK0jSZFwXXc7aXXa-767-527.png" alt="https://img.alicdn.com/tfs/TB1wjVJHHH1gK0jSZFwXXc7aXXa-767-527.png"></p><ul><li>替换内容。</li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift">sed &#x27;s<span class="hljs-regexp">/SELINUX=disabled/</span><span class="hljs-type">SELINUX</span><span class="hljs-operator">=</span>enforcing<span class="hljs-regexp">/&#x27; /</span>etc<span class="hljs-regexp">/selinux/</span>config<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1gURDHLb2gK0jSZK9XXaEgFXa-789-655.png" alt="https://img.alicdn.com/tfs/TB1gURDHLb2gK0jSZK9XXaEgFXa-789-655.png"></p><ul><li>替换行。</li></ul><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">sed <span class="hljs-string">&#x27;1c abcdefg&#x27;</span> <span class="hljs-regexp">/etc/</span>passwd<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1z6XEHUz1gK0jSZLeXXb9kVXa-658-512.png" alt="https://img.alicdn.com/tfs/TB1z6XEHUz1gK0jSZLeXXb9kVXa-658-512.png"></p><h2 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h2><p>命令描述：和 sed 命令类似，awk 命令也是逐行扫描文件（从第 1 行到最后一行），寻找含有目标文本的行，如果匹配成功，则会在该行上执行用户想要的操作；反之，则不对行做任何处理。</p><p>命令格式：awk [参数] [脚本] [文件]。</p><p>参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-F fs</td><td>指定以fs作为输入行的分隔符，awk 命令默认分隔符为空格或制表符</td></tr><tr><td>-f file</td><td>读取awk脚本</td></tr><tr><td>-v val&#x3D;val</td><td>在执行处理过程之前，设置一个变量var，并给其设置初始值为val</td></tr></tbody></table><p>内置变量：</p><table><thead><tr><th>变量</th><th>用途</th></tr></thead><tbody><tr><td>FS</td><td>字段分隔符</td></tr><tr><td>$n</td><td>指定分隔的第n个字段，如$1、$3分别表示第1、第三列</td></tr><tr><td>$0</td><td>当前读入的整行文本内容</td></tr><tr><td>NF</td><td>记录当前处理行的字段个数（列数）</td></tr><tr><td>NR</td><td>记录当前已读入的行数</td></tr><tr><td>FNR</td><td>当前行在源文件中的行号</td></tr></tbody></table><p>awk中还可以指定脚本命令的运行时机。默认情况下，awk会从输入中读取一行文本，然后针对该行的数据执行程序脚本，但有时可能需要在处理数据前运行一些脚本命令，这就需要使用BEGIN关键字，BEGIN会在awsk读取数据前强制执行该关键字后指定的脚本命令。</p><p>和BEGIN关键字相对应，END关键字允许我们指定一些脚本命令，awk会在读完数据后执行它们。</p><p>命令使用示例：</p><ul><li>查看本机IP地址。</li></ul><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">ifconfig</span> eth0 |awk <span class="hljs-string">&#x27;/inet/&#123;print <span class="hljs-variable">$2</span>&#125;&#x27;</span><br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1VwhFHUH1gK0jSZSyXXXtlpXa-482-66.png" alt="https://img.alicdn.com/tfs/TB1VwhFHUH1gK0jSZSyXXXtlpXa-482-66.png"></p><ul><li>查看本机剩余磁盘容量。</li></ul><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">df</span> -h |awk <span class="hljs-string">&#x27;/\/$/&#123;print <span class="hljs-variable">$4</span>&#125;&#x27;</span><br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1k.RDHLb2gK0jSZK9XXaEgFXa-423-70.png" alt="https://img.alicdn.com/tfs/TB1k.RDHLb2gK0jSZK9XXaEgFXa-423-70.png"></p><ul><li>统计系统用户个数。</li></ul><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">awk</span> -F: <span class="hljs-string">&#x27;<span class="hljs-variable">$3</span>&lt;1000&#123;x++&#125; END&#123;print x&#125;&#x27;</span> /etc/passwd<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1_AFFHFP7gK0jSZFjXXc5aXXa-553-66.png" alt="https://img.alicdn.com/tfs/TB1_AFFHFP7gK0jSZFjXXc5aXXa-553-66.png"></p><ul><li>输出其中登录Shell不以nologin结尾（对第7个字段做!~反向匹配）的用户名、登录Shell信息。</li></ul><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">awk</span> -F: <span class="hljs-string">&#x27;<span class="hljs-variable">$7</span>!~/nologin$/&#123;print <span class="hljs-variable">$1</span>,<span class="hljs-variable">$7</span>&#125;&#x27;</span> /etc/passwd<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1EaRHHKH2gK0jSZFEXXcqMpXa-595-129.png" alt="https://img.alicdn.com/tfs/TB1EaRHHKH2gK0jSZFEXXcqMpXa-595-129.png"></p><ul><li>输出&#x2F;etc&#x2F;passwd文件中前三行记录的用户名和用户uid。</li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift">head <span class="hljs-operator">-</span><span class="hljs-number">3</span> <span class="hljs-regexp">/etc/</span>passwd <span class="hljs-operator">|</span> awk  &#x27;<span class="hljs-type">BEGIN</span>&#123;<span class="hljs-type">FS</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;:&quot;</span>;print <span class="hljs-string">&quot;name<span class="hljs-subst">\t</span>uid&quot;</span>&#125;&#123;print <span class="hljs-variable">$1</span>,<span class="hljs-string">&quot;<span class="hljs-subst">\t</span>&quot;</span><span class="hljs-variable">$3</span>&#125;<span class="hljs-type">END</span>&#123;print <span class="hljs-string">&quot;sum lines &quot;</span><span class="hljs-type">NR</span>&#125;&#x27;<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1hAXJHUY1gK0jSZFCXXcwqXXa-1020-151.png" alt="https://img.alicdn.com/tfs/TB1hAXJHUY1gK0jSZFCXXcwqXXa-1020-151.png"></p><ul><li>查看tcp连接数。</li></ul><figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cos">netstat -na | awk &#x27;/<span class="hljs-symbol">^tcp</span>/ &#123;++<span class="hljs-keyword">S</span>[<span class="hljs-built_in">$NF</span>]&#125; END &#123;<span class="hljs-keyword">for</span>(a in <span class="hljs-keyword">S</span>) <span class="hljs-keyword">print</span> a, <span class="hljs-keyword">S</span>[a]&#125;&#x27;<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB10ghFHUH1gK0jSZSyXXXtlpXa-813-87.png" alt="https://img.alicdn.com/tfs/TB10ghFHUH1gK0jSZSyXXXtlpXa-813-87.png"></p><ul><li>关闭指定服务的所有的进程。</li></ul><h2 id="cut"><a href="#cut" class="headerlink" title="cut"></a>cut</h2><p>命令描述：cut命令主要用来切割字符串，可以对输入的数据进行切割然后输出。</p><p>命令格式：cut [参数] [文件]。</p><p>参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-b</td><td>以字节为单位进行分割</td></tr><tr><td>-c</td><td>以字符为单位进行分割</td></tr><tr><td>-d</td><td>自定义分隔符，默认为制表符</td></tr></tbody></table><p>命令使用示例：</p><ul><li>按字节进行切割。</li></ul><p><img src="https://img.alicdn.com/tfs/TB1ulVKHQT2gK0jSZFkXXcIQFXa-514-109.png" alt="https://img.alicdn.com/tfs/TB1ulVKHQT2gK0jSZFkXXcIQFXa-514-109.png"></p><ul><li>按字符进行切割。</li></ul><p><img src="https://img.alicdn.com/tfs/TB1HqRHHKH2gK0jSZFEXXcqMpXa-494-150.png" alt="https://img.alicdn.com/tfs/TB1HqRHHKH2gK0jSZFEXXcqMpXa-494-150.png"></p><ul><li>按指定字符进行切割。</li></ul><p><img src="https://img.alicdn.com/tfs/TB17VNGHUT1gK0jSZFrXXcNCXXa-516-107.png" alt="https://img.alicdn.com/tfs/TB17VNGHUT1gK0jSZFrXXcNCXXa-516-107.png"></p><h2 id="tr"><a href="#tr" class="headerlink" title="tr"></a>tr</h2><p>命令描述：tr命令用于对来自标准输入的字符进行替换、压缩和删除。</p><p>命令格式：tr [参数] [文本]。</p><p>参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-c</td><td>反选指定字符</td></tr><tr><td>-d</td><td>删除指定字符</td></tr><tr><td>-s</td><td>将重复的字符缩减成一个字符</td></tr><tr><td>-t [第一字符集] [第二字符集]</td><td>删除第一字符集较第二字符集多出的字符，使两个字符集长度相等</td></tr></tbody></table><p>命令使用示例：</p><ul><li>将输入字符由大写转换为小写。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;HELLO WORLD&quot;</span> | <span class="hljs-built_in">tr</span> <span class="hljs-string">&#x27;A-Z&#x27;</span> <span class="hljs-string">&#x27;a-z&#x27;</span><br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1YTdHHQY2gK0jSZFgXXc5OFXa-506-65.png" alt="https://img.alicdn.com/tfs/TB1YTdHHQY2gK0jSZFgXXc5OFXa-506-65.png"></p><ul><li>删除字符。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;hello 123 world 456&quot;</span> | <span class="hljs-built_in">tr</span> -d <span class="hljs-string">&#x27;0-9&#x27;</span><br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1XlBLHHj1gK0jSZFuXXcrHpXa-513-66.png" alt="https://img.alicdn.com/tfs/TB1XlBLHHj1gK0jSZFuXXcrHpXa-513-66.png"></p><ul><li>压缩字符。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;thissss is      a text linnnnnnne.&quot;</span> | <span class="hljs-built_in">tr</span> -s <span class="hljs-string">&#x27; sn&#x27;</span><br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1nthJHHY1gK0jSZTEXXXDQVXa-605-68.png" alt="https://img.alicdn.com/tfs/TB1nthJHHY1gK0jSZTEXXXDQVXa-605-68.png"></p><ul><li>产生随机密码。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> /dev/urandom | <span class="hljs-built_in">tr</span> -dc a-zA-Z0-9 | <span class="hljs-built_in">head</span> -c 13<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1kGFGHQP2gK0jSZPxXXacQpXa-573-69.png" alt="https://img.alicdn.com/tfs/TB1kGFGHQP2gK0jSZPxXXacQpXa-573-69.png"></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>Linux</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>Linux</tag>
-      
-      <tag>技术向</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>小猫跳圈</title>
-    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/"/>
-    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/</url>
-    
-    <content type="html"><![CDATA[<h1 id="小毛米跳大圈"><a href="#小毛米跳大圈" class="headerlink" title="小毛米跳大圈"></a>小毛米跳大圈</h1><p>代码如下：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">long</span> <span class="hljs-type">long</span> n;<br>    <span class="hljs-type">long</span> <span class="hljs-type">long</span> x0,y0,i,j,p,q,r,w;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;n);<br>    getchar();**<span class="hljs-comment">//one more getchar() here to remove Enter**</span><br>    getchar();<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;x0);<br>    getchar();<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;y0);<br>    getchar();<br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    scanf(&quot;%lld&quot;,&amp;p);</span><br><span class="hljs-comment">  getchar();</span><br><span class="hljs-comment">  scanf(&quot;%lld&quot;,&amp;q);</span><br><span class="hljs-comment">  getchar();</span><br><span class="hljs-comment">  scanf(&quot;%lld&quot;,&amp;r);</span><br><span class="hljs-comment">    */</span><br>**<span class="hljs-comment">//读取p q r的时候一个scanf就好，上述五行可以整合成下面一行↓**</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld %lld %lld&quot;</span>,&amp;p,&amp;q,&amp;r);<br>    w=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(w=<span class="hljs-number">0</span>;w&lt;n;w++)&#123;    <span class="hljs-comment">//here change to w&lt;n</span><br>        getchar(); **<span class="hljs-comment">//把回车读掉**</span><br>        getchar();<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;i);<br>        getchar();<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;j);<br>        getchar();<br>        x0=x0+i;<br>        y0=y0+j;<br>    &#125;<br>    <span class="hljs-keyword">if</span>((x0-p)*(x0-p)+(y0-q)*(y0-q)&gt;r*r)&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;(%lld,%lld)&quot;</span>,x0,y0);<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;N0 WAY!&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>分享</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>编程</tag>
-      
-      <tag>C语言</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>一些编程初学小技巧</title>
-    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%BA%9B%E7%BC%96%E7%A8%8B%E5%88%9D%E5%AD%A6%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
-    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%BA%9B%E7%BC%96%E7%A8%8B%E5%88%9D%E5%AD%A6%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
-    
-    <content type="html"><![CDATA[<h1 id="Some-insights"><a href="#Some-insights" class="headerlink" title="Some insights"></a>Some insights</h1><h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>关于编程，以后难免会遇到很多问题，这要求我们善用搜索引擎，在bing、Google等平台上搜索（尤其比较深入的问题，国内网站查不到的话，优先谷歌，用英文检索）。</p><p>后期运行相对大点的程序也会出现报错的情况，许多报错代码都可以直接看懂，比如</p><p>哪个地方没加分号，编译器就会提示      <em>expected 分号 before 什么什么</em> </p><p><img src="/./Untitled.png" alt="对应的就是printf()后没加分号的情况"></p><p>对应的就是printf()后没加分号的情况</p><hr><p>当然更多情况往往是我们看不太懂报错信息，最直接了当的方法就是ctrl+c然后把报错信息丢进搜索引擎，多数情况下都能找到相应解答。</p><p>对于初学者来说，dev-c++、codeblocks等普通IDE即可满足需求，这些IDE免费且为不少教材所接受，但从实际使用的角度讲，这些IDE毫无疑问是有点简陋在里面的，这边推荐几款<em><strong>好用的IDE</strong></em>：➡➡➡➡➡➡➡</p><p><a href="https://www.notion.so/Visual-Studio-Code-594827391c53488a98aa13caafdcf142?pvs=21">Visual Studio Code</a></p><p><a href="https://www.notion.so/CLion-d4ab46a2c0ad44e8a90f17a7ee48e7fd?pvs=21">CLion</a></p><hr><h2 id="书籍分享"><a href="#书籍分享" class="headerlink" title="书籍分享"></a>书籍分享</h2><p>这是一本内容丰富，广泛全面的C语言教程，可作为自学参考书籍或课本之外的拓展。</p><p><a href="./C_Primer_Plus.pdf">C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达.pdf 【右键Download即可下载】</a></p><hr><h2 id="网站分享"><a href="#网站分享" class="headerlink" title="网站分享"></a>网站分享</h2><h3 id="问答类"><a href="#问答类" class="headerlink" title="问答类"></a>问答类</h3><p><a href="https://github.com/">github.com</a> 全球最大的代码托管平台（可能需要特定的网络环境）</p><p><a href="https://stackoverflow.com/">Stack Overflow - Where Developers Learn, Share, &amp; Build Careers</a> 知名IT问答平台</p><p> <a href="https://www.csdn.net/">CSDN - 专业开发者社区</a> 国内最大的程序员交流平台，良莠不齐，查找问题时似乎还是直接搜索引擎比较好。</p><p><a href="https://www.zhihu.com/question/20824615">（这个问题有点意思的说）如何优雅地使用 Stack Overflow？</a> </p><h3 id="刷题类"><a href="#刷题类" class="headerlink" title="刷题类"></a>刷题类</h3><p><a href="https://leetcode.cn/">力扣（LeetCode）官网</a> 可以刷刷这上面的每日一题，对于平时的上机作业以及期末程序设计题有所帮助。</p><h3 id="分享代码"><a href="#分享代码" class="headerlink" title="分享代码"></a>分享代码</h3><p><a href="https://pastebin.mozilla.org/">Mozilla Community Pastebin</a> 分享代码的一个网站，可以把自己的代码贴在上面，把生成的链接发给要分享的人（相比微信直接粘贴和拍照片在格式上美观的多）缺点是中文分享后显示为乱码。</p><p><a href="https://carbon.now.sh/?bg=rgba(171,+184,+195,+1)&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false">Carbon | Create and share beautiful images of your source code</a> 可以把代码分享成美观的图片，比如杨某元旦整的某活（</p><p>以及现在我正在使用的Notion，作为一款功能强大，可分享的笔记软件，分享代码自然不在话下。上学期我不时会用它给同学分享代码，效果不错。凭教育邮箱可申请升级版账号，网页端&amp;&amp;PC端&amp;&amp;手机端&amp;&amp;ipad端实时云同步，美哉美哉。</p><p><a href="https://www.notion.so/14-56978b8cf9ac45c4a2027ae6aa153b1a?pvs=21">第14次上机</a></p><p>一个分享代码的例子⬆️⬆️⬆️⬆️⬆️⬆️</p><hr><h3 id="进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）"><a href="#进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）" class="headerlink" title="进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）"></a>进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）</h3><ul><li>GIt</li></ul><p><a href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a> 文件分布管理系统，学习成本蛮高，在没有开发较大程序的使用需求时似乎也没必要学🤔。</p><p><a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a> 一个直观的，帮助git学习理解的网站。</p><p><a href="./progit.pdf">git官方学习文档</a></p><p>git官方学习文档</p><ul><li>入坑计算机专业自学指南</li></ul><p><a href="https://csdiy.wiki/">CS自学指南 (csdiy.wiki)</a></p><p><a href="https://cs61a.org/">https://cs61a.org/</a></p><hr><h3 id="辅助"><a href="#辅助" class="headerlink" title="辅助"></a>辅助</h3><p><a href="https://microsoftedge.microsoft.com/addons/detail/%E6%B2%99%E6%8B%89%E6%9F%A5%E8%AF%8D%E8%81%9A%E5%90%88%E8%AF%8D%E5%85%B8%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/idghocbbahafpfhjnfhpbfbmpegphmmp">Microsoft Edge Addons</a></p><p>浏览器内划词翻译插件，查询英文文献时maybe helpful.</p><p><a href="https://www.runoob.com/">菜鸟教程 - 学的不仅是技术，更是梦想！</a></p><p>讲的比较浅，忘了某个语法的时候可以快速参考一下。</p><p><a href="https://wormhole.app/">Wormhole - Simple, private file sharing</a></p><p>临时分享一些稍大的文件，不过有个人隐私、或者机密性的文件还是谨慎啦。</p><p><a href="https://c.runoob.com/compile/11/">C 在线工具 | 菜鸟工具</a></p><p>C语言在线编译，外出没带电脑但临时有使用需求时可以一用。</p><p><del><a href="https://weixin.qq.com/">https://weixin.qq.com</a> 欢迎找小杨交流233333</del>🤪</p><h2 id="Hope-it-helpful！"><a href="#Hope-it-helpful！" class="headerlink" title="Hope it helpful！"></a>Hope it helpful！</h2>]]></content>
-    
-    
-    <categories>
-      
-      <category>学习笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>笔记</tag>
-      
-      <tag>编程</tag>
-      
-      <tag>C语言</tag>
-      
-      <tag>学习</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>白黑球</title>
-    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%99%BD%E9%BB%91%E7%90%83/"/>
-    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%99%BD%E9%BB%91%E7%90%83/</url>
-    
-    <content type="html"><![CDATA[<h1 id="白黑球"><a href="#白黑球" class="headerlink" title="白黑球"></a>白黑球</h1><p><img src="/img/photo_in_blogs/white_black_ball/1.png" alt="1.png"></p><p><em>这个题确实有点唬人，其实是有点取巧的</em></p><hr><p><strong>我们不妨分析一下：</strong></p><h3 id="w-b-1-即一共只有一个x色球，那概率当然是x色-100"><a href="#w-b-1-即一共只有一个x色球，那概率当然是x色-100" class="headerlink" title="&lt;1&gt; w+b&#x3D;&#x3D;1 即一共只有一个x色球，那概率当然是x色 100%"></a>&lt;1&gt; w+b&#x3D;&#x3D;1 即一共只有一个x色球，那概率当然是x色 100%</h3><h3 id="w-b≥2"><a href="#w-b≥2" class="headerlink" title="&lt;2&gt; w+b≥2"></a>&lt;2&gt; <strong>w+b≥2</strong></h3><ul><li>每次取2个球又放入1个，取一次后球的总数-1</li><li>若取1黑1白，则放入1白，相当于取1黑——黑的奇偶性改变，白的奇偶性不变</li><li>若取2黑，则放1黑——黑的奇偶性改变，白的奇偶性不变</li><li>若取2白，则放1黑——黑的奇偶性改变，白的奇偶性不变</li></ul><aside>💡 所以说，不管怎么取，都满足：黑的奇偶性改变，白的奇偶性不变</aside><hr><p>一共w个白球 b个黑球，总数目为w+b</p><p>取w+b-1次，即取出w+b-1个球，此时还剩一个球</p><ul><li>如果w<strong>一开始就是奇数</strong>，不管取出多少次，依旧是奇数</li></ul><p>也就是说，取w+b-1次，w仍然是奇数，而盒内此时只有一个球，<strong>必然是白球</strong></p><ul><li>如果w<strong>一开始是个偶数</strong>，不管取出多少次，依旧是偶数</li></ul><p>取w+b-1次后盒内只有一个球，白球是偶数，<strong>只能是黑球</strong></p><h2 id="所以，最后取出的球是白是黑只取决于一开始w是奇是偶，w是奇数则最后是白球，w是偶数则最后是黑球。"><a href="#所以，最后取出的球是白是黑只取决于一开始w是奇是偶，w是奇数则最后是白球，w是偶数则最后是黑球。" class="headerlink" title="所以，最后取出的球是白是黑只取决于一开始w是奇是偶，w是奇数则最后是白球，w是偶数则最后是黑球。"></a>所以，最后取出的球是白是黑只取决于一开始w是奇是偶，w是奇数则最后是白球，w是偶数则最后是黑球。</h2><p><img src="/img/photo_in_blogs/white_black_ball/2.png" alt="2.png"></p><p>至于如何输入T组数那就很简单啦。</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>分享</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>编程</tag>
-      
-      <tag>C语言</tag>
-      
-      <tag>算法</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>当我还有英语课时的某个pre</title>
-    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%ADpreparation/"/>
-    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%ADpreparation/</url>
-    
-    <content type="html"><![CDATA[<h1 id="英语口语preparation"><a href="#英语口语preparation" class="headerlink" title="英语口语preparation"></a>英语口语preparation</h1><h1 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h1><blockquote><p>1.What role do you think a university education will play in your life?</p></blockquote><p>From my perspective of view, the university education will be a milestone of my life. </p><p>First and foremost, in college education I can learn something that is not just general knowledge, but can really be used in our life. That indeed improve my ability to solve problems in our society.</p><p>What’s more, university education not only teach me academic knowledge, but also assist me to deal with interpersonal relationships. I will figure it out that what kind of person are deserved to make friends and by the way I can also gain some unforgettable friendships with others from different areas all over the world.</p><p>Last but not least, I will also learn how to live a proper life in university education. I need to arrange my schedule on my own. That may be a challenge at first but I hold the firm belief that I will make it.</p><h1 id="Culture"><a href="#Culture" class="headerlink" title="Culture"></a>Culture</h1><blockquote><p>4.How do you choose a friend? What qualities are your friends supposed to have? What would you do if something goes wrong between you and one of your friends?</p></blockquote><p>In my opinion making friends is a natural thing that if we appreciate values that each other has, we can make friends. Or we just talk with each other happily, we can make friends.</p><p>Of course some essential factors should be taken into account when making friends.</p><p>The most basic one is that he or she doesn’t have values that can’t be accepted in the society. I will expect my friends to be positive. He or she can trust me, share interesting things with me, and help me through difficult times. Relatively, I will give him or her the same enthusiasm as well.</p><p>I think the most important thing is to chat with each other about how we misunderstanding each other. The problem is not the most important, but the understanding to each other is. I will apologize if I do something wrong or accept his or her apology generously.</p><h1 id="Sports"><a href="#Sports" class="headerlink" title="Sports"></a>Sports</h1><blockquote><p>2.What is your favorite sport game? What benefits have you gained from it?</p></blockquote><p>My favorite sport is without doubt to be cycling.  By cycling not only can I improve my physical function but I can also appreciate the charming sceneries along the way. On the Mid-Autumn Festival of this year, I along with several friends ride shared bike to move from our school to the Oriental Pearl Tower. It takes a long time, but it deserve it. Despite exercising, I also know better about the city I lived, which is beneficial to my psychology health. All in all, cycling is such an appealing sports that I have fall in love with it thoroughly.</p><h1 id="Technology"><a href="#Technology" class="headerlink" title="Technology"></a>Technology</h1><blockquote><p>What are the major differences between AI and human beings.</p></blockquote><p>I think AI and human beings have essence&#x2F;‘es(ə)ns&#x2F; difference. Although AI have stronger and stronger ability nowadays, it works basically by training from tons of data and imitate the work process of human’s brain. Take chatGPT, a popular AI recently, for example, chatGPT is an AI that has such capacity to imitate human beings. It can do so many things that all of us are surprised to it. But it works by train through millions of data and imitate what people thing as well. AI can’t have its own thoughts, that is destined &#x2F;‘destɪn&#x2F; to be different from human beings.</p><h1 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h1><blockquote><p>A person who influence you most.</p></blockquote><p>I think the person who influences me most will be mother, who works hard for our family and get through many difficulties with her effort.</p><p>My mom works for a simple company in a small town. Her life originally was common and calm. As I entered the high school and need more tuitions and other expenses, she decided to make a difference. She study hard for the exam of middle economist and succeed just in one year. Then she entered a new company which offer higher salaries, but is also very busy. The most moving thing is that she doesn’t give up learning at the age of 40s, and become my model to work hard no matter what difficulties I may meet. Without her, I won’t have any thing I own now and I will learn from her and live up to her expectations!</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>作业</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>English</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>命运</title>
     <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%91%BD%E8%BF%90/"/>
     <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%91%BD%E8%BF%90/</url>
@@ -274,6 +135,35 @@
       <tag>文学</tag>
       
       <tag>小说</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>悉达多</title>
+    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%82%89%E8%BE%BE%E5%A4%9A/"/>
+    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%82%89%E8%BE%BE%E5%A4%9A/</url>
+    
+    <content type="html"><![CDATA[<h1 id="悉达多"><a href="#悉达多" class="headerlink" title="悉达多"></a>悉达多</h1><blockquote><p>内在“我”之源泉，必须拥有自己的阿特曼！其他一切都只是寻觅、走弯路和误入歧途。</p></blockquote><blockquote><p>意义和本质绝非隐藏在事物背后，它们就在事物当中，在一切事物当中。</p></blockquote><blockquote><p>“书写虽好，思考更佳；聪敏虽好，忍耐更佳。”</p></blockquote><blockquote><p>他永不停歇地向河水求教，首要的是学会抛弃激情和期盼，不论断、无成见地以寂静的心、侍奉和敞开的灵去倾听。</p></blockquote><blockquote><p>没有过去，没有未来，一切都是本质和当下。</p></blockquote><blockquote><p>生命不灭，刹那即永恒。</p></blockquote><blockquote><p>爱并非毫无价值。它源自天性，是一种必需。爱的欲望该得到哺育，痛苦该去品尝，蠢行该去实践。</p></blockquote><blockquote><p>他的爱像一道伤口。他感到伤口的存在不该只为在心中溃烂，它应该风化、发光。</p></blockquote><blockquote><p>世界并非不圆满。世界并非徐缓地行进在通向圆满之路：不，世间的每一瞬间皆为圆满。一切罪孽都承载宽赦，所有孩童身上都栖息老人，所有新生儿身上都栖息亡者，所有将死之人都孕育永恒的生命。没人能看清他者的道路。强盗和赌徒的路或许通向佛陀，婆罗门的路或许通往强盗。在最深的禅定中存在这种可能：时间被终结，人视过往、当下和未来的生活为同时。这时，一切皆为善、圆满和梵天。因此在我看来，世间存在的一切皆好。在我看来，死如同生，罪孽犹如神圣，聪明等同愚蠢。一切皆有定数，一切只需我的赞赏、顺从和爱的默许。这样于我有益，只会促进我，从不伤害我。我听便灵魂与肉体的安排，去经历罪孽，追逐肉欲和财富，去贪慕虚荣，以陷入最羞耻的绝望，以学会放弃挣扎，学会热爱世界。我不再将这个世界与我所期待的，塑造的圆满世界比照，而是接受这个世界，爱它，属于它。——哦，乔文达，这就是我的一些思考和感悟。”</p></blockquote><blockquote><p>这就是我的认知：智慧无法言传。智者试图传授智慧，总像痴人说梦。”</p></blockquote><blockquote><p>真的反面同样真实！也就是说，只有片面的真才得以以言辞彰显。可以思想和言说的一切都是片面的，是局部，都缺乏整体、完满、统一。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>哲思</tag>
+      
+      <tag>文学</tag>
+      
+      <tag>黑塞</tag>
       
     </tags>
     
@@ -309,35 +199,6 @@
   
   
   <entry>
-    <title>悉达多</title>
-    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%82%89%E8%BE%BE%E5%A4%9A/"/>
-    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%82%89%E8%BE%BE%E5%A4%9A/</url>
-    
-    <content type="html"><![CDATA[<h1 id="悉达多"><a href="#悉达多" class="headerlink" title="悉达多"></a>悉达多</h1><blockquote><p>内在“我”之源泉，必须拥有自己的阿特曼！其他一切都只是寻觅、走弯路和误入歧途。</p></blockquote><blockquote><p>意义和本质绝非隐藏在事物背后，它们就在事物当中，在一切事物当中。</p></blockquote><blockquote><p>“书写虽好，思考更佳；聪敏虽好，忍耐更佳。”</p></blockquote><blockquote><p>他永不停歇地向河水求教，首要的是学会抛弃激情和期盼，不论断、无成见地以寂静的心、侍奉和敞开的灵去倾听。</p></blockquote><blockquote><p>没有过去，没有未来，一切都是本质和当下。</p></blockquote><blockquote><p>生命不灭，刹那即永恒。</p></blockquote><blockquote><p>爱并非毫无价值。它源自天性，是一种必需。爱的欲望该得到哺育，痛苦该去品尝，蠢行该去实践。</p></blockquote><blockquote><p>他的爱像一道伤口。他感到伤口的存在不该只为在心中溃烂，它应该风化、发光。</p></blockquote><blockquote><p>世界并非不圆满。世界并非徐缓地行进在通向圆满之路：不，世间的每一瞬间皆为圆满。一切罪孽都承载宽赦，所有孩童身上都栖息老人，所有新生儿身上都栖息亡者，所有将死之人都孕育永恒的生命。没人能看清他者的道路。强盗和赌徒的路或许通向佛陀，婆罗门的路或许通往强盗。在最深的禅定中存在这种可能：时间被终结，人视过往、当下和未来的生活为同时。这时，一切皆为善、圆满和梵天。因此在我看来，世间存在的一切皆好。在我看来，死如同生，罪孽犹如神圣，聪明等同愚蠢。一切皆有定数，一切只需我的赞赏、顺从和爱的默许。这样于我有益，只会促进我，从不伤害我。我听便灵魂与肉体的安排，去经历罪孽，追逐肉欲和财富，去贪慕虚荣，以陷入最羞耻的绝望，以学会放弃挣扎，学会热爱世界。我不再将这个世界与我所期待的，塑造的圆满世界比照，而是接受这个世界，爱它，属于它。——哦，乔文达，这就是我的一些思考和感悟。”</p></blockquote><blockquote><p>这就是我的认知：智慧无法言传。智者试图传授智慧，总像痴人说梦。”</p></blockquote><blockquote><p>真的反面同样真实！也就是说，只有片面的真才得以以言辞彰显。可以思想和言说的一切都是片面的，是局部，都缺乏整体、完满、统一。</p></blockquote>]]></content>
-    
-    
-    <categories>
-      
-      <category>读书笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>文学</tag>
-      
-      <tag>哲思</tag>
-      
-      <tag>黑塞</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>我与地坛</title>
     <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%88%91%E4%B8%8E%E5%9C%B0%E5%9D%9B/"/>
     <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%88%91%E4%B8%8E%E5%9C%B0%E5%9D%9B/</url>
@@ -354,9 +215,9 @@
     
     <tags>
       
-      <tag>文学</tag>
-      
       <tag>哲思</tag>
+      
+      <tag>文学</tag>
       
       <tag>史铁生</tag>
       
@@ -421,33 +282,6 @@
   
   
   <entry>
-    <title>荒原狼</title>
-    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8D%92%E5%8E%9F%E7%8B%BC/"/>
-    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8D%92%E5%8E%9F%E7%8B%BC/</url>
-    
-    <content type="html"><![CDATA[<h1 id="荒原狼"><a href="#荒原狼" class="headerlink" title="荒原狼"></a>荒原狼</h1><blockquote><p>‘大多数人在不会游泳时不想游泳。’多么机趣，不是吗？他们当然不想游泳！他们为陆地而生，而非为水。他们当然也不愿思考，他们为活着而生，不为思考！是的，谁若思考，视思考为头等重要的事，他虽然可以持续深远地思考下去，但他却误把陆地当成水，终有一天会被淹死。”</p></blockquote><blockquote><p>每个时代、每种文化、每种习俗和传统都有自己的风格，都有与之相宜的柔和与冷酷，美与残忍，都视承受某些苦难、忍耐某种恶习为理所当然。人类唯有生活在两个时代、两种文化和宗教的冲突间，才真正受苦，如入地狱。</p></blockquote><blockquote><p>事实上，不能断定任何人的人生极为不幸。身上没有狼性的人也不必为此感到幸运。再不幸的人生，也有它的光明时刻，也有它沙砾和岩石间娇小的幸福之花。</p></blockquote><blockquote><p>追求权力者毁于权力，追求财富者毁于财富，卑躬屈膝者毁于盲从，贪图淫乐者毁于贪欲，而荒原狼，则毁于他的特立独行。</p></blockquote><blockquote><p>人是过渡，是自然与精神间一座狭长而危险的桥梁。他内在的使命是走向精神，走向上帝，而热诚的内在渴望则驱使他回归自然，回归母体：他的生命战战兢兢地摇摆在两种力量间。</p></blockquote><blockquote><p>任何高级的幽默都是从不再严肃地看待自己开始。</p></blockquote>]]></content>
-    
-    
-    <categories>
-      
-      <category>读书笔记</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>黑塞</tag>
-      
-      <tag>西方文学</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>病隙碎笔</title>
     <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%97%85%E9%9A%99%E7%A2%8E%E7%AC%94/"/>
     <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E7%97%85%E9%9A%99%E7%A2%8E%E7%AC%94/</url>
@@ -464,9 +298,9 @@
     
     <tags>
       
-      <tag>文学</tag>
-      
       <tag>哲思</tag>
+      
+      <tag>文学</tag>
       
       <tag>史铁生</tag>
       
@@ -506,6 +340,60 @@
   
   
   <entry>
+    <title>荒原狼</title>
+    <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8D%92%E5%8E%9F%E7%8B%BC/"/>
+    <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E8%8D%92%E5%8E%9F%E7%8B%BC/</url>
+    
+    <content type="html"><![CDATA[<h1 id="荒原狼"><a href="#荒原狼" class="headerlink" title="荒原狼"></a>荒原狼</h1><blockquote><p>‘大多数人在不会游泳时不想游泳。’多么机趣，不是吗？他们当然不想游泳！他们为陆地而生，而非为水。他们当然也不愿思考，他们为活着而生，不为思考！是的，谁若思考，视思考为头等重要的事，他虽然可以持续深远地思考下去，但他却误把陆地当成水，终有一天会被淹死。”</p></blockquote><blockquote><p>每个时代、每种文化、每种习俗和传统都有自己的风格，都有与之相宜的柔和与冷酷，美与残忍，都视承受某些苦难、忍耐某种恶习为理所当然。人类唯有生活在两个时代、两种文化和宗教的冲突间，才真正受苦，如入地狱。</p></blockquote><blockquote><p>事实上，不能断定任何人的人生极为不幸。身上没有狼性的人也不必为此感到幸运。再不幸的人生，也有它的光明时刻，也有它沙砾和岩石间娇小的幸福之花。</p></blockquote><blockquote><p>追求权力者毁于权力，追求财富者毁于财富，卑躬屈膝者毁于盲从，贪图淫乐者毁于贪欲，而荒原狼，则毁于他的特立独行。</p></blockquote><blockquote><p>人是过渡，是自然与精神间一座狭长而危险的桥梁。他内在的使命是走向精神，走向上帝，而热诚的内在渴望则驱使他回归自然，回归母体：他的生命战战兢兢地摇摆在两种力量间。</p></blockquote><blockquote><p>任何高级的幽默都是从不再严肃地看待自己开始。</p></blockquote>]]></content>
+    
+    
+    <categories>
+      
+      <category>读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>黑塞</tag>
+      
+      <tag>西方文学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Linux命令</title>
+    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%91%BD%E4%BB%A4/"/>
+    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%91%BD%E4%BB%A4/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h1><h2 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h2><p>echo 显示变量<br>date “+%j” 今年过去了多少天</p><p>ntpdate <a href="http://time.nist.gov/">time.nist.gov</a> 用ntpdate从服务器更新时间</p><p>wget -P 下载到指定目录<br>ps 查看系统进程<br>top 显示负载信息<br>pidof 查看PID值<br>kill 删除进程<br>killall<br>uname -s系统名称<br>-n主机名称 -i硬件架构<br>uptime系统负载信息<br>free 内存使用量信息<br>who 用户<br>last 最近登录信息<br>history 历史命令</p><hr><h2 id="磁盘管理"><a href="#磁盘管理" class="headerlink" title="磁盘管理"></a>磁盘管理</h2><p>df 磁盘空间利用情况<br>-h 以合适的单位返回各个文件系统容量<br>-T 文件系统类型<br>du 查看文件和目录磁盘的使用空间<br>fdisk 磁盘分区</p><hr><h2 id="文本编辑工具Vim"><a href="#文本编辑工具Vim" class="headerlink" title="文本编辑工具Vim"></a>文本编辑工具Vim</h2><h3 id="vim的三种操作模式"><a href="#vim的三种操作模式" class="headerlink" title="vim的三种操作模式"></a>vim的三种操作模式</h3><p>vim有三种操作模式，分别是命令模式（Command mode）、输入模式（Insert mode）和底线命令模式（Last line mode）。</p><p>三种模式切换快捷键：</p><table><thead><tr><th>模式</th><th>快捷键</th></tr></thead><tbody><tr><td>命令模式</td><td>ESC</td></tr><tr><td>输入模式</td><td>i或a</td></tr><tr><td>底线命令模式</td><td>:</td></tr></tbody></table><ul><li>命令模式</li></ul><p>在命令模式中控制光标移动和输入命令，可对文本进行复制、粘贴、删除和查找等工作。</p><p>使用命令vim filename后进入编辑器视图后，默认模式就是命令模式，此时敲击键盘字母会被识别为一个命令，例如在键盘上连续敲击两次d，就会删除光标所在行。</p><p>以下是在命令模式中常用的快捷操作：</p><table><thead><tr><th>操作</th><th>快捷键</th></tr></thead><tbody><tr><td>光标左移</td><td>h</td></tr><tr><td>光标右移</td><td>l（小写L）</td></tr><tr><td>光标上移</td><td>k</td></tr><tr><td>光标下移</td><td>j</td></tr><tr><td>光标移动到下一个单词</td><td>w</td></tr><tr><td>光标移动到上一个单词</td><td>b</td></tr><tr><td>移动游标到第n行</td><td>nG</td></tr><tr><td>移动游标到第一行</td><td>gg</td></tr><tr><td>移动游标到最后一行</td><td>G</td></tr><tr><td>快速回到上一次光标所在位置</td><td>Ctrl+o</td></tr><tr><td>删除当前字符</td><td>x</td></tr><tr><td>删除前一个字符</td><td>X</td></tr><tr><td>删除整行</td><td>dd</td></tr><tr><td>删除一个单词</td><td>dw或daw</td></tr><tr><td>删除至行尾</td><td>d$或D</td></tr><tr><td>删除至行首</td><td>d^</td></tr><tr><td>删除到文档末尾</td><td>dG</td></tr><tr><td>删除至文档首部</td><td>d1G</td></tr><tr><td>删除n行</td><td>ndd</td></tr><tr><td>删除n个连续字符</td><td>nx</td></tr><tr><td>将光标所在位置字母变成大写或小写</td><td>~</td></tr><tr><td>复制游标所在的整行</td><td>yy（3yy表示复制3行）</td></tr><tr><td>粘贴至光标后（下）</td><td>p</td></tr><tr><td>粘贴至光标前（上）</td><td>P</td></tr><tr><td>剪切</td><td>dd</td></tr><tr><td>交换上下行</td><td>ddp</td></tr><tr><td>替换整行，即删除游标所在行并进入插入模式</td><td>cc</td></tr><tr><td>撤销一次或n次操作</td><td>u{n}</td></tr><tr><td>撤销当前行的所有修改</td><td>U</td></tr><tr><td>恢复撤销操作</td><td>Ctrl+r</td></tr><tr><td>整行将向右缩进</td><td>&gt;&gt;</td></tr><tr><td>整行将向左退回</td><td>&lt;&lt;</td></tr><tr><td>若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开</td><td>ZZ</td></tr></tbody></table><ul><li>输入模式</li></ul><p>在命令模式下按i或a键就进入了输入模式，在输入模式下，您可以正常的使用键盘按键对文本进行插入和删除等操作。</p><ul><li>底线命令模式</li></ul><p>在命令模式下按:键就进入了底线命令模式，在底线命令模式中可以输入单个或多个字符的命令。</p><table><thead><tr><th>操作</th><th>命令</th></tr></thead><tbody><tr><td>保存</td><td>:w</td></tr><tr><td>退出</td><td>:q</td></tr><tr><td>保存并退出</td><td>:wq（:wq!表示强制保存退出）</td></tr><tr><td>将文件另存为其他文件名</td><td>:w new_filename</td></tr><tr><td>显示行号</td><td>:set nu</td></tr><tr><td>取消行号</td><td>:set nonu</td></tr><tr><td>使本行内容居中</td><td>:ce</td></tr><tr><td>使本行文本靠右</td><td>:ri</td></tr><tr><td>使本行内容靠左</td><td>:le</td></tr><tr><td>向光标之下寻找一个名称为word的字符串</td><td>:&#x2F;word</td></tr><tr><td>向光标之上寻找一个字符串名称为word的字符串</td><td>:?word</td></tr><tr><td>重复前一个搜寻的动作</td><td>:n</td></tr><tr><td>从第一行到最后一行寻找word1字符串，并将该字符串取代为word2</td><td></td></tr></tbody></table><h2 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h2><p>命令描述：cat命令用于查看内容较少的纯文本文件。</p><p>命令格式：cat [选项] [文件]。</p><p>命令参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-n或–number</td><td>显示行号</td></tr><tr><td>-b或–number-nonblank</td><td>显示行号，但是不对空白行进行编号</td></tr><tr><td>-s或–squeeze-blank</td><td>当遇到有连续两行以上的空白行，只显示一行的空白行</td></tr></tbody></table><h2 id="文本编辑工具Vim-1"><a href="#文本编辑工具Vim-1" class="headerlink" title="文本编辑工具Vim"></a>文本编辑工具Vim</h2><h3 id="vim的三种操作模式-1"><a href="#vim的三种操作模式-1" class="headerlink" title="vim的三种操作模式"></a>vim的三种操作模式</h3><p>vim有三种操作模式，分别是命令模式（Command mode）、输入模式（Insert mode）和底线命令模式（Last line mode）。</p><p>三种模式切换快捷键：</p><table><thead><tr><th>模式</th><th>快捷键</th></tr></thead><tbody><tr><td>命令模式</td><td>ESC</td></tr><tr><td>输入模式</td><td>i或a</td></tr><tr><td>底线命令模式</td><td>:</td></tr></tbody></table><ul><li>命令模式</li></ul><p>在命令模式中控制光标移动和输入命令，可对文本进行复制、粘贴、删除和查找等工作。</p><p>使用命令vim filename后进入编辑器视图后，默认模式就是命令模式，此时敲击键盘字母会被识别为一个命令，例如在键盘上连续敲击两次d，就会删除光标所在行。</p><p>以下是在命令模式中常用的快捷操作：</p><table><thead><tr><th>操作</th><th>快捷键</th></tr></thead><tbody><tr><td>光标左移</td><td>h</td></tr><tr><td>光标右移</td><td>l（小写L）</td></tr><tr><td>光标上移</td><td>k</td></tr><tr><td>光标下移</td><td>j</td></tr><tr><td>光标移动到下一个单词</td><td>w</td></tr><tr><td>光标移动到上一个单词</td><td>b</td></tr><tr><td>移动游标到第n行</td><td>nG</td></tr><tr><td>移动游标到第一行</td><td>gg</td></tr><tr><td>移动游标到最后一行</td><td>G</td></tr><tr><td>快速回到上一次光标所在位置</td><td>Ctrl+o</td></tr><tr><td>删除当前字符</td><td>x</td></tr><tr><td>删除前一个字符</td><td>X</td></tr><tr><td>删除整行</td><td>dd</td></tr><tr><td>删除一个单词</td><td>dw或daw</td></tr><tr><td>删除至行尾</td><td>d$或D</td></tr><tr><td>删除至行首</td><td>d^</td></tr><tr><td>删除到文档末尾</td><td>dG</td></tr><tr><td>删除至文档首部</td><td>d1G</td></tr><tr><td>删除n行</td><td>ndd</td></tr><tr><td>删除n个连续字符</td><td>nx</td></tr><tr><td>将光标所在位置字母变成大写或小写</td><td>~</td></tr><tr><td>复制游标所在的整行</td><td>yy（3yy表示复制3行）</td></tr><tr><td>粘贴至光标后（下）</td><td>p</td></tr><tr><td>粘贴至光标前（上）</td><td>P</td></tr><tr><td>剪切</td><td>dd</td></tr><tr><td>交换上下行</td><td>ddp</td></tr><tr><td>替换整行，即删除游标所在行并进入插入模式</td><td>cc</td></tr><tr><td>撤销一次或n次操作</td><td>u{n}</td></tr><tr><td>撤销当前行的所有修改</td><td>U</td></tr><tr><td>恢复撤销操作</td><td>Ctrl+r</td></tr><tr><td>整行将向右缩进</td><td>&gt;&gt;</td></tr><tr><td>整行将向左退回</td><td>&lt;&lt;</td></tr><tr><td>若档案没有更动，则不储存离开，若档案已经被更动过，则储存后离开</td><td>ZZ</td></tr></tbody></table><ul><li>输入模式</li></ul><p>在命令模式下按i或a键就进入了输入模式，在输入模式下，您可以正常的使用键盘按键对文本进行插入和删除等操作。</p><ul><li>底线命令模式</li></ul><p>在命令模式下按:键就进入了底线命令模式，在底线命令模式中可以输入单个或多个字符的命令。</p><table><thead><tr><th>操作</th><th>命令</th></tr></thead><tbody><tr><td>保存</td><td>:w</td></tr><tr><td>退出</td><td>:q</td></tr><tr><td>保存并退出</td><td>:wq（:wq!表示强制保存退出）</td></tr><tr><td>将文件另存为其他文件名</td><td>:w new_filename</td></tr><tr><td>显示行号</td><td>:set nu</td></tr><tr><td>取消行号</td><td>:set nonu</td></tr><tr><td>使本行内容居中</td><td>:ce</td></tr><tr><td>使本行文本靠右</td><td>:ri</td></tr><tr><td>使本行内容靠左</td><td>:le</td></tr><tr><td>向光标之下寻找一个名称为word的字符串</td><td>:&#x2F;word</td></tr><tr><td>向光标之上寻找一个字符串名称为word的字符串</td><td>:?word</td></tr><tr><td>重复前一个搜寻的动作</td><td>:n</td></tr><tr><td>从第一行到最后一行寻找word1字符串，并将该字符串取代为word2</td><td></td></tr></tbody></table><h2 id="cat-1"><a href="#cat-1" class="headerlink" title="cat"></a>cat</h2><p>命令描述：cat命令用于查看内容较少的纯文本文件。</p><p>命令格式：cat [选项] [文件]。</p><p>命令参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-n或–number</td><td>显示行号</td></tr><tr><td>-b或–number-nonblank</td><td>显示行号，但是不对空白行进行编号</td></tr><tr><td>-s或–squeeze-blank</td><td>当遇到有连续两行以上的空白行，只显示一行的空白行</td></tr></tbody></table><p>more</p><p>less 显示文件</p><p>head 显示文件开头指定行数（-n）指定字符数（-c）</p><p>tail 显示文件末尾多少行 -f显示文件最新追加的内容</p><p>stat 显示文件详细信息</p><p>wc 统计指定文本的行数-l 、单词数-w、字节数-c</p><p>file 辨识文件类型</p><p>diff 查看两个文件的差异</p><p>grep 查找文件里符合条件的字符串</p><h2 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h2><p>命令描述：sed是一种流编辑器，它是文本处理中非常中的工具，能够完美的配合正则表达式使用。</p><p>1. 处理时，把当前处理的行存储在临时缓冲区中，称为模式空间（pattern space）。<br>2. 接着用sed命令处理缓冲区中的内容，处理完成后，把缓冲区的内容送往屏幕。<br>3. 接着处理下一行，这样不断重复，直到文件末尾。</p><p>注意：</p><ul><li>sed命令不会修改原文件，例如删除命令只表示某些行不打印输出，而不是从原文件中删去。</li><li>如果要改变源文件，需要使用-i选项。</li></ul><p>命令格式：sed [参数] [动作] [文件]。</p><p>参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-e [script]</td><td>执行多个script</td></tr><tr><td>-f [script文件]</td><td>执行指定script文件</td></tr><tr><td>-n</td><td>仅显示script处理后的结果</td></tr><tr><td>-i</td><td>输出到原文件，静默执行（修改原文件）</td></tr></tbody></table><p>动作说明：</p><table><thead><tr><th>动作</th><th>说明</th></tr></thead><tbody><tr><td>a</td><td>在行后面增加内容</td></tr><tr><td>c</td><td>替换行</td></tr><tr><td>d</td><td>删除行</td></tr><tr><td>i</td><td>在行前面插入</td></tr><tr><td>p</td><td>打印相关的行</td></tr><tr><td>s</td><td>替换内容</td></tr></tbody></table><p>命令使用示例：</p><ul><li>删除第3行到最后一行内容。</li></ul><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">sed</span> <span class="hljs-string">&#x27;3,<span class="hljs-variable">$d</span>&#x27;</span> /etc/passwd<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1VGVHHQL0gK0jSZFAXXcA9pXa-633-570.png" alt="https://img.alicdn.com/tfs/TB1VGVHHQL0gK0jSZFAXXcA9pXa-633-570.png"></p><ul><li>在最后一行新增行。</li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift">sed &#x27;<span class="hljs-variable">$a</span> admin:x:<span class="hljs-number">1000</span>:<span class="hljs-number">1000</span>:admin:<span class="hljs-regexp">/home/</span>admin:<span class="hljs-regexp">/bin/</span>bash&#x27; <span class="hljs-regexp">/etc/</span>passwd<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1wjVJHHH1gK0jSZFwXXc7aXXa-767-527.png" alt="https://img.alicdn.com/tfs/TB1wjVJHHH1gK0jSZFwXXc7aXXa-767-527.png"></p><ul><li>替换内容。</li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift">sed &#x27;s<span class="hljs-regexp">/SELINUX=disabled/</span><span class="hljs-type">SELINUX</span><span class="hljs-operator">=</span>enforcing<span class="hljs-regexp">/&#x27; /</span>etc<span class="hljs-regexp">/selinux/</span>config<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1gURDHLb2gK0jSZK9XXaEgFXa-789-655.png" alt="https://img.alicdn.com/tfs/TB1gURDHLb2gK0jSZK9XXaEgFXa-789-655.png"></p><ul><li>替换行。</li></ul><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">sed <span class="hljs-string">&#x27;1c abcdefg&#x27;</span> <span class="hljs-regexp">/etc/</span>passwd<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1z6XEHUz1gK0jSZLeXXb9kVXa-658-512.png" alt="https://img.alicdn.com/tfs/TB1z6XEHUz1gK0jSZLeXXb9kVXa-658-512.png"></p><h2 id="awk"><a href="#awk" class="headerlink" title="awk"></a>awk</h2><p>命令描述：和 sed 命令类似，awk 命令也是逐行扫描文件（从第 1 行到最后一行），寻找含有目标文本的行，如果匹配成功，则会在该行上执行用户想要的操作；反之，则不对行做任何处理。</p><p>命令格式：awk [参数] [脚本] [文件]。</p><p>参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-F fs</td><td>指定以fs作为输入行的分隔符，awk 命令默认分隔符为空格或制表符</td></tr><tr><td>-f file</td><td>读取awk脚本</td></tr><tr><td>-v val&#x3D;val</td><td>在执行处理过程之前，设置一个变量var，并给其设置初始值为val</td></tr></tbody></table><p>内置变量：</p><table><thead><tr><th>变量</th><th>用途</th></tr></thead><tbody><tr><td>FS</td><td>字段分隔符</td></tr><tr><td>$n</td><td>指定分隔的第n个字段，如$1、$3分别表示第1、第三列</td></tr><tr><td>$0</td><td>当前读入的整行文本内容</td></tr><tr><td>NF</td><td>记录当前处理行的字段个数（列数）</td></tr><tr><td>NR</td><td>记录当前已读入的行数</td></tr><tr><td>FNR</td><td>当前行在源文件中的行号</td></tr></tbody></table><p>awk中还可以指定脚本命令的运行时机。默认情况下，awk会从输入中读取一行文本，然后针对该行的数据执行程序脚本，但有时可能需要在处理数据前运行一些脚本命令，这就需要使用BEGIN关键字，BEGIN会在awsk读取数据前强制执行该关键字后指定的脚本命令。</p><p>和BEGIN关键字相对应，END关键字允许我们指定一些脚本命令，awk会在读完数据后执行它们。</p><p>命令使用示例：</p><ul><li>查看本机IP地址。</li></ul><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">ifconfig</span> eth0 |awk <span class="hljs-string">&#x27;/inet/&#123;print <span class="hljs-variable">$2</span>&#125;&#x27;</span><br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1VwhFHUH1gK0jSZSyXXXtlpXa-482-66.png" alt="https://img.alicdn.com/tfs/TB1VwhFHUH1gK0jSZSyXXXtlpXa-482-66.png"></p><ul><li>查看本机剩余磁盘容量。</li></ul><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">df</span> -h |awk <span class="hljs-string">&#x27;/\/$/&#123;print <span class="hljs-variable">$4</span>&#125;&#x27;</span><br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1k.RDHLb2gK0jSZK9XXaEgFXa-423-70.png" alt="https://img.alicdn.com/tfs/TB1k.RDHLb2gK0jSZK9XXaEgFXa-423-70.png"></p><ul><li>统计系统用户个数。</li></ul><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">awk</span> -F: <span class="hljs-string">&#x27;<span class="hljs-variable">$3</span>&lt;1000&#123;x++&#125; END&#123;print x&#125;&#x27;</span> /etc/passwd<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1_AFFHFP7gK0jSZFjXXc5aXXa-553-66.png" alt="https://img.alicdn.com/tfs/TB1_AFFHFP7gK0jSZFjXXc5aXXa-553-66.png"></p><ul><li>输出其中登录Shell不以nologin结尾（对第7个字段做!~反向匹配）的用户名、登录Shell信息。</li></ul><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">awk</span> -F: <span class="hljs-string">&#x27;<span class="hljs-variable">$7</span>!~/nologin$/&#123;print <span class="hljs-variable">$1</span>,<span class="hljs-variable">$7</span>&#125;&#x27;</span> /etc/passwd<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1EaRHHKH2gK0jSZFEXXcqMpXa-595-129.png" alt="https://img.alicdn.com/tfs/TB1EaRHHKH2gK0jSZFEXXcqMpXa-595-129.png"></p><ul><li>输出&#x2F;etc&#x2F;passwd文件中前三行记录的用户名和用户uid。</li></ul><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs swift">head <span class="hljs-operator">-</span><span class="hljs-number">3</span> <span class="hljs-regexp">/etc/</span>passwd <span class="hljs-operator">|</span> awk  &#x27;<span class="hljs-type">BEGIN</span>&#123;<span class="hljs-type">FS</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;:&quot;</span>;print <span class="hljs-string">&quot;name<span class="hljs-subst">\t</span>uid&quot;</span>&#125;&#123;print <span class="hljs-variable">$1</span>,<span class="hljs-string">&quot;<span class="hljs-subst">\t</span>&quot;</span><span class="hljs-variable">$3</span>&#125;<span class="hljs-type">END</span>&#123;print <span class="hljs-string">&quot;sum lines &quot;</span><span class="hljs-type">NR</span>&#125;&#x27;<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1hAXJHUY1gK0jSZFCXXcwqXXa-1020-151.png" alt="https://img.alicdn.com/tfs/TB1hAXJHUY1gK0jSZFCXXcwqXXa-1020-151.png"></p><ul><li>查看tcp连接数。</li></ul><figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cos">netstat -na | awk &#x27;/<span class="hljs-symbol">^tcp</span>/ &#123;++<span class="hljs-keyword">S</span>[<span class="hljs-built_in">$NF</span>]&#125; END &#123;<span class="hljs-keyword">for</span>(a in <span class="hljs-keyword">S</span>) <span class="hljs-keyword">print</span> a, <span class="hljs-keyword">S</span>[a]&#125;&#x27;<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB10ghFHUH1gK0jSZSyXXXtlpXa-813-87.png" alt="https://img.alicdn.com/tfs/TB10ghFHUH1gK0jSZSyXXXtlpXa-813-87.png"></p><ul><li>关闭指定服务的所有的进程。</li></ul><h2 id="cut"><a href="#cut" class="headerlink" title="cut"></a>cut</h2><p>命令描述：cut命令主要用来切割字符串，可以对输入的数据进行切割然后输出。</p><p>命令格式：cut [参数] [文件]。</p><p>参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-b</td><td>以字节为单位进行分割</td></tr><tr><td>-c</td><td>以字符为单位进行分割</td></tr><tr><td>-d</td><td>自定义分隔符，默认为制表符</td></tr></tbody></table><p>命令使用示例：</p><ul><li>按字节进行切割。</li></ul><p><img src="https://img.alicdn.com/tfs/TB1ulVKHQT2gK0jSZFkXXcIQFXa-514-109.png" alt="https://img.alicdn.com/tfs/TB1ulVKHQT2gK0jSZFkXXcIQFXa-514-109.png"></p><ul><li>按字符进行切割。</li></ul><p><img src="https://img.alicdn.com/tfs/TB1HqRHHKH2gK0jSZFEXXcqMpXa-494-150.png" alt="https://img.alicdn.com/tfs/TB1HqRHHKH2gK0jSZFEXXcqMpXa-494-150.png"></p><ul><li>按指定字符进行切割。</li></ul><p><img src="https://img.alicdn.com/tfs/TB17VNGHUT1gK0jSZFrXXcNCXXa-516-107.png" alt="https://img.alicdn.com/tfs/TB17VNGHUT1gK0jSZFrXXcNCXXa-516-107.png"></p><h2 id="tr"><a href="#tr" class="headerlink" title="tr"></a>tr</h2><p>命令描述：tr命令用于对来自标准输入的字符进行替换、压缩和删除。</p><p>命令格式：tr [参数] [文本]。</p><p>参数说明：</p><table><thead><tr><th>参数</th><th>说明</th></tr></thead><tbody><tr><td>-c</td><td>反选指定字符</td></tr><tr><td>-d</td><td>删除指定字符</td></tr><tr><td>-s</td><td>将重复的字符缩减成一个字符</td></tr><tr><td>-t [第一字符集] [第二字符集]</td><td>删除第一字符集较第二字符集多出的字符，使两个字符集长度相等</td></tr></tbody></table><p>命令使用示例：</p><ul><li>将输入字符由大写转换为小写。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;HELLO WORLD&quot;</span> | <span class="hljs-built_in">tr</span> <span class="hljs-string">&#x27;A-Z&#x27;</span> <span class="hljs-string">&#x27;a-z&#x27;</span><br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1YTdHHQY2gK0jSZFgXXc5OFXa-506-65.png" alt="https://img.alicdn.com/tfs/TB1YTdHHQY2gK0jSZFgXXc5OFXa-506-65.png"></p><ul><li>删除字符。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;hello 123 world 456&quot;</span> | <span class="hljs-built_in">tr</span> -d <span class="hljs-string">&#x27;0-9&#x27;</span><br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1XlBLHHj1gK0jSZFuXXcrHpXa-513-66.png" alt="https://img.alicdn.com/tfs/TB1XlBLHHj1gK0jSZFuXXcrHpXa-513-66.png"></p><ul><li>压缩字符。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;thissss is      a text linnnnnnne.&quot;</span> | <span class="hljs-built_in">tr</span> -s <span class="hljs-string">&#x27; sn&#x27;</span><br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1nthJHHY1gK0jSZTEXXXDQVXa-605-68.png" alt="https://img.alicdn.com/tfs/TB1nthJHHY1gK0jSZTEXXXDQVXa-605-68.png"></p><ul><li>产生随机密码。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> /dev/urandom | <span class="hljs-built_in">tr</span> -dc a-zA-Z0-9 | <span class="hljs-built_in">head</span> -c 13<br></code></pre></td></tr></table></figure><p>命令输出结果：</p><p><img src="https://img.alicdn.com/tfs/TB1kGFGHQP2gK0jSZPxXXacQpXa-573-69.png" alt="https://img.alicdn.com/tfs/TB1kGFGHQP2gK0jSZPxXXacQpXa-573-69.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Linux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Linux</tag>
+      
+      <tag>技术向</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>飞鸟集</title>
     <link href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%A3%9E%E9%B8%9F%E9%9B%86/"/>
     <url>/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E9%A3%9E%E9%B8%9F%E9%9B%86/</url>
@@ -527,6 +415,118 @@
       <tag>诗</tag>
       
       <tag>泰戈尔</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>一些编程初学小技巧</title>
+    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%BA%9B%E7%BC%96%E7%A8%8B%E5%88%9D%E5%AD%A6%E5%B0%8F%E6%8A%80%E5%B7%A7/"/>
+    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%B8%80%E4%BA%9B%E7%BC%96%E7%A8%8B%E5%88%9D%E5%AD%A6%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Some-insights"><a href="#Some-insights" class="headerlink" title="Some insights"></a>Some insights</h1><h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>关于编程，以后难免会遇到很多问题，这要求我们善用搜索引擎，在bing、Google等平台上搜索（尤其比较深入的问题，国内网站查不到的话，优先谷歌，用英文检索）。</p><p>后期运行相对大点的程序也会出现报错的情况，许多报错代码都可以直接看懂，比如</p><p>哪个地方没加分号，编译器就会提示      <em>expected 分号 before 什么什么</em> </p><p><img src="/./Untitled.png" alt="对应的就是printf()后没加分号的情况"></p><p>对应的就是printf()后没加分号的情况</p><hr><p>当然更多情况往往是我们看不太懂报错信息，最直接了当的方法就是ctrl+c然后把报错信息丢进搜索引擎，多数情况下都能找到相应解答。</p><p>对于初学者来说，dev-c++、codeblocks等普通IDE即可满足需求，这些IDE免费且为不少教材所接受，但从实际使用的角度讲，这些IDE毫无疑问是有点简陋在里面的，这边推荐几款<em><strong>好用的IDE</strong></em>：➡➡➡➡➡➡➡</p><p><a href="https://www.notion.so/Visual-Studio-Code-594827391c53488a98aa13caafdcf142?pvs=21">Visual Studio Code</a></p><p><a href="https://www.notion.so/CLion-d4ab46a2c0ad44e8a90f17a7ee48e7fd?pvs=21">CLion</a></p><hr><h2 id="书籍分享"><a href="#书籍分享" class="headerlink" title="书籍分享"></a>书籍分享</h2><p>这是一本内容丰富，广泛全面的C语言教程，可作为自学参考书籍或课本之外的拓展。</p><p><a href="./C_Primer_Plus.pdf">C Primer Plus（第6版）中文版 (（美）史蒂芬·普拉达.pdf 【右键Download即可下载】</a></p><hr><h2 id="网站分享"><a href="#网站分享" class="headerlink" title="网站分享"></a>网站分享</h2><h3 id="问答类"><a href="#问答类" class="headerlink" title="问答类"></a>问答类</h3><p><a href="https://github.com/">github.com</a> 全球最大的代码托管平台（可能需要特定的网络环境）</p><p><a href="https://stackoverflow.com/">Stack Overflow - Where Developers Learn, Share, &amp; Build Careers</a> 知名IT问答平台</p><p> <a href="https://www.csdn.net/">CSDN - 专业开发者社区</a> 国内最大的程序员交流平台，良莠不齐，查找问题时似乎还是直接搜索引擎比较好。</p><p><a href="https://www.zhihu.com/question/20824615">（这个问题有点意思的说）如何优雅地使用 Stack Overflow？</a> </p><h3 id="刷题类"><a href="#刷题类" class="headerlink" title="刷题类"></a>刷题类</h3><p><a href="https://leetcode.cn/">力扣（LeetCode）官网</a> 可以刷刷这上面的每日一题，对于平时的上机作业以及期末程序设计题有所帮助。</p><h3 id="分享代码"><a href="#分享代码" class="headerlink" title="分享代码"></a>分享代码</h3><p><a href="https://pastebin.mozilla.org/">Mozilla Community Pastebin</a> 分享代码的一个网站，可以把自己的代码贴在上面，把生成的链接发给要分享的人（相比微信直接粘贴和拍照片在格式上美观的多）缺点是中文分享后显示为乱码。</p><p><a href="https://carbon.now.sh/?bg=rgba(171,+184,+195,+1)&t=seti&wt=none&l=auto&width=680&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=true&pv=56px&ph=56px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false">Carbon | Create and share beautiful images of your source code</a> 可以把代码分享成美观的图片，比如杨某元旦整的某活（</p><p>以及现在我正在使用的Notion，作为一款功能强大，可分享的笔记软件，分享代码自然不在话下。上学期我不时会用它给同学分享代码，效果不错。凭教育邮箱可申请升级版账号，网页端&amp;&amp;PC端&amp;&amp;手机端&amp;&amp;ipad端实时云同步，美哉美哉。</p><p><a href="https://www.notion.so/14-56978b8cf9ac45c4a2027ae6aa153b1a?pvs=21">第14次上机</a></p><p>一个分享代码的例子⬆️⬆️⬆️⬆️⬆️⬆️</p><hr><h3 id="进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）"><a href="#进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）" class="headerlink" title="进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）"></a>进阶（仅供兴趣拓展，对于普通的C语言课程来说意义不大）</h3><ul><li>GIt</li></ul><p><a href="https://git-scm.com/downloads">Git - Downloads (git-scm.com)</a> 文件分布管理系统，学习成本蛮高，在没有开发较大程序的使用需求时似乎也没必要学🤔。</p><p><a href="https://learngitbranching.js.org/?locale=zh_CN">Learn Git Branching</a> 一个直观的，帮助git学习理解的网站。</p><p><a href="./progit.pdf">git官方学习文档</a></p><p>git官方学习文档</p><ul><li>入坑计算机专业自学指南</li></ul><p><a href="https://csdiy.wiki/">CS自学指南 (csdiy.wiki)</a></p><p><a href="https://cs61a.org/">https://cs61a.org/</a></p><hr><h3 id="辅助"><a href="#辅助" class="headerlink" title="辅助"></a>辅助</h3><p><a href="https://microsoftedge.microsoft.com/addons/detail/%E6%B2%99%E6%8B%89%E6%9F%A5%E8%AF%8D%E8%81%9A%E5%90%88%E8%AF%8D%E5%85%B8%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/idghocbbahafpfhjnfhpbfbmpegphmmp">Microsoft Edge Addons</a></p><p>浏览器内划词翻译插件，查询英文文献时maybe helpful.</p><p><a href="https://www.runoob.com/">菜鸟教程 - 学的不仅是技术，更是梦想！</a></p><p>讲的比较浅，忘了某个语法的时候可以快速参考一下。</p><p><a href="https://wormhole.app/">Wormhole - Simple, private file sharing</a></p><p>临时分享一些稍大的文件，不过有个人隐私、或者机密性的文件还是谨慎啦。</p><p><a href="https://c.runoob.com/compile/11/">C 在线工具 | 菜鸟工具</a></p><p>C语言在线编译，外出没带电脑但临时有使用需求时可以一用。</p><p><del><a href="https://weixin.qq.com/">https://weixin.qq.com</a> 欢迎找小杨交流233333</del>🤪</p><h2 id="Hope-it-helpful！"><a href="#Hope-it-helpful！" class="headerlink" title="Hope it helpful！"></a>Hope it helpful！</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>笔记</tag>
+      
+      <tag>C语言</tag>
+      
+      <tag>编程</tag>
+      
+      <tag>学习</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>白黑球</title>
+    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%99%BD%E9%BB%91%E7%90%83/"/>
+    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%99%BD%E9%BB%91%E7%90%83/</url>
+    
+    <content type="html"><![CDATA[<h1 id="白黑球"><a href="#白黑球" class="headerlink" title="白黑球"></a>白黑球</h1><p><img src="/img/photo_in_blogs/white_black_ball/1.png" alt="1.png"></p><p><em>这个题确实有点唬人，其实是有点取巧的</em></p><hr><p><strong>我们不妨分析一下：</strong></p><h3 id="w-b-1-即一共只有一个x色球，那概率当然是x色-100"><a href="#w-b-1-即一共只有一个x色球，那概率当然是x色-100" class="headerlink" title="&lt;1&gt; w+b&#x3D;&#x3D;1 即一共只有一个x色球，那概率当然是x色 100%"></a>&lt;1&gt; w+b&#x3D;&#x3D;1 即一共只有一个x色球，那概率当然是x色 100%</h3><h3 id="w-b≥2"><a href="#w-b≥2" class="headerlink" title="&lt;2&gt; w+b≥2"></a>&lt;2&gt; <strong>w+b≥2</strong></h3><ul><li>每次取2个球又放入1个，取一次后球的总数-1</li><li>若取1黑1白，则放入1白，相当于取1黑——黑的奇偶性改变，白的奇偶性不变</li><li>若取2黑，则放1黑——黑的奇偶性改变，白的奇偶性不变</li><li>若取2白，则放1黑——黑的奇偶性改变，白的奇偶性不变</li></ul><aside>💡 所以说，不管怎么取，都满足：黑的奇偶性改变，白的奇偶性不变</aside><hr><p>一共w个白球 b个黑球，总数目为w+b</p><p>取w+b-1次，即取出w+b-1个球，此时还剩一个球</p><ul><li>如果w<strong>一开始就是奇数</strong>，不管取出多少次，依旧是奇数</li></ul><p>也就是说，取w+b-1次，w仍然是奇数，而盒内此时只有一个球，<strong>必然是白球</strong></p><ul><li>如果w<strong>一开始是个偶数</strong>，不管取出多少次，依旧是偶数</li></ul><p>取w+b-1次后盒内只有一个球，白球是偶数，<strong>只能是黑球</strong></p><h2 id="所以，最后取出的球是白是黑只取决于一开始w是奇是偶，w是奇数则最后是白球，w是偶数则最后是黑球。"><a href="#所以，最后取出的球是白是黑只取决于一开始w是奇是偶，w是奇数则最后是白球，w是偶数则最后是黑球。" class="headerlink" title="所以，最后取出的球是白是黑只取决于一开始w是奇是偶，w是奇数则最后是白球，w是偶数则最后是黑球。"></a>所以，最后取出的球是白是黑只取决于一开始w是奇是偶，w是奇数则最后是白球，w是偶数则最后是黑球。</h2><p><img src="/img/photo_in_blogs/white_black_ball/2.png" alt="2.png"></p><p>至于如何输入T组数那就很简单啦。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+      <tag>编程</tag>
+      
+      <tag>算法</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>当我还有英语课时的某个pre</title>
+    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%ADpreparation/"/>
+    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%ADpreparation/</url>
+    
+    <content type="html"><![CDATA[<h1 id="英语口语preparation"><a href="#英语口语preparation" class="headerlink" title="英语口语preparation"></a>英语口语preparation</h1><h1 id="Education"><a href="#Education" class="headerlink" title="Education"></a>Education</h1><blockquote><p>1.What role do you think a university education will play in your life?</p></blockquote><p>From my perspective of view, the university education will be a milestone of my life. </p><p>First and foremost, in college education I can learn something that is not just general knowledge, but can really be used in our life. That indeed improve my ability to solve problems in our society.</p><p>What’s more, university education not only teach me academic knowledge, but also assist me to deal with interpersonal relationships. I will figure it out that what kind of person are deserved to make friends and by the way I can also gain some unforgettable friendships with others from different areas all over the world.</p><p>Last but not least, I will also learn how to live a proper life in university education. I need to arrange my schedule on my own. That may be a challenge at first but I hold the firm belief that I will make it.</p><h1 id="Culture"><a href="#Culture" class="headerlink" title="Culture"></a>Culture</h1><blockquote><p>4.How do you choose a friend? What qualities are your friends supposed to have? What would you do if something goes wrong between you and one of your friends?</p></blockquote><p>In my opinion making friends is a natural thing that if we appreciate values that each other has, we can make friends. Or we just talk with each other happily, we can make friends.</p><p>Of course some essential factors should be taken into account when making friends.</p><p>The most basic one is that he or she doesn’t have values that can’t be accepted in the society. I will expect my friends to be positive. He or she can trust me, share interesting things with me, and help me through difficult times. Relatively, I will give him or her the same enthusiasm as well.</p><p>I think the most important thing is to chat with each other about how we misunderstanding each other. The problem is not the most important, but the understanding to each other is. I will apologize if I do something wrong or accept his or her apology generously.</p><h1 id="Sports"><a href="#Sports" class="headerlink" title="Sports"></a>Sports</h1><blockquote><p>2.What is your favorite sport game? What benefits have you gained from it?</p></blockquote><p>My favorite sport is without doubt to be cycling.  By cycling not only can I improve my physical function but I can also appreciate the charming sceneries along the way. On the Mid-Autumn Festival of this year, I along with several friends ride shared bike to move from our school to the Oriental Pearl Tower. It takes a long time, but it deserve it. Despite exercising, I also know better about the city I lived, which is beneficial to my psychology health. All in all, cycling is such an appealing sports that I have fall in love with it thoroughly.</p><h1 id="Technology"><a href="#Technology" class="headerlink" title="Technology"></a>Technology</h1><blockquote><p>What are the major differences between AI and human beings.</p></blockquote><p>I think AI and human beings have essence&#x2F;‘es(ə)ns&#x2F; difference. Although AI have stronger and stronger ability nowadays, it works basically by training from tons of data and imitate the work process of human’s brain. Take chatGPT, a popular AI recently, for example, chatGPT is an AI that has such capacity to imitate human beings. It can do so many things that all of us are surprised to it. But it works by train through millions of data and imitate what people thing as well. AI can’t have its own thoughts, that is destined &#x2F;‘destɪn&#x2F; to be different from human beings.</p><h1 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h1><blockquote><p>A person who influence you most.</p></blockquote><p>I think the person who influences me most will be mother, who works hard for our family and get through many difficulties with her effort.</p><p>My mom works for a simple company in a small town. Her life originally was common and calm. As I entered the high school and need more tuitions and other expenses, she decided to make a difference. She study hard for the exam of middle economist and succeed just in one year. Then she entered a new company which offer higher salaries, but is also very busy. The most moving thing is that she doesn’t give up learning at the age of 40s, and become my model to work hard no matter what difficulties I may meet. Without her, I won’t have any thing I own now and I will learn from her and live up to her expectations!</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>作业</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>English</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>小猫跳圈</title>
+    <link href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/"/>
+    <url>/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/</url>
+    
+    <content type="html"><![CDATA[<h1 id="小毛米跳大圈"><a href="#小毛米跳大圈" class="headerlink" title="小毛米跳大圈"></a>小毛米跳大圈</h1><p>代码如下：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span><br>&#123;<br>    <span class="hljs-type">long</span> <span class="hljs-type">long</span> n;<br>    <span class="hljs-type">long</span> <span class="hljs-type">long</span> x0,y0,i,j,p,q,r,w;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;n);<br>    getchar();**<span class="hljs-comment">//one more getchar() here to remove Enter**</span><br>    getchar();<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;x0);<br>    getchar();<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;y0);<br>    getchar();<br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    scanf(&quot;%lld&quot;,&amp;p);</span><br><span class="hljs-comment">  getchar();</span><br><span class="hljs-comment">  scanf(&quot;%lld&quot;,&amp;q);</span><br><span class="hljs-comment">  getchar();</span><br><span class="hljs-comment">  scanf(&quot;%lld&quot;,&amp;r);</span><br><span class="hljs-comment">    */</span><br>**<span class="hljs-comment">//读取p q r的时候一个scanf就好，上述五行可以整合成下面一行↓**</span><br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld %lld %lld&quot;</span>,&amp;p,&amp;q,&amp;r);<br>    w=<span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span>(w=<span class="hljs-number">0</span>;w&lt;n;w++)&#123;    <span class="hljs-comment">//here change to w&lt;n</span><br>        getchar(); **<span class="hljs-comment">//把回车读掉**</span><br>        getchar();<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;i);<br>        getchar();<br>        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%lld&quot;</span>,&amp;j);<br>        getchar();<br>        x0=x0+i;<br>        y0=y0+j;<br>    &#125;<br>    <span class="hljs-keyword">if</span>((x0-p)*(x0-p)+(y0-q)*(y0-q)&gt;r*r)&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;(%lld,%lld)&quot;</span>,x0,y0);<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;N0 WAY!&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>分享</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C语言</tag>
+      
+      <tag>编程</tag>
       
     </tags>
     
