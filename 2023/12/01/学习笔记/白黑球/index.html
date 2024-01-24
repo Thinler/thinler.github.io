@@ -403,9 +403,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%91%BD%E8%BF%90/" title="命运">
+                      <a href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%8B%B1%E8%AF%AD%E5%8F%A3%E8%AF%ADpreparation/" title="当我还有英语课时的某个pre">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">命运</span>
+                        <span class="hidden-mobile">当我还有英语课时的某个pre</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -413,8 +413,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B0%8F%E7%8C%AB%E8%B7%B3%E5%9C%88/" title="小猫跳圈">
-                        <span class="hidden-mobile">小猫跳圈</span>
+                      <a href="/2023/12/01/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%91%BD%E8%BF%90/" title="命运">
+                        <span class="hidden-mobile">命运</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -429,24 +429,31 @@
   
     <article id="comments" lazyload>
       
-  <div class="disqus" style="width:100%">
-    <div id="disqus_thread"></div>
-    
-      <script type="text/javascript">
-        var disqus_config = function() {
-          this.page.url = 'http://example.com/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%99%BD%E9%BB%91%E7%90%83/';
-          this.page.identifier = '/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%99%BD%E9%BB%91%E7%90%83/';
-        };
-        Fluid.utils.loadComments('#disqus_thread', function() {
-          var d = document, s = d.createElement('script');
-          s.src = '//' + 'fluid' + '.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', new Date());
-          (d.head || d.body).appendChild(s);
-        });
-      </script>
-    
-    <noscript>Please enable JavaScript to view the comments</noscript>
-  </div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'Thinler/github-comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
 
 
     </article>

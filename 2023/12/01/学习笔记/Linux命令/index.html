@@ -1212,9 +1212,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/01/others/Travel%20Plan/" title="Travel Plan——Version 1.0">
+                      <a href="/2023/12/14/%E6%97%A5%E8%AE%B0%E9%9A%8F%E6%83%B3/2023-12-11/" title="随想-2023-12-11">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Travel Plan——Version 1.0</span>
+                        <span class="hidden-mobile">随想-2023-12-11</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -1238,24 +1238,31 @@
   
     <article id="comments" lazyload>
       
-  <div class="disqus" style="width:100%">
-    <div id="disqus_thread"></div>
-    
-      <script type="text/javascript">
-        var disqus_config = function() {
-          this.page.url = 'http://example.com/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%91%BD%E4%BB%A4/';
-          this.page.identifier = '/2023/12/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux%E5%91%BD%E4%BB%A4/';
-        };
-        Fluid.utils.loadComments('#disqus_thread', function() {
-          var d = document, s = d.createElement('script');
-          s.src = '//' + 'fluid' + '.disqus.com/embed.js';
-          s.setAttribute('data-timestamp', new Date());
-          (d.head || d.body).appendChild(s);
-        });
-      </script>
-    
-    <noscript>Please enable JavaScript to view the comments</noscript>
-  </div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#comments', function() {
+      var light = 'github-light';
+      var dark = 'github-dark';
+      var schema = document.documentElement.getAttribute('data-user-color-scheme');
+      if (schema === 'dark') {
+        schema = dark;
+      } else {
+        schema = light;
+      }
+      window.UtterancesThemeLight = light;
+      window.UtterancesThemeDark = dark;
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.setAttribute('repo', 'Thinler/github-comment');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('label', 'utterances');
+      
+      s.setAttribute('theme', schema);
+      s.setAttribute('crossorigin', 'anonymous');
+      document.getElementById('comments').appendChild(s);
+    })
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
 
 
     </article>
