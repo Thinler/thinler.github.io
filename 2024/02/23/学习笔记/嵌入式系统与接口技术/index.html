@@ -16,12 +16,12 @@
   <meta name="author" content="Thinler">
   <meta name="keywords" content="">
   
-    <meta name="description" content="计算机组成CPU组成 ALU 运算器 二进制运算 CU 控制单元晶体管-&gt;逻辑门-&gt;加法器-&gt;ALU晶体管-&gt;存储器-&gt;锁存器…寄存器，…memory—&gt;RAM三态：高电压 低电压 高阻  冯·诺伊曼结构（普林斯顿结构） 系统总线 各部件之间传送信息（BUS） 地址总线 Address Bus  CPU用来向存储器或I&#x2F;O端口传送地址 CPU单向发出">
+    <meta name="description" content="计算机组成CPU组成 ALU 运算器 二进制运算 CU 控制单元晶体管-&gt;逻辑门-&gt;加法器-&gt;ALU晶体管-&gt;存储器-&gt;锁存器…寄存器，…memory—&gt;RAM三态：高电压 低电压 高阻  冯·诺伊曼结构（普林斯顿结构） 指令程序和数据在同一个存储空间 哈佛结构指令、数据存在不同地方（双存储器） 计算机硬件结构ALU（Arithmetic Logical Uni">
 <meta property="og:type" content="article">
 <meta property="og:title" content="嵌入式系统与接口技术">
 <meta property="og:url" content="https://thinler.github.io/2024/02/23/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8E%A5%E5%8F%A3%E6%8A%80%E6%9C%AF/index.html">
 <meta property="og:site_name" content="Thinler&#39;s Hexo Blog">
-<meta property="og:description" content="计算机组成CPU组成 ALU 运算器 二进制运算 CU 控制单元晶体管-&gt;逻辑门-&gt;加法器-&gt;ALU晶体管-&gt;存储器-&gt;锁存器…寄存器，…memory—&gt;RAM三态：高电压 低电压 高阻  冯·诺伊曼结构（普林斯顿结构） 系统总线 各部件之间传送信息（BUS） 地址总线 Address Bus  CPU用来向存储器或I&#x2F;O端口传送地址 CPU单向发出">
+<meta property="og:description" content="计算机组成CPU组成 ALU 运算器 二进制运算 CU 控制单元晶体管-&gt;逻辑门-&gt;加法器-&gt;ALU晶体管-&gt;存储器-&gt;锁存器…寄存器，…memory—&gt;RAM三态：高电压 低电压 高阻  冯·诺伊曼结构（普林斯顿结构） 指令程序和数据在同一个存储空间 哈佛结构指令、数据存在不同地方（双存储器） 计算机硬件结构ALU（Arithmetic Logical Uni">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/Pasted%20image%2020240219111521.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/Pasted%20image%2020240219111420.png">
@@ -32,11 +32,13 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240223200951.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240223201513.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240223202058.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240226100448.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240228110703.png">
 <meta property="article:published_time" content="2024-02-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-23T12:37:33.687Z">
+<meta property="article:modified_time" content="2024-02-28T03:19:27.624Z">
 <meta property="article:author" content="Thinler">
-<meta property="article:tag" content="笔记">
 <meta property="article:tag" content="学习">
+<meta property="article:tag" content="笔记">
 <meta property="article:tag" content="嵌入式">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/Pasted%20image%2020240219111521.png">
@@ -236,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.6k 字
+          4.4k 字
         
       </span>
     
@@ -247,7 +249,7 @@
         
         
         
-          22 分钟
+          37 分钟
         
       </span>
     
@@ -294,14 +296,6 @@
 <li>CU 控制单元<br>晶体管-&gt;逻辑门-&gt;加法器-&gt;ALU<br>晶体管-&gt;存储器-&gt;锁存器…寄存器，…memory—&gt;RAM<br>三态：高电压 低电压 高阻</li>
 </ul>
 <h3 id="冯·诺伊曼结构（普林斯顿结构）"><a href="#冯·诺伊曼结构（普林斯顿结构）" class="headerlink" title="冯·诺伊曼结构（普林斯顿结构）"></a>冯·诺伊曼结构（普林斯顿结构）</h3><p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/Pasted%20image%2020240219111521.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="系统总线-各部件之间传送信息（BUS）"><a href="#系统总线-各部件之间传送信息（BUS）" class="headerlink" title="系统总线 各部件之间传送信息（BUS）"></a>系统<strong>总线</strong> 各部件之间传送信息（<strong>BUS</strong>）</h3><ul>
-<li><p>地址总线 Address Bus<br>  CPU用来向存储器或I&#x2F;O端口传送地址 CPU单向发出<br>  位数n—&gt;可直接寻址的内存，IO接口容量$2^n$</p>
-</li>
-<li><p>数据总线 Data Bus<br>  CPU与存储器及外设交换数据的通路<br>  双向、三态<br>  位数与微处理器的位数相同</p>
-</li>
-<li><p>控制总线 Control Bus<br>  用来传输控制信号<br>  由两种方向的<strong>单向</strong>控制信号组成</p>
-</li>
-</ul>
 <p>指令程序和数据在同一个存储空间<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/Pasted%20image%2020240219111420.png" srcset="/img/loading.gif" lazyload></p>
 <h3 id="哈佛结构"><a href="#哈佛结构" class="headerlink" title="哈佛结构"></a>哈佛结构</h3><p>指令、数据存在不同地方（双存储器）<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/Pasted%20image%2020240219111428.png" srcset="/img/loading.gif" lazyload></p>
 <h2 id="计算机硬件结构"><a href="#计算机硬件结构" class="headerlink" title="计算机硬件结构"></a>计算机硬件结构</h2><h3 id="ALU（Arithmetic-Logical-Unit）算术逻辑单元"><a href="#ALU（Arithmetic-Logical-Unit）算术逻辑单元" class="headerlink" title="ALU（Arithmetic Logical Unit）算术逻辑单元"></a>ALU（Arithmetic Logical Unit）算术逻辑单元</h3><p>算数、逻辑运算<br>双输入 单输出<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/Pasted%20image%2020240219112745.png" srcset="/img/loading.gif" lazyload></p>
@@ -343,6 +337,14 @@
 <p>一条计算机指令的功能有限，完成复杂的运算功能需要将多条指令组合起来构成指令序列。这样一个完成某种功能的指令序列称为<strong>程序</strong>。</p>
 <ul>
 <li>通常还把CPU、存储器和输入&#x2F;输出接口电路和在一起构成的电路系统称为<strong>主机</strong>（也即微型计算机）</li>
+</ul>
+<h3 id="系统总线-各部件之间传送信息（BUS）"><a href="#系统总线-各部件之间传送信息（BUS）" class="headerlink" title="系统总线 各部件之间传送信息（BUS）"></a>系统<strong>总线</strong> 各部件之间传送信息（<strong>BUS</strong>）</h3><ul>
+<li><p>地址总线 Address Bus<br>  CPU用来向存储器或I&#x2F;O端口传送地址 CPU单向发出<br>  位数n—&gt;可直接寻址的内存，IO接口容量$2^n$</p>
+</li>
+<li><p>数据总线 Data Bus<br>  CPU与存储器及外设交换数据的通路<br>  双向、三态<br>  位数与微处理器的位数相同</p>
+</li>
+<li><p>控制总线 Control Bus<br>  用来传输控制信号<br>  由两种方向的<strong>单向</strong>控制信号组成</p>
+</li>
 </ul>
 <h3 id="总线：计算机中连接各个功能模块的纽带，是计算机各模块之间进行信息传输的公共线路。"><a href="#总线：计算机中连接各个功能模块的纽带，是计算机各模块之间进行信息传输的公共线路。" class="headerlink" title="总线：计算机中连接各个功能模块的纽带，是计算机各模块之间进行信息传输的公共线路。"></a><strong>总线</strong>：计算机中连接各个功能模块的纽带，是计算机各模块之间进行信息传输的<strong>公共线路</strong>。</h3><p>发射模块、接收模块<br>主设备：能启动总线服务的设备（如CPU）<br>从设备：只能等待启动命令的被动型设备</p>
 <p> 按物理特性分类：<br>    - 电缆式：通常采用扁平电缆连接线路板<br>    - 主板式：在主机板上采用插槽方式供功能板插入。<br>    - 背板式：在机箱中设置一个专门的总线插槽板。</p>
@@ -408,6 +410,187 @@
 <li>恢复现场</li>
 <li>开中断</li>
 </ol>
+<h2 id="计算机软件系统"><a href="#计算机软件系统" class="headerlink" title="计算机软件系统"></a><strong>计算机软件系统</strong></h2><ul>
+<li>系统软件<ul>
+<li>操作系统<ul>
+<li>交互操作系统</li>
+<li>实时操作系统</li>
+<li>嵌入式操作系统 Embedded Operation System，EOS</li>
+</ul>
+</li>
+<li>编译程序</li>
+<li>解释程序</li>
+</ul>
+</li>
+<li>应用软件</li>
+<li>虚拟机 在实际硬件以上的机器层次都称为虚拟机，是由软件构成的外部特性</li>
+</ul>
+<h4 id="层次化结构"><a href="#层次化结构" class="headerlink" title="层次化结构"></a>层次化结构</h4><p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240226100448.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><strong>Firmware</strong>：固定不变的常用软件固化在硬件中 （ROM） 成为<strong>固件</strong></p>
+<h3 id="计算机语言"><a href="#计算机语言" class="headerlink" title="计算机语言"></a><strong>计算机语言</strong></h3><ul>
+<li>机器语言 二进制代码</li>
+<li>汇编语言 助记符</li>
+<li>高级语言 与计算机结构无关 C等</li>
+<li>应用语言 应用程序中使用 SQL HTML</li>
+</ul>
+<h3 id="定点数编码"><a href="#定点数编码" class="headerlink" title="定点数编码"></a><strong>定点数编码</strong></h3><h4 id="数制"><a href="#数制" class="headerlink" title="数制"></a><strong>数制</strong></h4><p>二进制——后缀B               1101.1010B<br>八进制——后缀Q或O        625.71Q<br>十进制——后缀D或省略    3.1415<br>十六进制——后缀H            0AE.3FH<br>$$<br>(𝑥)<em>𝑁&#x3D;𝑥_𝑛 𝑥</em>(𝑛−1)⋯𝑥<em>1 𝑥_0 𝑥</em>{−1}⋯𝑥_{−𝑚}&#x3D;∑_{𝑖&#x3D;−𝑚}^𝑛(𝑥_𝑖×𝑁^𝑖 )<br>$$</p>
+<ul>
+<li>定点数：小数点位置固定不变的数</li>
+<li>定点整数：小数点定在最低位数的右面</li>
+<li>定点小数：小数点固定在最高位数的后面，即纯小数表示</li>
+</ul>
+<p>0： 30h 48D<br>A：41h 65D<br>a： 61h  97D<br>回车(CR)：0DH<br>换行(LF)：0AH</p>
+<p>计算机以二进制数的形式存储数据，称为机器数</p>
+<ul>
+<li>无符号数</li>
+<li>有符号数<br>  原码、反码、补码、移码<br>  1位符号位</li>
+</ul>
+<h3 id="原码-Sign-magnitude-representation"><a href="#原码-Sign-magnitude-representation" class="headerlink" title="原码 (Sign-magnitude representation)"></a>原码 (Sign-magnitude representation)</h3><ul>
+<li><strong>表示方法</strong>：原码使用二进制的最高位作为符号位（0代表正，1代表负），其余位</li>
+<li>表示数值的绝对值。</li>
+<li><strong>例子</strong>：+7 的原码为 0111，-7 的原码为 1111（假设使用4位表示）。</li>
+</ul>
+<h3 id="反码-Ones’-complement"><a href="#反码-Ones’-complement" class="headerlink" title="反码 (Ones’ complement)"></a>反码 (Ones’ complement)</h3><ul>
+<li><strong>正数的反码</strong>与原码相同。</li>
+<li><strong>负数的反码</strong>是对原码除符号位外的所有位取反（0变1，1变0）。</li>
+<li><strong>例子</strong>：+7 的反码为 0111（与原码相同），-7 的反码为 1000（4位表示）。</li>
+</ul>
+<h3 id="补码-Twos’-complement"><a href="#补码-Twos’-complement" class="headerlink" title="补码 (Twos’ complement)"></a>补码 (Twos’ complement)</h3><ul>
+<li><p><strong>正数的补码</strong>与原码相同。</p>
+</li>
+<li><p><strong>负数的补码</strong>是其反码加1。</p>
+</li>
+<li><p><strong>转换方法</strong>：无论正负数，将一个数的补码再次取补码可以得到其原码。</p>
+</li>
+<li><p><strong>例子</strong>：+7 的补码为 0111（与原码相同），-7 的补码为 1001（4位表示）。</p>
+</li>
+<li><p><strong>原码转反码和补码</strong>：</p>
+<ul>
+<li>正数：原码、反码、补码相同。</li>
+<li>负数：反码是原码非符号位取反；补码是反码加1。</li>
+</ul>
+</li>
+<li><p><strong>反码转原码</strong>：</p>
+<ul>
+<li>正数：直接转换。</li>
+<li>负数：反码非符号位取反。</li>
+</ul>
+</li>
+<li><p><strong>补码转原码</strong>：</p>
+<ul>
+<li>正数：直接转换。</li>
+<li>负数：补码减1后，非符号位取反。<br><strong>移码</strong>：在补码基础上加$2^n$<br>-5    1011(补)    0011（移）</li>
+</ul>
+</li>
+</ul>
+<p>补码可直接相加、减<br>$$<br>[x]<em>补+[y]<em>补&#x3D;[x+y]<em>补<br>$$<br>$$<br>[x-y]</em>{补}&#x3D;[x]</em>{补}-y</em>{补}&#x3D;x_{补}+[-y]_补<br>$$<br><strong>字节存储顺序</strong> </p>
+<ul>
+<li>大数端(big Endian)：高位字节置于低地址，低位字节置于高地址 </li>
+<li>小数端(little Endian)：低位字节置于低地址，高位字节置于高地址</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>地址</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4H</td>
+<td>00H</td>
+</tr>
+<tr>
+<td>5H</td>
+<td>11H</td>
+</tr>
+<tr>
+<td>6H</td>
+<td>AAH</td>
+</tr>
+<tr>
+<td>7H</td>
+<td>BBH</td>
+</tr>
+</tbody></table>
+<p>小数端：BBAA1100H<br>大数端：0011AABBH<br>Intel,ARM均小端格式 摩托罗拉古早为大端</p>
+<h3 id="浮点数编码"><a href="#浮点数编码" class="headerlink" title="浮点数编码"></a><strong>浮点数编码</strong></h3><ul>
+<li>组成：阶码E，尾数M，符号位S</li>
+<li>E的编码：移码或补码<ul>
+<li>移码：将数据的二进制编码加上一个常数（通常是 $2^{n-1}$）后的二进制代码作为该数据的编码。移码的特点：保持了数据原有的大小顺序，便于数据比较。</li>
+</ul>
+</li>
+<li>S与M的编码：原码或补码</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>S 符号位 0&#x2F;1</th>
+<th>E 阶码 移码表示</th>
+<th>M 尾数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>N&#x3D;(-1)^S\times M \times R^E</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>R进制：多个二进制位构成一组，代表一个R进制位</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="规范化浮点数（IEEE754）编码"><a href="#规范化浮点数（IEEE754）编码" class="headerlink" title="规范化浮点数（IEEE754）编码"></a><strong>规范化浮点数（IEEE754）编码</strong></h3><p>$$<br>N&#x3D;(-1)^S\times 1.M \times 2^e<br>$$<br>S and M :原码 S&#x3D;0为正<br>E&#x3D;e+127(单精度)        E&#x3D;e+1023(双精度)</p>
+<ul>
+<li>在单精度浮点数中，指数位偏移量为127。<ul>
+<li>对于一个非负指数，真实指数值加上偏移量就是该指数的编码值</li>
+<li>对于一个负指数，真实指数值加上偏移量的补码就是该指数的编码值。<br>单精度 32bit</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>S</th>
+<th>E</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>31</td>
+<td>30          (8)               23</td>
+<td>22            (23)              0</td>
+</tr>
+</tbody></table>
+<p>双精度 64bit</p>
+<table>
+<thead>
+<tr>
+<th>S</th>
+<th>E</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>63</td>
+<td>62            (11)              52</td>
+<td>51            (52)              0</td>
+</tr>
+</tbody></table>
+<h4 id="浮点数的表示范围"><a href="#浮点数的表示范围" class="headerlink" title="浮点数的表示范围"></a><strong>浮点数的表示范围</strong></h4><ul>
+<li>浮点数的溢出表现为阶码的溢出。浮点数的上溢：数据太大，以至于大于阶码所能表示的数据；浮点数的下溢：数据太小，以至于小于阶码所能表示的数值</li>
+<li>浮点数表示法可以扩大数值表示的范围；浮点数表示法未增加表示数值的个数；绝对值越大，浮点数分布越稀疏；</li>
+<li>阶码位数越多，数据表示的<strong>范围</strong>就越大；尾数位数越多，数据表示的<strong>精度</strong>越高<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240228110703.png" srcset="/img/loading.gif" lazyload alt="image.png"></li>
+</ul>
 
                 
               </div>
@@ -441,9 +624,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%AC%94%E8%AE%B0/" class="print-no-link">#笔记</a>
-      
         <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="print-no-link">#学习</a>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0/" class="print-no-link">#笔记</a>
       
         <a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/" class="print-no-link">#嵌入式</a>
       
