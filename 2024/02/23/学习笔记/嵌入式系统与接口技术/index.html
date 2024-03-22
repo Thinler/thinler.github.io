@@ -48,8 +48,26 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240313202201.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240313202507.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240313202931.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240320102826.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322190525.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322190709.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322194517.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322195407.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322195607.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322200750.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322201620.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322201836.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202026.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322200910.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202552.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202639.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202730.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202903.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202945.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322203018.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322203045.png">
 <meta property="article:published_time" content="2024-02-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-13T12:30:05.726Z">
+<meta property="article:modified_time" content="2024-03-22T12:36:14.023Z">
 <meta property="article:author" content="Thinler">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="学习">
@@ -252,7 +270,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          12k 字
+          20k 字
         
       </span>
     
@@ -263,7 +281,7 @@
         
         
         
-          98 分钟
+          165 分钟
         
       </span>
     
@@ -623,9 +641,10 @@
 <h3 id="指令指针寄存器"><a href="#指令指针寄存器" class="headerlink" title="指令指针寄存器"></a><strong>指令指针寄存器</strong></h3><p><strong>IP</strong>: 用来存放<strong>下一条</strong>要执行指令的&#x3D;&#x3D;偏移地址&#x3D;&#x3D;</p>
 <p>当CPU从CS段偏移地址为(IP)的内存单元中取出指令代码的一个字节后，IP自动加1，指向指令代码的下一个字节。</p>
 <p><strong>用户程序不能直接访问IP</strong> (指令的操作数不能是IP)。 </p>
+<p>物理地址 &#x3D; 段地址 x 16 + 偏移地址<br>Physical Address&#x3D;(CS×16)+IP</p>
 <h3 id="标志寄存器"><a href="#标志寄存器" class="headerlink" title="标志寄存器"></a><strong>标志寄存器</strong></h3><p>也称程序状态字（PSW），16位寄存器，但只使用了其中9位<br>6 个状态标志 + 3个控制标志</p>
 <p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240313104418.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
-<h4 id="状态标志"><a href="#状态标志" class="headerlink" title="状态标志"></a><strong>状态标志</strong></h4><p>CF: 进位标志 有进&#x2F;借则1 无则0<br>PF: 运算结果低8位中1的个数偶则PF&#x3D;1 奇则PF&#x3D;0<br>AF: $AF&#x3D;D_{3CY}$ 低四位向高四位有仅为或借位，则AF&#x3D;1，否则AF&#x3D;0 BCD运算则应调整<br>ZF: 当运算结果各位均为零时ZF&#x3D;1，否则ZF&#x3D;0<br>SF: $D_7&#x3D;1$(byte) or  $D_{15}&#x3D;1$(word) 则为1 反映符号位<br>OF: 算术运算的结果超出了带符号数的范围，即溢出时OF&#x3D;1<br>    8位带符号数的范围是-128<del>+127，16位带符号数的范围是-32 768</del>+32 767。<br>$OF&#x3D;D_{7CY}\oplus D_{6CY}$ or $OF&#x3D;D_{15CY}\oplus D_{14CY}$<br>机器把所有数都当<strong>无符号数运算</strong>，把结果都当<strong>有符号数来设置标志</strong>。</p>
+<h4 id="状态标志"><a href="#状态标志" class="headerlink" title="状态标志"></a><strong>状态标志</strong></h4><p>CF: 进位标志 有进&#x2F;借则1 无则0<br>PF: 运算结果低8位中1的个数 偶则PF&#x3D;1 奇则PF&#x3D;0<br>AF: $AF&#x3D;D_{3CY}$ 低四位向高四位有仅为或借位，则AF&#x3D;1，否则AF&#x3D;0 BCD运算则应调整<br>ZF: 当运算结果各位均为零时ZF&#x3D;1，否则ZF&#x3D;0<br>SF: $D_7&#x3D;1$(byte) or  $D_{15}&#x3D;1$(word) 则为1 反映符号位（负为1）<br>OF: 算术运算的结果超出了带符号数的范围，即溢出时OF&#x3D;1<br>    8位带符号数的范围是-128<del>+127，16位带符号数的范围是-32 768</del>+32 767。<br>$OF&#x3D;D_{7CY}\oplus D_{6CY}$ or $OF&#x3D;D_{15CY}\oplus D_{14CY}$<br>机器把所有数都当<strong>无符号数运算</strong>，把结果都当<strong>有符号数来设置标志</strong>。</p>
 <p>无符号数加法 CF判断溢出<br>有符号数加法 OF判断溢出</p>
 <ul>
 <li>比较大小：<ul>
@@ -831,7 +850,7 @@
 </blockquote>
 <h3 id="数据存取"><a href="#数据存取" class="headerlink" title="数据存取"></a><strong>数据存取</strong></h3><p><strong>数据对准</strong><br>当CPU读&#x2F;写一个字时，若字单元地址从偶地址开始，只需访问一次存储器；若字单元地址从奇地址开始，则需访问两次存储器。</p>
 <p><strong>堆栈</strong><br>堆栈(STACK)是由若干个连续存储单元组成的、操作时遵循<strong>先进后出（FILO）</strong> 原则的一个存储器区，主要用于暂存中断和子程序调用时的现场数据及返回地址。（保护现场）</p>
-<p>入栈和出栈都必须是双字节数据(16位)。进行一次入栈操作，SP减2；进行一次出栈操作，SP加2<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240313201842.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>入栈和出栈都必须是**双字节数据(16位)**。进行一次入栈操作，SP减2；进行一次出栈操作，SP加2<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240313201842.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <h2 id="8086CPU时序"><a href="#8086CPU时序" class="headerlink" title="8086CPU时序"></a>8086CPU时序</h2><ul>
 <li>微处理器是在统一的时钟信号CLK控制下，按照一定的<strong>时序</strong>来工作的。</li>
 <li>8086时钟频率为5 MHz，一个时钟周期等于200 ns。</li>
@@ -864,7 +883,205 @@
 <li>利用 READY 信号，CPU可以插入若干个 Tw，使总线周期延长，达到可靠地读&#x2F;写内存和 I&#x2F;O 接口的目的。</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240313202931.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>最大模式下工作时序</p>
-<h2 id="8086CPU寻址方式和指令系统"><a href="#8086CPU寻址方式和指令系统" class="headerlink" title="8086CPU寻址方式和指令系统"></a>8086CPU寻址方式和指令系统</h2>
+<h2 id="8086CPU寻址方式和指令系统"><a href="#8086CPU寻址方式和指令系统" class="headerlink" title="8086CPU寻址方式和指令系统"></a>8086CPU寻址方式和指令系统</h2><p>编程语言分：</p>
+<ul>
+<li>机器语言 二进制代码串</li>
+<li>汇编语言 指令助记符、符号地址和标号等</li>
+<li>高级语言</li>
+</ul>
+<h3 id="汇编语言程序开发过程："><a href="#汇编语言程序开发过程：" class="headerlink" title="汇编语言程序开发过程："></a><strong>汇编语言程序开发过程：</strong></h3><ol>
+<li>编辑源程序生成*.ASM		EDIT         *.ASM</li>
+<li>汇编生成目标程序*.OBJ：    	ML		  *.ASM； </li>
+<li>连接生成可执行程序*.EXE：  LINK 	  *；</li>
+<li>调试: 					DEBUG  	  *.EXE</li>
+<li>执行：					可执行文件名</li>
+</ol>
+<h3 id="操作数寻址方式"><a href="#操作数寻址方式" class="headerlink" title="操作数寻址方式"></a><strong>操作数寻址方式</strong></h3><p>寻址方式：指令中给出操作数的方法。</p>
+<p>立即数操作数：       立即寻址<br>寄存器操作数：       寄存器寻址<br>存储器操作数：<br>    直接寻址<br>    寄存器间接寻址<br>    寄存器相对寻址<br>    基址变址寻址<br>    相对基址变址寻址</p>
+<ol>
+<li>立即寻址<br> 操作数以常数的形式直接表示在指令中</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs asm">MOV AL,5      ;AL&lt;-5<br>MOV AX,1234H    ;AX&lt;-1234h<br>				;AH=12H,AL=34H<br></code></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240320102826.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>立即数在内存的代码段内，指令执行时不需再存取存储器。<br><strong><em>不能</em>直接对段寄存器用立即数赋值</strong><br>立即数<strong>不能</strong>作目的操作数<br>给存储器操作数[默认段寄存器为DS]用立即数赋值时，要指明WORD PTR或者BYTE PTR</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asm">MOV	BYTE PTR [300H], 5FH<br></code></pre></td></tr></table></figure>
+
+<p>以A~F打头的数字出现在指令中时，前面要加数字0，以免与变量名等符号混淆</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asm">MOV	BX, 0F77H<br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>寄存器寻址<br>(1) 格式：操作数是通用寄存器或段寄存器中的内容。<br>  寄存器可以是通用寄存器（AX，BX，CX，DX，SP，BP，SI，DI， AH，AL，BH，BL，CH，CL，DH，DL）、段地址寄存器（ CS，SS，DS，ES）、标志寄存器<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs asm">INC CX		；CX&lt;-CX+1<br>MOV SS，AX	；SS&lt;-AX	<br>ADD CL，BH	；CL&lt;-CL+BH<br></code></pre></td></tr></table></figure>
+<strong>注意点：</strong></li>
+</ol>
+<ul>
+<li>操作数在CPU内的寄存器中，执行时间短；只访问寄存器，不访问内存</li>
+<li><strong>CS一般不要求用户赋值</strong>。否则语法无错，执行错</li>
+<li>两个操作数的长度必须一致</li>
+</ul>
+<p>操作数在内存中除代码段以外的存储区中。<br><strong>物理地址&#x3D;段寄存器&lt;&lt;4bit+EA</strong>（有效地址或偏移地址）<br>确定物理地址的关键：从指令中找出EA（由若干部分合成），再确定用哪个段寄存器。</p>
+<ol start="3">
+<li>直接寻址<br><strong>格式</strong>：操作数表示成[立即数]、[变量名]或变量名<br>MOV AX，[3000H]<br>MOV AX，VALUE	或MOV AX，[VALUE]<br>MOV AX，[VALUE+2]	或MOV AX，[VALUE]+2<br>也可指明段寄存器（称段超越）：<br>MOV AX，ES：[2000H]  ;“：”称修改属性运算符<br>MOV AX，CS：VALUE</li>
+</ol>
+<p>AX一般不用于间接寻址<br><strong>物理地址</strong>：<br>$$PA&#x3D;DS（或段超越指定的段寄存器）&lt;&lt;4+立即数或变量的偏移$$</p>
+<ol start="4">
+<li><p>寄存器间接寻址<br><strong>格式</strong>：操作数表示成[BX]、[BP]、[SI]或[DI]，寄存器内容是操作数的有效地址。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs asm">MOV	BX，[DI]<br>MOV	[SI]，DS<br>MOV	[BP]，AX<br>MOV	ES：[DI]，AX<br>MOV	DX，DS：[BP]<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>寄存器相对寻址<br><strong>格式</strong>：操作数表示成[BX&#x2F;BP&#x2F;SI&#x2F;DI+立即数&#x2F;变量名]，是直接寻址和寄存器间接寻址的组合。注意：变量的值是偏移地址。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs asm">MOV	BX，[SI+1003H]<br>MOV	AL，[DI+TABLE]	 <br>MOV	AL，TABLE[BX]	 <br>MOV	AL，[BP]+TABLE	 <br>MOV	BX，ES：[SI+1003H]<br>MOV	TABLE[BP]，AX<br></code></pre></td></tr></table></figure>
+<p>物理地址：<br>$$<br>PA&#x3D;DS&lt;&lt;4+（BX&#x2F;SI&#x2F;DI）+立即数或变量的偏移<br>$$<br>$$<br>PA&#x3D;SS&lt;&lt;4+（BP）+立即数或变量的偏移</p>
+</li>
+</ol>
+<p>$$</p>
+<ol start="6">
+<li><p>基址变址寻址<br>格式：操作数表示成[BX&#x2F;BP+SI&#x2F;DI]</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs asm">MOV	AX，[BX][DI]<br>MOV	CL，[BP+DI]<br>MOV	ES：[BX][SI]，AH	；或 MOV  [SI][BX]，AH<br></code></pre></td></tr></table></figure>
+<p>物理地址：（段寄存器缺省的情况）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs asm">PA=DS&lt;&lt;4+BX+SI/DI<br>PA=SS&lt;&lt;4+BP+SI/DI<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>相对基址变址寻址<br> (1)  格式：操作数表示成[BX&#x2F;BP+SI&#x2F;DI+立即数&#x2F;变量名]</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs asm">MOV	AX，COUNT[BX][SI]<br>MOV	AX，COUNT[SI][BX]<br>MOV	AX，[BX+COUNT][SI]<br>MOV	AX，[BX+SI+COUNT]<br>MOV	AX，[BX]COUNT[SI]<br>ADD	VALUE[BX][DI]，DX；<br></code></pre></td></tr></table></figure>
+<p>(2)  物理地址：（缺省情况）<br> PA&#x3D;DS&lt;&lt;4+BX+SI&#x2F;DI+立即数或变量的偏移<br> PA&#x3D;SS&lt;&lt;4+BP+SI&#x2F;DI +立即数或变量的偏移</p>
+</li>
+<li><p>I&#x2F;O端口寻址<br> 直接寻址：指令中直接给出8位端口地址，只能寻址256个端口<br> IN   AL&#x2F;AX，8位立即数(PORT)<br> OUT	8位立即数(PORT)，AL&#x2F;AX<br>间接寻址：将16位端口地址放入DX<br> MOV	DX，16位立即数<br> IN   	AL&#x2F;AX，DX<br> OUT	DX，AL&#x2F;AX<br> IN	           AL,	20H	; [20H]-&gt;AL<br> MOV	DX,	210H<br> OUT	DX,	AL	;AL-&gt;[210H]</p>
+</li>
+<li><p>隐含寻址<br>将一个操作数隐含在指令码中的寻址方式就称为隐含寻址。 </p>
+<blockquote>
+<p>例： 指令“MUL BL”的功能是把AL中的内容与BL中的内容相乘，乘积送到AX寄存器。即(AL)×(BL)→AX。这条指令隐含了被乘数AL及存放结果的累加器AX。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="转移地址寻址"><a href="#转移地址寻址" class="headerlink" title="转移地址寻址"></a><strong>转移地址寻址</strong></h3><ol>
+<li>段内直接（相对）转移寻址<br>短转移：8位偏移<br>近转移：16位偏移</li>
+</ol>
+<p>（1）格式：操作码 	[SHORT 或NEAR PTR] 近标号。<br>    JMP	NEXT		；NEXT是一个短标号或近标号<br>    CALL	SUB		；SUB是一个段内子过程名<br>    在DEBUG中不能用标号和过程名：<br>    JMP	110H		;  执行CS:110处的指令<br>（2）转移的目标地址：<br>    CS不变；IP&#x3D;当前IP+指令中的8&#x2F;16位偏移量<br>（3）注意：条件转移只能段内直接短转移。</p>
+<ol start="2">
+<li>段内间接转移寻址：</li>
+</ol>
+<p>（1）格式：操作码	 16位通用寄存器操作数&#x2F;字类型存储器操作数<br>    JMP		BX<br>    JMP		AX<br>    JMP		SI<br>    JMP		TABLE[BX]		；TABLE是字变量<br>    JMP		WORD PTR[BP][DI]<br>    JMP		[BX]			；缺省表示是字</p>
+<p>（2）转移的目标地址：<br>    CS不变；IP&#x3D;寄存器或连续2字节存储单元的内容</p>
+<ol start="3">
+<li><p>段间直接转移寻址：<br>(1) 格式：操作码	 [FAR PTR] 远标号<br> JMP		LABEL	；LABEL为远标号<br>(2) 转移的目标地址: CS&#x3D;标号的段地址；IP&#x3D;标号的偏移地址</p>
+</li>
+<li><p>段间间接转移寻址：<br>(1) 格式：操作码  FAR [PTR]或DWORD PTR  存储器操作数<br>    JMP		DWORD PTR[BP][SI]	<br>    JMP		VAR			；VAR是双字变量</p>
+</li>
+</ol>
+<p>(2) 转移的目标地址：<br>     CS&#x3D;高2字节存储单元的内容；IP&#x3D;低2字节存储单元的内容。 </p>
+<h3 id="指令介绍"><a href="#指令介绍" class="headerlink" title="指令介绍"></a><strong>指令介绍</strong></h3><p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322190525.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="MOV"><a href="#MOV" class="headerlink" title="MOV"></a><strong>MOV</strong></h4><p>（1）格式：MOV	DST（目的操作数），SRC（源操作数）<br>（2）执行：DST&lt;-SRC<br>（3）操作数类型：立即数，寄存器操作数和存储器操作数</p>
+<p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322190709.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>使用 mov 指令读取内存时，只需提供偏移地址，而段地址是由 DS 寄存器提供的</li>
+<li>8086CPU 不支持直接把数据放进段寄存器，对 DS 赋值需要用<strong>通用寄存器中转</strong>，比如<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs asm">mov bx, 1000H<br>mov ds, bx<br></code></pre></td></tr></table></figure></li>
+<li>两个操作数不能全为存储器</li>
+<li>两个操作数不能全为段寄存器</li>
+<li>DST不能是立即数</li>
+<li>源和目的类型必须一致</li>
+<li>MOV 不影响标志位</li>
+<li>读写内存操作可以这样写：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs asm">mov ax, [0]<br>mov [0], cx<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="PUSH、POP"><a href="#PUSH、POP" class="headerlink" title="PUSH、POP"></a><strong>PUSH、POP</strong></h4><ul>
+<li>对于8086PC机，在编程时，可以根据需要，将一组内存单元定义为一个段。我们可以将一组长度为$N(N≤64KB)$、地址连续、起始地址为16的倍数的内存单元当作栈空间来使用，从而定义了一个<strong>栈段</strong>。</li>
+<li>栈底放在高地址处，栈顶在低地址处。</li>
+<li>CPU 并不会知道我们将一段内存当作栈空间，CPU只认被 SS:SP 指向的内存单元中的值作为栈顶。</li>
+<li>栈里的数据是16位的，占两个内存单元</li>
+<li>push指令执行时，先将SP&#x3D;SP-2，再将要入栈的内容送入SS:SP指向的内存处，此时SS:SP指向新栈顶</li>
+<li>pop指令执行时，先将SS:SP指向的数据送出，再SP&#x3D;SP+2，此时SS:SP指向新栈顶</li>
+<li>8086CPU 不保证我们对栈的操作不会超界。这也就是说，8086CPU 只知道栈顶在何处，而不知道我们安排的栈空间有多大。这点就好像CPU只知道当前要执行的指令在何处，而不知道要执行的指令有多少。</li>
+<li>我们在编程的时候要自己操心栈顶超界的问题，要根据可能用到的最大栈空间，来安排栈的大小，防止入栈的数据太多而导致的超界；执行出栈操作的时候也要注意，以防栈空的时候继续出栈而导致的超界。</li>
+<li>每次传送的数据为16位，16位数据在堆栈中的存放顺序按照“高高低低”原则。</li>
+<li>用于保护数据：PUSH和POP指令保护和恢复寄存器和内存内容；CALL和RET或INT和IRET指令自动保护和恢复主程序断点处的段和偏移地址</li>
+<li>不影响标志位。</li>
+</ul>
+<h4 id="XCHG"><a href="#XCHG" class="headerlink" title="XCHG"></a><strong>XCHG</strong></h4><p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322194517.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>格式：XCHG	OPR1,OPR2（字节&#x2F;字）<br>执行：OPR1&lt;–&gt;OPR2</p>
+<h4 id="Others"><a href="#Others" class="headerlink" title="Others"></a><strong>Others</strong></h4><p><strong>LEA（取有效地址）</strong><br><strong>LDS、LES （将双字指针送寄存器和DS&#x2F;ES）</strong><br><strong>LAHF、SAHF（字节）</strong><br><strong>PUSHF、POPF（字）</strong> </p>
+<h4 id="算数"><a href="#算数" class="headerlink" title="算数"></a><strong>算数</strong></h4><p>加法	&#x3D;&#x3D;ADD	ADC	INC&#x3D;&#x3D; 	DAA	AAA<br>减法	&#x3D;&#x3D;SUB	SUBB DEC	NEG	CMP&#x3D;&#x3D;  DAS	AAS<br>乘法	MUL	IMUL	AAM<br>除法	DIV	IDIV	CBW	CWD	AAD </p>
+<p>上述指令基本上都影响标志位 </p>
+<h4 id="逻辑"><a href="#逻辑" class="headerlink" title="逻辑"></a><strong>逻辑</strong></h4><p>逻辑运算			AND	OR	XOR	NOT	TEST<br>移位	算术移位		SAL	SAR<br>    逻辑移位		SHL	SHR<br>    循环移位		ROL	ROR<br>    带借位的循环移位    RCL	RCR</p>
+<h4 id="串操作"><a href="#串操作" class="headerlink" title="串操作"></a><strong>串操作</strong></h4><h3 id="控制转移指令"><a href="#控制转移指令" class="headerlink" title="控制转移指令"></a><strong>控制转移指令</strong></h3><p>无条件跳转      JMP<br>条件跳转         JZ&#x2F;JE  JNZ&#x2F;JNE  JS  JNS  JO  JNO  JP&#x2F;JPE  JNP&#x2F;JPO<br>(无符号数比较) JC&#x2F;JB&#x2F;JNAE  JNC&#x2F;JNB&#x2F;JAE  JBE&#x2F;JNA   JNBE&#x2F;JA<br>(有符号数比较) JL&#x2F;JNGE  JNL&#x2F;JGE  JLE&#x2F;JNG    JNLE&#x2F;JG   JCXZ<br>循环     	LOOP<br>过程调用和返回  CALL    RET<br>软件中断和返回  INT    IRET</p>
+<p>（1）格式：	<br>     JMP  短标号&#x2F;近标号&#x2F;远标号&#x2F;字寄存器&#x2F;字存储器&#x2F;双字存储器<br>（2）不影响标志</p>
+<p>例：JMP  SHORT LABEL ;段内直接转移<br>        JMP  BX ； 段内间接转移 ，IP←BX<br>        JMP  [BX]； 段内间接转移 ，IP←（BX）<br>        JMP  FAR PTR LABEL  ;段间间接转移<br>        JMP DWORD PTR [BX] ;段间间接转移 </p>
+<h3 id="处理器控制"><a href="#处理器控制" class="headerlink" title="处理器控制"></a><strong>处理器控制</strong></h3><p>标志位操作 	CLC	 STC   CMC	CLD	STD	  CLI 	STI<br>空操作		NOP<br>外同步操作		HLT	ESC	WAIT	  LOCK	</p>
+<h3 id="指令周期"><a href="#指令周期" class="headerlink" title="指令周期"></a><strong>指令周期</strong></h3><p>8086指令的执行速率是由晶振控制产生的时钟决定的，每条指令执行都需要几个时钟周期。<br>8086CPU的工作频率5MHZ，一个时钟周期T&#x3D;1&#x2F;5MHZ&#x3D;0.2µs</p>
+<h3 id="复杂指令系统计算机-CISC-和精简指令系统计算机-RISC"><a href="#复杂指令系统计算机-CISC-和精简指令系统计算机-RISC" class="headerlink" title="复杂指令系统计算机( CISC)和精简指令系统计算机 (RISC)"></a><strong>复杂指令系统计算机( CISC)和精简指令系统计算机 (RISC)</strong></h3><p>复杂指令系统计算机（CISC）<br>Complex Instruction Set Computer<br>指令系统复杂：指令数目大于200条，寻址方式多，指令格式多。<br>指令串行执行：执行步骤多，需要多个时钟周期。<br>各种指令都可访问存储器。<br>有较多专用寄存器。<br>编译程序难以进行高效的代码优化。</p>
+<p>精简指令系统计算机（RISC）<br>Reduced Instruction Set Computer<br>简化的指令系统<br>以寄存器-寄存器方式工作<br>采用流水技术<br>使用较多的通用寄存器以减少访存<br>采用优化编译技术<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322195407.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h2 id="8086CPU的中断"><a href="#8086CPU的中断" class="headerlink" title="8086CPU的中断"></a>8086CPU的中断</h2><p><strong>中断的概念</strong><br>CPU在正常执行程序的过程中，由于某种原因，使CPU暂停当前程序的执行，转去处理临时发生的事件，处理完毕再返回继续执行暂停的程序。 ——该过程称中断<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322195607.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<ul>
+<li><p>8086CPU具有一个简单而灵活的中断系统，可处理256种不同的中断请求。</p>
+</li>
+<li><p>根据中断源是来自CPU内部还是<strong>外部</strong>，通常将所有中断源分为两类：外部中断源和内部中断源，对应的中断称为<strong>外部中断</strong>或<strong>内部中断</strong>。<br>  <strong>内部</strong><br>  INT  n 指令中断<br>  CPU执行INT  n 指令后，产生中断类型号N＝n 的中断；中断向量表地址＝4×n<br>  例如：INT 21H，产生中断类型号为21H的中断，并从中断向量表的4×21H（即0:84H）单元取出中断服务程序的入口地址，转去执行<br>  除法错中断：除数为0或商超出寄存器范围。中断类型号N&#x3D;0<br>  溢出中断指令INTO：在算术运算指令之后紧跟INTO指令，可检查溢出标志OF 。中断类型号N＝4<br>  例如：测试加法的溢出<br>  MOV  AX,0009H               	MOV AX,9000H<br>  ADD AX,0080H                 	ADD AX,8000H<br>  INTO                                  	INTO<br>   ：                                      	：<br>  无溢出,不中断,顺序         溢出，中断，转移</p>
+<p>  单步中断<br>  当标志位TF＝1时，每执行一条指令，CPU便产生中断类型号N＝1的单步中断。单步中断用于 Debug调试程序<br>  断点中断<br>  当程序设置了断点时，CPU执行到断点处便产生中断类型号N＝3的断点中断，并显示寄存器及单元内容，供Debug调试程序使用</p>
+</li>
+<li><p>外部中断中，通过可屏蔽中断请求引脚输入的中断请求信号称作<strong>可屏蔽中断</strong>请求，对这种中断请求CPU可响应，也可不响应，具体取决于标志寄存器中IF标志位的状态。通过<strong>不可屏蔽中断</strong>请求引脚输入的中断请求信号称作<strong>非屏蔽中断请求</strong>，这种中断请求CPU必须响应。<br>  <strong>非屏蔽</strong><br>  由引脚NMI引入，边沿触发，上升沿之后维持两个时钟周期高电平有效，中断类型号N＝2；不受中断标志位IF影响<br>  引起原因：RAM奇偶校验错误、I&#x2F;O通道扩展板奇偶校验错误、协处理器8087中断请求<br>  <strong>可屏蔽</strong><br>  引脚INTR引入，电平触发，高电平有效<br>  中断标志位<strong>IF＝1时允许中断；IF＝0时禁止中断</strong><br>  可用STI指令置位IF状态（开中断），CLI指令复位（关中断）<br>  引起原因：外部设备的中断请求</p>
+</li>
+<li><p><strong>硬件中断</strong>和<strong>软件中断</strong>是指引起中断的原因，硬件中断是由<strong>外设</strong>引发的，软件中断是执行<strong>中断指令</strong>产生的</p>
+</li>
+<li><p><strong>中断响应</strong>：CPU在每条指令的最后一个周期检测中断信号引脚，当条件满足时，CPU响应中断，向外设发中断响应信号，并保护断点，转向中断服务程序</p>
+</li>
+<li><p><strong>中断向量表</strong>：中断服务程序的入口地址存放处</p>
+</li>
+<li><p><strong>中断优先级</strong>：为了解决多个中断同时申请时响应的先后顺序问题，系统将所有的中断划分为四级，以0级为最高，依次降低，不同级别的中断同时申请时，CPU根据级别高低依次决定响应顺序。</p>
+<ul>
+<li>0 级——除单步中断以外的所有内部中断。</li>
+<li>1 级——不可屏蔽中断。</li>
+<li>2 级——可屏蔽中断。</li>
+<li>3 级——单步中断。</li>
+</ul>
+</li>
+<li><p>在实际系统中，常常遇到<strong>多个中断源</strong>同时请求中断的情况，这时 CPU 必须确定首先为哪一个中断源服务，以及服务的次序。解决的方法是排好中断处理的优先次序，即<strong>优先级</strong>，又称优先权。先响应优先级最高的中断请求。</p>
+</li>
+<li><p>另外，当 CPU 正在处理中断时，也要能响应优先级更高的中断请求，而屏蔽掉同级或较低级的中断请求即所谓<strong>多重中断</strong>的问题。</p>
+</li>
+</ul>
+<h3 id="中断处理过程"><a href="#中断处理过程" class="headerlink" title="中断处理过程"></a><strong>中断处理过程</strong></h3><h4 id="可屏蔽中断"><a href="#可屏蔽中断" class="headerlink" title="可屏蔽中断"></a><strong>可屏蔽中断</strong></h4><p>CPU响应<strong>可屏蔽中断</strong>的条件：</p>
+<ul>
+<li>外设提出中断申请</li>
+<li>本中断位未被屏蔽</li>
+<li>中断允许<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322200750.png" srcset="/img/loading.gif" lazyload alt="image.png"></li>
+</ul>
+<p>(1)  CPU响应可屏蔽中断<br>当中断接口电路中中断屏蔽触发器未被屏蔽时，外设可发出中断请求信号<br>CPU在每条指令的最后一个机器周期的最后一个T状态采样INTR引脚，若有中断请求信号且CPU内部中断允许触发器是开放的（IF＝1），则CPU响应中断<br>CPU向外设接口发两个中断响应信号INTA；外设收到第二个INTA，往数据线送中断类型号</p>
+<p>(2)  CPU转入中断服务过程</p>
+<ul>
+<li>从数据总线读取由外设输入的中断类型号</li>
+<li>标志寄存器PSW的值入栈；PSW中的中断允许标志IF和单步标志TF清0</li>
+<li>保护断点，下一条指令的段地址CS和指令指针IP的值入栈</li>
+<li>取中断向量表的中断入口地址，转入中断服务子程序；中断处理程序结束后，从堆栈依次弹出IP、CS和PSW，返回主程序断点处继续执行</li>
+</ul>
+<h4 id="非屏蔽中断请求NMI"><a href="#非屏蔽中断请求NMI" class="headerlink" title="非屏蔽中断请求NMI"></a><strong>非屏蔽中断请求NMI</strong></h4><p>CPU检测有NMI，不必判断IF标志，内部自动产生中断类型号N＝2，并转入相应中断服务过程</p>
+<h4 id="软件（内部）中断INT-n"><a href="#软件（内部）中断INT-n" class="headerlink" title="软件（内部）中断INT  n"></a><strong>软件（内部）中断INT  n</strong></h4><p>由软件设定，不受IF标志影响，CPU内部形成中断类型号N＝n ，并转入相应中断服务过程<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322201620.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h3 id="中断向量表"><a href="#中断向量表" class="headerlink" title="中断向量表"></a><strong>中断向量表</strong></h3><p>也称中断服务程序入口地址表<br>中断向量表安排在内存的前1KB，即00000H~003FFH<br>每个服务程序入口地址CS:IP占用4个字节$(256*4＝1KB)$，高字节存放段地址CS，低字节存放段内偏移IP，按中断类型号顺序存放<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322201836.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>0～7-&gt;系统专用，<br>  8～FH-&gt;八级硬件中断，<br>    10H～1FH-&gt; BIOS调用，<br>      20H～3FH-&gt; DOS使用，<br>        40H～0FFH-&gt;可由用户程序使用。<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202026.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h3 id="主程序的编程"><a href="#主程序的编程" class="headerlink" title="主程序的编程"></a><strong>主程序的编程</strong></h3><ol>
+<li><p>主程序中的初始化<br>设置中断向量<br>设置8259A的中断屏蔽寄存器的中断屏蔽位<br>设置CPU中断允许位标志IF</p>
+</li>
+<li><p>硬件（外设接口）和CPU自动完成<br>外设向CPU INTR端发中断请求<br>执行完当前指令CPU发两个中断响应信号$\overline{INTA}$<br>CPU取中断类型号n<br>CPU将当前PSW、CS、IP入栈保护<br>清IF、TF，禁止外部中断和单步中断<br>从中断向量表取[4n]→IP，[4n＋2]→CS<br>转向中断服务子程序</p>
+</li>
+</ol>
+<h3 id="中断服务子程序"><a href="#中断服务子程序" class="headerlink" title="中断服务子程序"></a><strong>中断服务子程序</strong></h3><p><strong>中断服务子程序的编写</strong></p>
+<ul>
+<li>保护现场，用PUSH指令将各寄存器值入栈</li>
+<li>若允许中断嵌套，则用STI开中断（置IF＝1）</li>
+<li>执行中断处理程序</li>
+<li>用CLI关中断（清IF＝0）</li>
+<li>给中断命令寄存器送中断结束命令EOI【仅针对8259】</li>
+<li>恢复现场，用POP指令将各寄存器值退栈恢复</li>
+<li>用中断返回指令IRET返回主程序</li>
+</ul>
+<h3 id="中断响应时序"><a href="#中断响应时序" class="headerlink" title="中断响应时序"></a><strong>中断响应时序</strong></h3><p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322200910.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h3 id="中断优先级和中断嵌套"><a href="#中断优先级和中断嵌套" class="headerlink" title="中断优先级和中断嵌套"></a><strong>中断优先级和中断嵌套</strong></h3><p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202552.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>多中断源的中断流程增加了<strong>屏蔽本级和低级中断</strong>和<strong>开中断</strong>以允许嵌套<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202639.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="软件查询确定中断优先级"><a href="#软件查询确定中断优先级" class="headerlink" title="软件查询确定中断优先级"></a><strong>软件查询确定中断优先级</strong></h4><p>软件查询中断方式，是将各个外设的中断请求信号通过或门后，送到 CPU 的 INTR 端，同时把几个外设的中断请求状态位组成一个端口，赋以<strong>端口号</strong>，如下图所示。任一外设有中断请求，CPU 响应中断后进入中断处理子程序，用软件读取端口内容，<strong>逐位查询端口</strong>的每位状态，查到哪个外设有请求中断，就转入哪个外设的中断服务程序。查询程序的次序，决定了外设优先级别的高低，先测试的中断源优先级别最高。当然在软件查询程序中也可用移位或屏蔽法来改变端口各位的测试次序，但查询时间较长，对中断源较多的情况不合适。<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202730.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="硬件查询确定优先级——菊花链法"><a href="#硬件查询确定优先级——菊花链法" class="headerlink" title="硬件查询确定优先级——菊花链法"></a><strong>硬件查询确定优先级——菊花链法</strong></h4><p>越靠近CPU的外设，优先级越高<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202903.png" srcset="/img/loading.gif" lazyload alt="image.png"><br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322202945.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="矢量中断优先级"><a href="#矢量中断优先级" class="headerlink" title="矢量中断优先级"></a><strong>矢量中断优先级</strong></h4><p>由优先级管理逻辑判别最高优先级中断请求<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322203018.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h4 id="中断嵌套"><a href="#中断嵌套" class="headerlink" title="中断嵌套"></a><strong>中断嵌套</strong></h4><p>高优先级的中断源能中断低优先级的中断处理<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240322203045.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h3 id="中断实验编程说明"><a href="#中断实验编程说明" class="headerlink" title="中断实验编程说明"></a><strong>中断实验编程说明</strong></h3><ol>
+<li>中断初始化<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs asm">MOV  BL, IRQNum; 	取得中断矢量号<br>CALL INT_INIT; 	初始化中断向量表<br></code></pre></td></tr></table></figure></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs asm">INT_INIT   PROC [FAR]	;FAR可省略<br>CLI<br>MOV AX, 0<br>MOV ES, AX<br>XOR BH, BH<br>SHL BX, 1<br>SHL BX, 1<br>MOV AX, OFFSET MYIRQ<br>MOV ES:[BX], AX<br>MOV AX, SEG MYIRQ<br>MOV ES:[BX+2], AX<br>RET<br>INT_INIT   ENDP<br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>中端服务程序<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs asm">LEDON	   DB	00000001b<br></code></pre></td></tr></table></figure></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs asm">MYIRQ 	PROC [FAR]<br>		PUSH DX<br>		PUSH AX<br>; 读取C口数值，并把LEDON的值输出到PC7。<br>		MOV	DX, L8255PC	; DX指向C端口<br>		IN  AL, DX		; 读取C口数值<br>		AND AL, 01111111b	; 清除PC7<br>		XOR	[LEDON], 00000001b    ; LED灯状态取反<br>		JZ  ISROut<br>		OR  AL, 10000000b	; 置位PC7<br>ISROut:	OUT DX, AL	; 更新PC端口<br>		POP AX<br>		POP DX	; 取回DX	<br>		IRET<br>MYIRQ 	ENDP<br></code></pre></td></tr></table></figure>
+
+<h1 id="8086汇编语言程序设计"><a href="#8086汇编语言程序设计" class="headerlink" title="8086汇编语言程序设计"></a>8086汇编语言程序设计</h1><h1 id="存储系统"><a href="#存储系统" class="headerlink" title="存储系统"></a>存储系统</h1>
                 
               </div>
             
@@ -957,6 +1174,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2024/03/14/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/git&amp;github%20%E9%99%8C%E7%94%9F%E6%93%8D%E4%BD%9C/" title="Git&amp;Github陌生操作">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Git&amp;Github陌生操作</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
