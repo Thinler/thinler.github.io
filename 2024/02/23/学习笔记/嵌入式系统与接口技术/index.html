@@ -102,8 +102,11 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240408184021.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240408190449.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240408200326.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/Clip_2024-04-15_10-59-29.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240415110806.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240417104656.png">
 <meta property="article:published_time" content="2024-02-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-04-08T12:20:08.057Z">
+<meta property="article:modified_time" content="2024-04-17T02:54:16.329Z">
 <meta property="article:author" content="Thinler">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="学习">
@@ -306,7 +309,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          36k 字
+          39k 字
         
       </span>
     
@@ -317,7 +320,7 @@
         
         
         
-          304 分钟
+          328 分钟
         
       </span>
     
@@ -2127,6 +2130,136 @@
 <li>常用的校验方法有：奇偶校验、循环冗余校验(CRC) 。</li>
 <li>奇偶校验：主要用于对一个字符的传送过程进行校验；奇偶校验可以检查出一个字节中发生的单个错误；奇偶校验不能自动纠错，发现错误后需“重传”。</li>
 </ul>
+<h1 id="嵌入式系统和Cortex-M3-M4"><a href="#嵌入式系统和Cortex-M3-M4" class="headerlink" title="嵌入式系统和Cortex-M3&#x2F;M4"></a>嵌入式系统和Cortex-M3&#x2F;M4</h1><h2 id="嵌入式系统中的处理器"><a href="#嵌入式系统中的处理器" class="headerlink" title="嵌入式系统中的处理器"></a>嵌入式系统中的处理器</h2><ul>
+<li><strong>微处理器（μP, Micro-Processors）</strong><ul>
+<li>EMPU（Embedded Micro-Processor Unit）</li>
+<li>由通用计算机中的CPU演变而来，装在专门设计的电路板上，只保留和嵌入式需求有关的一些母板功能，配上必须的扩展外围电路</li>
+<li>特点：低功耗、可扩展、存储区保护功能、调试功能、实时处理能力等</li>
+<li>主流的EMPU：ARM、MIPS、MC68000、PowerPC、i386EX等</li>
+</ul>
+</li>
+<li><strong>微控制器（μC, Micro-Controllers）</strong><ul>
+<li>MCU（Micro-Controller Unit）</li>
+<li>将CPU、存储器(少量RAM&#x2F;ROM)和其它外设封装在同一片集成电路——单片机</li>
+<li>特点：单片化、体积小、低成本、低故障率、开发周期短等</li>
+<li>代表性的MCU通用系列： Cortex-M 、8051、P51XA、MCS-96&#x2F;196&#x2F;296、MCS-251、C166&#x2F;167、MC68HC05&#x2F;11&#x2F;12&#x2F;16、68300等</li>
+</ul>
+</li>
+</ul>
+<h2 id="Cortex-M3-M4"><a href="#Cortex-M3-M4" class="headerlink" title="Cortex-M3&#x2F;M4"></a>Cortex-M3&#x2F;M4</h2><ul>
+<li>32-bit微处理器</li>
+<li>哈佛架构</li>
+<li>三级流水线</li>
+<li>地址空间：4GB</li>
+<li>寄存器： R0-R15、SFR</li>
+<li><strong>线程模式&#x2F;处理模式</strong></li>
+<li><strong>特权级&#x2F;用户级</strong></li>
+<li>NVIC</li>
+<li>总线接口</li>
+<li><strong>MPU</strong></li>
+<li>Thumb-2 指令集</li>
+<li>固定内部调试组件<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/Clip_2024-04-15_10-59-29.png" srcset="/img/loading.gif" lazyload alt="Clip_2024-04-15_10-59-29.png"></li>
+</ul>
+<h3 id="寄存器组"><a href="#寄存器组" class="headerlink" title="寄存器组"></a><strong>寄存器组</strong></h3><p><strong>通用寄存器</strong></p>
+<ol>
+<li>R0~R7 (低寄存器)：可以被所有 16-bit Thumb 指令和所有 32-bit Thumb-2 指令访问。</li>
+<li>R8~R12 (高寄存器)：可以被所有 Thumb-2 指令但不能被所有 Thumb 指令访问。</li>
+</ol>
+<p><strong>堆栈指针R13</strong>——两个堆栈指针在同一时间只有一个可见，堆栈指针的最低两位总是0，他们总是字对齐。</p>
+<ol>
+<li>主堆栈指针(MSP)：这是默认的堆栈指针。或写作SP_main</li>
+<li>进程堆栈指针(PSP)：被常规的应用程序代码所使用。或写作SP_process<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240415110806.png" srcset="/img/loading.gif" lazyload alt="image.png"></li>
+</ol>
+<p><strong>连接寄存器</strong><br>R14 是连接寄存器 (LR)。 当一个子程序或函数被调用时，LR用来<strong>存储返回的程序计数器</strong>。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs asm">Main     ; Main program<br>…<br>BL func1      ; Call function1<br>                    ; PC = function1 <br>                    ; LR = next instruction<br>…                 ; program code<br>func1<br>…<br>BX LR           ; Return<br><br></code></pre></td></tr></table></figure>
+
+<p><strong>程序计数器</strong><br>R15 是程序计数器。可以在汇编语言中通过R15或PC访问。</p>
+<p>示例：<br>0x1000 :  MOV R0, PC   ; R0 &#x3D; 0x1004</p>
+<h3 id="特殊功能寄存器"><a href="#特殊功能寄存器" class="headerlink" title="特殊功能寄存器"></a><strong>特殊功能寄存器</strong></h3><p>在Cortex-M3&#x2F;M4处理器中的特殊寄存器包括: </p>
+<ol>
+<li>程序状态寄存器 (PSRs)</li>
+<li>中断屏蔽寄存器(PRIMASK, FAULTMASK, and BASEPRI)</li>
+<li>控制寄存器 (CONTROL)</li>
+</ol>
+<p><strong>程序状态寄存器 (PSRs)</strong><br>程序状态寄存器可以分为三个状态寄存器：</p>
+<ol>
+<li>应用 PSR (APSR)  [负、零、进&#x2F;借、溢、饱和(用于饱和运算)]</li>
+<li>中断 PSR (IPSR)</li>
+<li>执行 PSR (EPSR)  [ICI&#x2F;IT: ICI指令&#x2F;IT指令状态位；T总为1]</li>
+</ol>
+<p><strong>中断屏蔽寄存器</strong>PRIMASK、FAULTMASK 和 BASEPRI<br>用来开放&#x2F;禁用异常</p>
+<table>
+<thead>
+<tr>
+<th>寄存器名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PRIMASK</td>
+<td>一个1-bit 寄存器。1：仅允许NMI 和硬件默认异常，所有其他的中断和异常将被屏蔽；0：开放中断</td>
+</tr>
+<tr>
+<td>FAULTMASK</td>
+<td>一个1-bit 寄存器。1：仅允许NMI, 所有中断和默认异常处理包括硬件异常被忽略。</td>
+</tr>
+<tr>
+<td>BASEPRI</td>
+<td>一个9位寄存器。它定义了屏蔽优先级。 当设置为某值时, 所有大于或等于该值的中断被屏蔽（值越大，优先级越低）。全为0（默认值）：不屏蔽任何中断。</td>
+</tr>
+<tr>
+<td><strong>控制寄存器</strong>CONTROL</td>
+<td></td>
+</tr>
+<tr>
+<td>被用来定义特权级和堆栈指针的选择。这个寄存器有两位。</td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>位</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CONTROL[1]</td>
+<td>堆栈指针选择<br>0&#x3D;选择主堆栈指针MSP（复位后缺省值）<br>1&#x3D;选择进程堆栈指针PSP<br>在线程或基础级（没有在响应异常），可以使用PSP。在handler 模式下，只允许使用MSP，所以此时不得往该位写1。</td>
+</tr>
+<tr>
+<td>CONTROL[0]</td>
+<td>0&#x3D;特权级的线程模式<br>1&#x3D;用户级的线程模式<br>handler 模式永远都是特权级的。</td>
+</tr>
+</tbody></table>
+<p> CONTROL[1]<br>对Cortex-M3&#x2F;M4，在处理者模式中CONTROL[1] 位总是0 (MSP)。但是， 在线程或基本级别，它可以为0或1。<br> CONTROL[0]<br>CONTRL[0] 位只在特权状态可写。</p>
+<p>使用MRS和MSR指令来访问控制寄存器:<br> MRS r0, CONTROL  ; Read CONTROL register into R0<br> MSR CONTROL, r0  ; Write R0 into CONTROL register</p>
+<h3 id="操作模式"><a href="#操作模式" class="headerlink" title="操作模式"></a><strong>操作模式</strong></h3><p>操作模式决定处理器运行正常程序或运行异常处理程序。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>特权</th>
+<th>用户</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>当运行一个异常(中断)程序</td>
+<td>处理者模式</td>
+<td>错误的用法</td>
+</tr>
+<tr>
+<td>当运行主应用程序</td>
+<td>线程模式</td>
+<td>线程模式</td>
+</tr>
+</tbody></table>
+<p><strong>特权级别的作用</strong>：提供了一种机制来保障访问存储器的关键区域，同时还提供了一个基本的安全模式。通过写Control register[0]&#x3D;1，软件在特权访问级别可以使程序转换到<strong>用户访问</strong>级别。<br>用户程序不能够通过写控制寄存器直接变回特权状态。它要经过一个<strong>异常处理程序</strong>设置Control register[0]&#x3D;0使得处理器切换回特权访问级别。</p>
+<p>进程（process）是操作系统中进行保护和资源分配的基本单位，操作系统分配资源以进程为基本单位。而线程(thread)是进程的组成部分，它代表一条顺序的执行流，是操作系统能够进行运算调度的最小单位。它被包含在进程之中，是进程中的实际运作单位。<br>handler模式为异常处理例程的代码；线程模式为普通应用程序的代码<br>在特权级下，程序可以访问所有范围的存储器（如果有MPU，还要在MPU的禁地之外），并且能够执行所有指令；在用户级下，某些寄存器不允许访问，如果访问，则产生fault，具体地说就是MPU，NVIC，SCB和STK四个单元不能访问<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240417104656.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<p>当CONTROL[0]&#x3D;0 时，在异常处理的始末，只发生了处理器模式的转换。<br>线程模式           handler模式                 线程模式<br>(特权级)              (特权级)                      (特权级)</p>
+<p>若CONTROL[0]&#x3D;1（线程模式+用户级），则在中断响应的始末， 处理器模式和特权等极都要发生变化。<br>线程模式           handler模式                 线程模式<br>(用户级)              (特权级)                      (用户级)</p>
+<h3 id="向量表"><a href="#向量表" class="headerlink" title="向量表"></a><strong>向量表</strong></h3><p>Cortex‐M3&#x2F;M4 支持大量异常，包括16‐4‐1&#x3D;<strong>11</strong> 个系统异常，和最多240 个外部中断——简称IRQ。具体使用了这240 个中断源中的多少个，则由芯片制造商决定。<br>由外设产生的中断信号，除了SysTick 的之外，全都连接到NVIC 的中断输入信号线。<br>当一个发生的异常被CM3&#x2F;M4 内核接受，对应异常handler 就会执行。为了决定handler 的入口地址，CM3&#x2F;M4 使用“向量表查表机制”。<br>向量表的存储位置是可以设置的，通过NVIC 中的一个重定位寄存器来指出向量表的地址。<br>复位后，该寄存器的值为0。因此，在地址0 处必须包含一张向量表，用于初始时的异常分配。</p>
 
                 
               </div>
