@@ -105,8 +105,10 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/Clip_2024-04-15_10-59-29.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240415110806.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240417104656.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240417111854.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240417112918.png">
 <meta property="article:published_time" content="2024-02-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-04-17T02:54:16.329Z">
+<meta property="article:modified_time" content="2024-04-17T03:40:04.678Z">
 <meta property="article:author" content="Thinler">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="学习">
@@ -309,7 +311,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          39k 字
+          42k 字
         
       </span>
     
@@ -320,7 +322,7 @@
         
         
         
-          328 分钟
+          352 分钟
         
       </span>
     
@@ -2259,7 +2261,188 @@
 <p>进程（process）是操作系统中进行保护和资源分配的基本单位，操作系统分配资源以进程为基本单位。而线程(thread)是进程的组成部分，它代表一条顺序的执行流，是操作系统能够进行运算调度的最小单位。它被包含在进程之中，是进程中的实际运作单位。<br>handler模式为异常处理例程的代码；线程模式为普通应用程序的代码<br>在特权级下，程序可以访问所有范围的存储器（如果有MPU，还要在MPU的禁地之外），并且能够执行所有指令；在用户级下，某些寄存器不允许访问，如果访问，则产生fault，具体地说就是MPU，NVIC，SCB和STK四个单元不能访问<br><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240417104656.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
 <p>当CONTROL[0]&#x3D;0 时，在异常处理的始末，只发生了处理器模式的转换。<br>线程模式           handler模式                 线程模式<br>(特权级)              (特权级)                      (特权级)</p>
 <p>若CONTROL[0]&#x3D;1（线程模式+用户级），则在中断响应的始末， 处理器模式和特权等极都要发生变化。<br>线程模式           handler模式                 线程模式<br>(用户级)              (特权级)                      (用户级)</p>
-<h3 id="向量表"><a href="#向量表" class="headerlink" title="向量表"></a><strong>向量表</strong></h3><p>Cortex‐M3&#x2F;M4 支持大量异常，包括16‐4‐1&#x3D;<strong>11</strong> 个系统异常，和最多240 个外部中断——简称IRQ。具体使用了这240 个中断源中的多少个，则由芯片制造商决定。<br>由外设产生的中断信号，除了SysTick 的之外，全都连接到NVIC 的中断输入信号线。<br>当一个发生的异常被CM3&#x2F;M4 内核接受，对应异常handler 就会执行。为了决定handler 的入口地址，CM3&#x2F;M4 使用“向量表查表机制”。<br>向量表的存储位置是可以设置的，通过NVIC 中的一个重定位寄存器来指出向量表的地址。<br>复位后，该寄存器的值为0。因此，在地址0 处必须包含一张向量表，用于初始时的异常分配。</p>
+<h3 id="向量表"><a href="#向量表" class="headerlink" title="向量表"></a><strong>向量表</strong></h3><ul>
+<li>Cortex‐M3&#x2F;M4 支持大量异常，包括16‐4‐1&#x3D;<strong>11</strong> 个系统异常，和最多240 个外部中断——简称IRQ。具体使用了这240 个中断源中的多少个，则由芯片制造商决定。</li>
+<li>由外设产生的中断信号，除了SysTick 的之外，全都连接到NVIC 的中断输入信号线。</li>
+<li>当一个发生的异常被CM3&#x2F;M4 内核接受，对应异常handler 就会执行。为了决定handler 的入口地址，CM3&#x2F;M4 使用“向量表查表机制”。</li>
+<li>向量表的存储位置是可以设置的，通过NVIC 中的一个重定位寄存器来指出向量表的地址。</li>
+<li>复位后，该寄存器的值为0。因此，在地址0 处必须包含一张向量表，用于初始时的异常分配。</li>
+</ul>
+<p>向量表结构：</p>
+<table>
+<thead>
+<tr>
+<th>异常类型</th>
+<th>偏移地址</th>
+<th>优先级</th>
+<th>异常向量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0x00</td>
+<td>N&#x2F;A</td>
+<td>MSP的开始值</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0x04</td>
+<td>-3（最高）</td>
+<td>复位</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0x08</td>
+<td>-2</td>
+<td>NMI</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0x0C</td>
+<td>-1</td>
+<td>硬件故障</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0x10</td>
+<td>可编程</td>
+<td>存储器管理故障</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0x14</td>
+<td>可编程</td>
+<td>总线故障</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0x18</td>
+<td>可编程</td>
+<td>程序错误导致的故障</td>
+</tr>
+<tr>
+<td>7-10</td>
+<td>0x1C-0x28</td>
+<td>N&#x2F;A</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0x2C</td>
+<td>可编程</td>
+<td>执行系统服务调用指令引发的异常SVC</td>
+</tr>
+<tr>
+<td>12</td>
+<td>0x30</td>
+<td>可编程</td>
+<td>调试监视器</td>
+</tr>
+<tr>
+<td>13</td>
+<td>0x34</td>
+<td>N&#x2F;A</td>
+<td>保留</td>
+</tr>
+<tr>
+<td>14</td>
+<td>0x38</td>
+<td>可编程</td>
+<td>为系统设备而设的可悬挂请求PendSV</td>
+</tr>
+<tr>
+<td>15</td>
+<td>0x3C</td>
+<td>可编程</td>
+<td>系统滴答定时器 SysTick</td>
+</tr>
+<tr>
+<td>16</td>
+<td>0x40</td>
+<td>可编程</td>
+<td>IRQ#0</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>可编程</td>
+<td></td>
+</tr>
+<tr>
+<td>255</td>
+<td>0x3FF</td>
+<td>可编程</td>
+<td>IRQ#239</td>
+</tr>
+</tbody></table>
+<h3 id="栈内存操作"><a href="#栈内存操作" class="headerlink" title="栈内存操作"></a><strong>栈内存操作</strong></h3><p>栈操作：在寄存器中的数据可以通过PUSH操作保存到栈内存并且通过POP操作在稍后恢复到寄存器。当PUSH&#x2F;POP 指令执行时，SP 指针的值也跟着自减&#x2F;自增。</p>
+<p>Cortex-M3&#x2F;M4 有两个堆栈指针: 主堆栈指针 (MSP) 和进程堆栈指针(PSP)。<br>被使用的SP 寄存器由Control [1]控制。</p>
+<p>Control [1] &#x3D; 0：使用MSP<br>线程模式           handler模式                 线程模式<br>(使用MSP)         (使用MSP)                 (使用MSP)</p>
+<p>Control [1] &#x3D; 1： 线程模式使用PSP；Handler模式使用MSP<br>线程模式           handler模式                 线程模式<br>(使用PSP)         (使用MSP)                 (使用PSP)</p>
+<h3 id="复位序列"><a href="#复位序列" class="headerlink" title="复位序列"></a><strong>复位序列</strong></h3><p>处理器复位后，它会从存储器中读取两个字：<br>从地址 <code>0x0000 0000</code> 处取出MSP 的初始值。<br>从地址 <code>0x0000 0004</code> 处取出PC 的初始值——复位向量，其LSB 必须是1 （表明进入 <strong>Thumb 状态</strong>） 。然后从这个值所对应的地址处取指。</p>
+<pre class="mermaid">graph LR
+    A[复位] --> B[取MSP初始值&&取复位向量]
+    B --> C[取第一条指令]</pre>
+
+<p>MSP &#x3D;堆栈内存末地址+1<br>初始PC &#x3D;启动代码的首地址+1（CM3&#x2F;4在Thumb状态执行）</p>
+<h3 id="Cortex-M3-M4内部总线接口"><a href="#Cortex-M3-M4内部总线接口" class="headerlink" title="Cortex-M3&#x2F;M4内部总线接口"></a><strong>Cortex-M3&#x2F;M4内部总线接口</strong></h3><p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240417111854.png" srcset="/img/loading.gif" lazyload alt="image.png"><br>AHB（Advanced High-performance Bus，先进高性能总线）：连接<strong>高性能</strong>系统模块<br>ASB（Advanced System Bus，先进系统总线）：连接高性能系统模块； ARM的第一代系统总线<br>APB（Advanced Peripheral Bus，先进外设总线）：为外围<strong>低性能</strong>的单元提供简单的接口<br>I-Code：32位AHB-Lite总线，用于代码区的<strong>取指</strong>和<strong>读取中断向量表</strong>（0x0<del>0x1FFFFFFF）<br>D-Code： 32位AHB-Lite总线，用于代码区的数据访问（0x0</del>0x1FFFFFFF）<br>PPB （私有外设总线，Private Peripheral Bus ） ：32位APB、AHB总线，用于调试组件等私有外设访问<br>系统总线：32位AHB-Lite总线，用于内存和外设区（0x20000000~0xFFFFFFFF除PPB区域外的存储空间）的存取访问</p>
+<h2 id="存储器系统"><a href="#存储器系统" class="headerlink" title="存储器系统"></a>存储器系统</h2><h3 id="Cortex-M3-M4存储器系统功能概述"><a href="#Cortex-M3-M4存储器系统功能概述" class="headerlink" title="Cortex-M3&#x2F;M4存储器系统功能概述"></a><strong>Cortex-M3&#x2F;M4存储器系统功能概述</strong></h3><ul>
+<li>存储器映射是预定义的，并且还规定好了哪个位置使用哪条总线。</li>
+<li>Cortex-M3&#x2F;M4的存储器系统支持所谓的“位带”（bit‐band）操作。通过它，实现了对单一比特的<strong>原子操作</strong>。位带操作仅适用于一些特殊的存储器区域中。</li>
+<li>Cortex-M3&#x2F;M4的存储器系统支持非对齐访问和互斥访问。这两个特性是直到了v7M 时才出来的。</li>
+<li>Cortex-M3&#x2F;M4的存储器系统支持小端配置和大端配置。</li>
+</ul>
+<h3 id="内存映射"><a href="#内存映射" class="headerlink" title="内存映射"></a><strong>内存映射</strong></h3><ul>
+<li>Cortex-M3&#x2F;M4 处理器有一个固定的存储映射<ul>
+<li>极大地方便软件在各种CM3&#x2F;4单片机间的移植</li>
+<li>例：各款CM3&#x2F;M4的NVIC 和MPU 都在相同的位置布设寄存器→设置变得通用</li>
+</ul>
+</li>
+<li>一些存储单元被分配给了私有外设，比如调试组件→这个地址段被称为“<strong>私有外设区</strong>”。私有外设区的组件包括：<ul>
+<li>闪存地址重载及断点单元(FPB)</li>
+<li>数据观察点单元(DWT)</li>
+<li>指令跟踪宏单元(ITM)</li>
+<li>嵌入式跟踪宏单元(ETM)</li>
+<li>跟踪端口接口单元(TPIU)</li>
+<li>ROM 表</li>
+</ul>
+</li>
+</ul>
+<p>Cortex-M3&#x2F;M4 预定义 内存映射<br>SRAM： 1 GB。 SRAM存储范围是用来连接内部的SRAM。<br>片上外设：0.5 GB，支持 bit-band 别名并且可以通过系统总线接口访问。<br>外部 RAM： 1 GB。允许执行程序。<br>外部设备：1 GB。不允许执行程序。<br>系统级组件+ 内部专用的外围总线+ 外部私有外设总线+ 供应商特定系统外设：0.5 GB。</p>
+<p><strong>私有外设总线</strong></p>
+<ol>
+<li>AHB 私有外设总线，只针对 Cortex-M3&#x2F;4 内部 AHB 外设，它们是：NVIC, FPB, DWT 和ITM。</li>
+<li>APB 私有外设总线，既用于CM3&#x2F;4 内部的APB 设备，也用于外部设备（这里的“外部”是对内核而言）。<br>NVIC 所处的区域叫做“系统控制空间（SCS）”，在SCS 里的还有SysTick、MPU 以及代码调试控制所用的寄存器。</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/Thinler/PhotosOfNotes/master/classnotes/20240417112918.png" srcset="/img/loading.gif" lazyload alt="image.png"></p>
+<h3 id="内存访问属性"><a href="#内存访问属性" class="headerlink" title="内存访问属性"></a><strong>内存访问属性</strong></h3><p>Cortex-M3&#x2F;M4 在定义了存储器映射之外，还为存储器的访问规定了4 种属性，分别是：</p>
+<ul>
+<li>可否缓冲(Bufferable)</li>
+<li>可否缓存(Cacheable)</li>
+<li>可否执行(Executable)</li>
+<li>可否共享(Sharable)<br>如果配了MPU，则可以通过它配置不同的存储区，并且覆盖缺省的访问属性。</li>
+</ul>
+<h3 id="默认内存访问权限"><a href="#默认内存访问权限" class="headerlink" title="默认内存访问权限"></a><strong>默认内存访问权限</strong></h3><ul>
+<li>Cortex-M3&#x2F;M4 有一个缺省的存储访问许可，它能防止用户代码访问系统控制存储空间，保护NVIC、MPU 等关键部件。缺省访问许可在下列条件时生效：<ul>
+<li>没有配备 MPU</li>
+<li>配备了 MPU，但MPU被除能</li>
+</ul>
+</li>
+<li>如果启用了MPU，则MPU 可以在地址空间划出若干区域，并为每个区规定不同的访问许可权限。<br>当一个用户级访问被阻止时，会立即产生一个总线异常。</li>
+</ul>
+<h3 id="Bit-Band操作"><a href="#Bit-Band操作" class="headerlink" title="Bit-Band操作"></a><strong>Bit-Band操作</strong></h3><p><strong>位带</strong>别名 &#x3D; 位带基址+ （字节偏移量* 32） + （位编号* 4）<br>例  如果要修改地址0x2000.1000的第3位，位带别名的计算如下：<br>$$0X2200.0000 + (0X1000 * 32) + (3 * 4) &#x3D; 0X2202.000C$$</p>
+<p><strong>写操作</strong></p>
+<ol>
+<li>不使用Bit-Band:<br>  LDR         R0,   &#x3D;0x20000000   ; Setup address<br>  LDR         R1,   [R0]                  ; Read<br>  ORR.W    R1,   #0x4                 ; Modify bit<br>  STR         R1,   [R0]                  ; Write back result</li>
+<li>使用Bit-Band:<br>  LDR         R0,   &#x3D;0x22000008    ; Setup address<br>  MOV        R1,   #1                      ; Setup data, R1&#x3D;0x1<br>  STR         R1,   [R0]                   ; Write</li>
+</ol>
+<p><strong>读操作</strong></p>
+<ol>
+<li><p>使用 Bit-Band:<br>  LDR          R0,   &#x3D;0x20000000   ; Setup address<br>  LDR          R1,   [R0]                  ; Read<br>  UBFX.W   R1,   R1,  #2,  #1      ; Extract bit[2]</p>
+</li>
+<li><p>使用 Bit-Band:<br>  LDR          R0,   &#x3D;0x22000008   ; Setup address<br>  LDR          R1,   [R0]                  ; Read, LSB of R1&#x3D;bit2 of 0x20000000</p>
+</li>
+</ol>
 
                 
               </div>
